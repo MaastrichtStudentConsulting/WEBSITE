@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useCallback } from 'react';
-import Image from 'next/image';
+import Image from '@/components/SafeImage';
 
 interface Step {
   title: string;

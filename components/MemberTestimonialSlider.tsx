@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
+import Image from '@/components/SafeImage';
 import type { Testimonial } from '@/data/testimonials';
 
 interface Props {

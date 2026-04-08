@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/SafeImage';
 import HeroSection from '@/components/HeroSection';
 import BoardGrid from '@/components/BoardGrid';
 import ReferenceCard from '@/components/ReferenceCard';

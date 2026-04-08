@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import BoardGrid from '@/components/BoardGrid';
 import ConsultantGrid from '@/components/ConsultantGrid';

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
+import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import MemberTestimonialSlider from '@/components/MemberTestimonialSlider';
 import EventSlider from '@/components/EventSlider';
