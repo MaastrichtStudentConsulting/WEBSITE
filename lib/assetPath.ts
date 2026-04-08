@@ -1,8 +1,5 @@
-// Prefixes a public asset path with the Next.js basePath when needed.
-// Use for inline style backgroundImage: url(...) and other non-<Image> uses.
-const basePath = process.env.NODE_ENV === 'production' ? '/WEBSITEWIP' : '';
-
+// No-op now that we're hosting on Vercel (served at root, no basePath).
+// Left in place so existing imports keep working without touching every file.
 export function asset(path: string): string {
-  if (!path.startsWith('/')) return path;
-  return `${basePath}${path}`;
+  return path;
 }
