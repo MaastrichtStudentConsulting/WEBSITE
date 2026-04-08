@@ -47,7 +47,7 @@ export const consultants: Consultant[] = [
   { name: 'Anna Mitchell', image: '/images/consultants/Anna Mitchell.jpg' },
   { name: 'Shervin', image: '/images/consultants/Shervin.jpg' },
   { name: 'Martim Machado', image: '/images/consultants/Martim.jpg' },
-  { name: 'Helene Werner', image: '/images/consultants/Helene Werner.png' },
+  { name: 'Helene Werner', image: '/images/consultants/Helene Werner.jpg' },
   { name: 'Henrik Pickrahn', image: '/images/consultants/Henrik Pickrahn.jpeg' },
   { name: 'Jonathan Altmann', image: '/images/consultants/Jonathan Altmann.jpeg' },
   { name: 'Ada Volkmann', image: '/images/consultants/Ada.jpeg' },

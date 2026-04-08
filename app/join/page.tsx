@@ -73,7 +73,7 @@ export default function JoinPage() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${asset('/images/become-team-new.png')})` }}
+          style={{ backgroundImage: `url(${asset('/images/become-team-new.jpg')})` }}
         />
         <div className="absolute inset-0 bg-black/20" />
 
