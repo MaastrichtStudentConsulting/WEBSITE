@@ -70,7 +70,7 @@ export default function HeroSection({
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster={asset('/images/header_bg.jpg')}
             className="absolute inset-0 w-full h-full object-cover"
           >
