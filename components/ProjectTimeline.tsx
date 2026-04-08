@@ -97,7 +97,7 @@ function TimelineStep({
   step: Step;
   index: number;
   isLast: boolean;
-  lastIconRef?: React.RefObject<HTMLDivElement | null>;
+  lastIconRef?: React.RefObject<HTMLDivElement>;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
