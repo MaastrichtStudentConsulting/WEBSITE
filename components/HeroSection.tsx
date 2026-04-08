@@ -74,7 +74,7 @@ export default function HeroSection({
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={asset('/video/WebsiteHeader.h264.mp4')} type="video/mp4" />
+            <source src={asset('/video/WebsiteHeader.mp4')} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-navy/50" />
         </>
