@@ -59,6 +59,8 @@ export default function HeroSection({
   showStats = false,
   backgroundImage = '/images/header_bg.jpg',
 }: HeroSectionProps) {
+  const [videoReady, setVideoReady] = useState(false);
+
   return (
     <section className="relative h-screen flex flex-col justify-center overflow-hidden">
       {/* Background */}
@@ -72,7 +74,8 @@ export default function HeroSection({
             loop
             playsInline
             preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
+            onPlaying={() => setVideoReady(true)}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
           >
             <source src={asset('/video/WebsiteHeader.mp4')} type="video/mp4" />
           </video>
