@@ -62,7 +62,7 @@ export default function HeroSection({
   const [videoReady, setVideoReady] = useState(false);
 
   return (
-    <section className="relative h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative h-screen flex flex-col justify-center overflow-hidden bg-navy">
       {/* Background */}
       {video ? (
         <>
