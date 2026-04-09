@@ -12,7 +12,7 @@ const cards = [
     image: '/images/hero-board-2.jpg',
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
-    imageClassName: '!-left-[28%] !-right-[8%] !w-[136%] !max-w-none',
+    imageClassName: '!-left-[5%] !-right-[31%] !w-[136%] !max-w-none',
   },
   {
     title: 'Partners',
