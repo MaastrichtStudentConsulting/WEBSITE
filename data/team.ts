@@ -17,6 +17,8 @@ export const boardMembers: BoardMember[] = [
 export interface Consultant {
   name: string;
   image: string | null;
+  /** Extra Tailwind classes on the <Image>, e.g. to zoom out a tight crop */
+  imageClassName?: string;
 }
 
 export const consultants: Consultant[] = [
@@ -34,7 +36,7 @@ export const consultants: Consultant[] = [
   { name: 'Bintou Jabbi', image: '/images/consultants/Bintou Siya.jpg' },
   { name: 'Leonhard Cuzmin', image: '/images/consultants/Leonhard Cuzmin.jpg' },
   { name: 'Julian Kuni', image: '/images/consultants/Julian Kuni.jpg' },
-  { name: 'Arthur von Moltke', image: '/images/consultants/Arthur.jpg' },
+  { name: 'Arthur von Moltke', image: '/images/consultants/Arthur.jpg', imageClassName: 'scale-[1.35]' },
   { name: 'Ida Gloede', image: '/images/consultants/Ida Gloede.jpg' },
   { name: 'Benjamin Ganovsky', image: '/images/consultants/Ben Ganovsky.jpg' },
   { name: 'Maxim Franko', image: '/images/consultants/Maxim Franko.jpg' },

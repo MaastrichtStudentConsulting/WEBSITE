@@ -56,7 +56,7 @@ export default function PartnersPage() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
@@ -144,7 +144,7 @@ export default function PartnersPage() {
               We have built successful, long-term relationships with a number of different companies.
             </p>
           </div>
-          <LogoGrid logos={partnerLogos} largerLogos={['Simon Kucher']} removeBackground={['Inverto', 'BCG']} />
+          <LogoGrid logos={partnerLogos} largerLogos={['Simon Kucher', 'SET Management Consulting']} />
         </div>
       </section>
 

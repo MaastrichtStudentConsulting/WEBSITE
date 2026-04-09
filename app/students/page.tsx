@@ -159,7 +159,7 @@ export default function StudentsPage() {
       {/* Alumni */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
         <Image
-          src="/images/hero-board-standing.jpg"
+          src="/images/alumni-event.jpg"
           alt=""
           fill
           sizes="100vw"

@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 text-center">
-          <p className="text-white/30 text-sm">&copy; Maastricht Student Consulting</p>
+          <p className="text-white/30 text-sm">&copy; Maastricht Student Consulting 2026</p>
         </div>
       </div>
     </footer>

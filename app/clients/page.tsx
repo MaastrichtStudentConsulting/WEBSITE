@@ -188,7 +188,7 @@ export default function ClientsPage() {
               We work together with companies in many different industries ranging from start-ups to multinational corporations.
             </p>
           </div>
-          <LogoGrid logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema']} />
+          <LogoGrid logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips']} />
         </div>
       </section>
 
