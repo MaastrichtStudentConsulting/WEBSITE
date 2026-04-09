@@ -24,7 +24,7 @@ export default function LogoGrid({ logos, largerLogos = [], removeBackground = [
                 alt={logo.name}
                 width={200}
                 height={80}
-                className={`w-auto object-contain ${isLarger ? 'max-h-[6.5rem]' : 'max-h-20'}${removeBg ? ' mix-blend-multiply' : ''}`}
+                className={`w-auto object-contain ${isLarger ? 'max-h-[5.5rem]' : 'max-h-16'}${removeBg ? ' mix-blend-multiply' : ''}`}
               />
             ) : (
               <span className="text-navy/40 text-sm font-medium text-center">

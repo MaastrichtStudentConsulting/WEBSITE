@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // Vercel handles image optimization automatically. No unoptimized flag
-    // so we get WebP, responsive sizing, and lazy loading for free.
+    // Larger device sizes so Retina screens get crisp images
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 };
 

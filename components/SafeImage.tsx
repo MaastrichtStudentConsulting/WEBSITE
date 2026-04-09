@@ -22,5 +22,10 @@ export default function SafeImage(props: ImageProps) {
     computedProps.sizes = '(max-width: 768px) 100vw, 50vw';
   }
 
+  // Default to quality 90 for sharper images (Next.js default is 75)
+  if (!props.quality) {
+    computedProps.quality = 90;
+  }
+
   return <NextImage {...computedProps} />;
 }
