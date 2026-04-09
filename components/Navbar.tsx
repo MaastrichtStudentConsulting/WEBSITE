@@ -101,16 +101,16 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-100">
-          <div className="px-6 py-4 space-y-1">
+        <div className="lg:hidden fixed inset-0 top-20 bg-white z-50 flex flex-col items-center justify-center">
+          <div className="space-y-2 text-center">
             {navLinks.map((link) => {
               const isActive = pathname === link.href || pathname.startsWith(link.href + '/');
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-3 py-3 text-base font-medium transition-colors ${
-                    isActive ? 'text-orange' : 'text-navy/70 hover:text-orange'
+                  className={`block px-6 py-4 text-2xl font-semibold transition-colors ${
+                    isActive ? 'text-orange' : 'text-navy hover:text-orange'
                   }`}
                   onClick={() => setMobileOpen(false)}
                 >
@@ -120,7 +120,8 @@ export default function Navbar() {
             })}
             <a
               href="mailto:info@maastrichtconsulting.com"
-              className="block mt-3 border border-navy/20 text-navy px-3 py-3 rounded text-base font-medium text-center transition-colors hover:bg-navy hover:text-white"
+              className="inline-block mt-6 border-2 border-navy text-navy px-8 py-3 rounded-full text-lg font-semibold transition-colors hover:bg-navy hover:text-white"
+              onClick={() => setMobileOpen(false)}
             >
               Contact
             </a>

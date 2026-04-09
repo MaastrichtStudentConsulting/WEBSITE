@@ -20,8 +20,8 @@ export default function BoardGrid({ members }: BoardGridProps) {
               className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
             />
           </div>
-          <p className="font-semibold text-navy text-sm sm:text-[15px]">{member.name}</p>
-          <p className="text-navy/50 text-xs sm:text-sm mt-0.5">{member.title}</p>
+          <p className="font-semibold text-navy text-xs sm:text-[15px] leading-tight">{member.name}</p>
+          <p className="text-navy/50 text-[10px] sm:text-sm mt-0.5 leading-tight">{member.title}</p>
         </div>
       ))}
     </div>

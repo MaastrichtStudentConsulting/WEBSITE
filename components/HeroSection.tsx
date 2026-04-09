@@ -107,13 +107,13 @@ export default function HeroSection({
         )}
 
         {showStats && (
-          <div className="mt-14 flex justify-center flex-wrap gap-x-20 gap-y-6">
+          <div className="mt-14 flex flex-row justify-center gap-x-10 sm:gap-x-20">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+                <div className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white">
                   <AnimatedNumber target={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-white/60 text-sm sm:text-base font-medium mt-1">
+                <div className="text-white/60 text-xs sm:text-base font-medium mt-1">
                   {stat.label}
                 </div>
               </div>

@@ -53,10 +53,10 @@ export default function EventSlider({ events }: Props) {
 
   return (
     <div className="relative">
-      {/* Arrows */}
+      {/* Arrows — hidden on mobile (use dots), visible on desktop */}
       <button
         onClick={prev}
-        className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 transition-colors z-10 ${
+        className={`hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 transition-colors z-10 ${
           current === 0 ? 'text-navy/10 cursor-default' : 'text-navy/30 hover:text-navy'
         }`}
         aria-label="Previous events"
@@ -68,7 +68,7 @@ export default function EventSlider({ events }: Props) {
       </button>
       <button
         onClick={next}
-        className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 transition-colors z-10 ${
+        className={`hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 transition-colors z-10 ${
           current >= maxIndex ? 'text-navy/10 cursor-default' : 'text-navy/30 hover:text-navy'
         }`}
         aria-label="Next events"
