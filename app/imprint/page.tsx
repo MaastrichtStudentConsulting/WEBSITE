@@ -18,6 +18,7 @@ export default function ImprintPage() {
             <p className="mb-2"><strong>Maastricht Student Consulting</strong></p>
             <p>Sint Antoniuslaan 61</p>
             <p>6221 XJ Maastricht</p>
+            <p>Netherlands</p>
           </div>
 
           <div>
