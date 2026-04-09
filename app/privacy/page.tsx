@@ -56,35 +56,12 @@ export default function PrivacyPage() {
             Our website contains information that enables a quick electronic contact to our organisation, including a general e-mail address. If a data subject contacts us by e-mail, the personal data transmitted by the data subject are automatically stored. Such personal data transmitted on a voluntary basis by a data subject to us are stored for the purpose of processing or contacting the data subject. There is no transfer of this personal data to third parties.
           </p>
 
-          <h2 className="text-2xl font-bold text-navy pt-6">External Services</h2>
-
-          <h3 className="text-xl font-bold text-navy pt-2">Vercel (Hosting)</h3>
-          <p>
-            Our website is hosted on Vercel Inc. (340 S Lemon Ave #4133, Walnut, CA 91789, USA). When you visit our website, Vercel may process your IP address and other technical data to deliver the website to you. For more information, see{' '}
-            <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-orange hover:underline">
-              Vercel&apos;s Privacy Policy
-            </a>.
-          </p>
-
-          <h3 className="text-xl font-bold text-navy pt-2">HubSpot (Talent Pool Form)</h3>
-          <p>
-            We use HubSpot (HubSpot Inc., 25 First Street, Cambridge, MA 02141, USA) for our Talent Pool sign-up form. When you submit data through this form, it is processed by HubSpot on our behalf. The data you provide (such as your name and e-mail address) is used solely for the purpose of contacting you about future opportunities at Maastricht Student Consulting. For more information, see{' '}
-            <a href="https://legal.hubspot.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-orange hover:underline">
-              HubSpot&apos;s Privacy Policy
-            </a>.
-          </p>
-
           <h2 className="text-2xl font-bold text-navy pt-6">Cookies</h2>
           <p>
             Our website uses only technically necessary cookies that are essential for the functioning of the website. These cookies do not track your behaviour and do not collect personal data for marketing purposes. No consent is required for these cookies under applicable law.
           </p>
           <p>
             We do not use any analytics, advertising, or third-party tracking cookies on this website.
-          </p>
-
-          <h2 className="text-2xl font-bold text-navy pt-6">Photos of Team Members</h2>
-          <p>
-            Our website displays photographs of our board members and consultants. All individuals depicted have given their explicit consent for the publication of their photographs on this website. Any team member may withdraw their consent at any time by contacting us, after which their photograph will be promptly removed.
           </p>
 
           <h2 className="text-2xl font-bold text-navy pt-6">Rights of the Data Subject</h2>
