@@ -60,9 +60,24 @@ export default function HeroSection({
   backgroundImage = '/images/header_bg.jpg',
 }: HeroSectionProps) {
   const [videoReady, setVideoReady] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const heroHeight = rect.height;
+      const scrollProgress = Math.max(0, Math.min(1, -rect.top / heroHeight));
+      setScale(1 + scrollProgress * 0.08);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <section className="relative h-screen flex flex-col justify-center overflow-hidden bg-navy">
+    <section ref={sectionRef} className="relative h-screen flex flex-col justify-center overflow-hidden bg-navy">
       {/* Background */}
       {video ? (
         <>
@@ -75,6 +90,7 @@ export default function HeroSection({
             preload="auto"
             onPlaying={() => setVideoReady(true)}
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoReady ? 'opacity-100' : 'opacity-0'}`}
+            style={{ transform: `scale(${scale})` }}
           >
             <source src={asset('/video/WebsiteHeader.mp4')} type="video/mp4" />
           </video>
@@ -89,6 +105,7 @@ export default function HeroSection({
             priority
             sizes="100vw"
             className="object-cover"
+            style={{ transform: `scale(${scale})` }}
           />
           <div className="absolute inset-0 bg-navy/55" />
         </>

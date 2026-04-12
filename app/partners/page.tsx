@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import LogoGrid from '@/components/LogoGrid';
 import EventSlider from '@/components/EventSlider';
+import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 import { partnerTestimonials } from '@/data/testimonials';
 import { partnerLogos, partnerEvents } from '@/data/clients';
@@ -50,14 +51,7 @@ export default function PartnersPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/hero-partners-hands.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+        <ParallaxHero src="/images/hero-partners-hands.jpg" className="object-center" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -71,7 +65,7 @@ export default function PartnersPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-12">
             <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={80} className="flex-shrink-0" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
             <div className="flex-grow h-px bg-navy/20" />
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
@@ -98,7 +92,7 @@ export default function PartnersPage() {
               <div key={item.title} className="bg-gray-50/80 rounded-lg p-7 sm:p-8 border border-gray-100">
                 <h3 className="text-lg font-bold text-navy mb-3">{item.title}</h3>
                 <div className="w-8 h-0.5 bg-orange/50 mb-4" />
-                <p className="text-navy/60 leading-relaxed text-[15px]">{item.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{item.text}</p>
               </div>
             ))}
           </div>
@@ -116,7 +110,7 @@ export default function PartnersPage() {
             {whatWeExpect.map((item) => (
               <div key={item.title} className="bg-white rounded-lg p-7 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100">
                 <h3 className="text-lg font-bold text-navy mb-3">{item.title}</h3>
-                <p className="text-navy/60 leading-relaxed text-[15px]">{item.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{item.text}</p>
               </div>
             ))}
           </div>
@@ -144,7 +138,7 @@ export default function PartnersPage() {
               We have built successful, long-term relationships with a number of different companies.
             </p>
           </div>
-          <LogoGrid logos={partnerLogos} largerLogos={['Simon Kucher', 'SET Management Consulting']} smallerLogos={['BCG', 'Inverto']} />
+          <LogoGrid logos={partnerLogos} largerLogos={['Simon Kucher', 'SET Management Consulting', 'Rheinmetall']} smallerLogos={['BCG', 'Inverto']} />
         </div>
       </section>
 

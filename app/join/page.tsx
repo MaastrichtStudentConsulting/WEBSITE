@@ -3,6 +3,7 @@ import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import CountdownTimer from '@/components/CountdownTimer';
 import ProjectTimeline from '@/components/ProjectTimeline';
+import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 
 export const metadata: Metadata = {
@@ -11,6 +12,11 @@ export const metadata: Metadata = {
 };
 
 const applicationSteps = [
+  {
+    title: 'Attend our Info Night',
+    description: 'Join our info night to learn more about MSC and to meet our current consultants.',
+    icon: '/images/icons/chat-bubble.svg',
+  },
   {
     title: 'Write your application',
     description: 'This includes a Motivation Letter, your CV and a Grade Transcript (incl. your official GPA).',
@@ -40,14 +46,7 @@ export default function JoinPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/hero-board-1.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxHero src="/images/hero-board-1.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -61,7 +60,7 @@ export default function JoinPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-12">
             <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={80} className="flex-shrink-0" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
             <div className="flex-grow h-px bg-navy/20" />
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">

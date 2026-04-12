@@ -3,6 +3,7 @@ import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import MemberTestimonialSlider from '@/components/MemberTestimonialSlider';
 import EventSlider from '@/components/EventSlider';
+import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
 import { studentInsights } from '@/data/clients';
@@ -55,14 +56,7 @@ export default function StudentsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/hero-consultants-all.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxHero src="/images/hero-consultants-all.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -76,7 +70,7 @@ export default function StudentsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-12">
             <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={80} className="flex-shrink-0" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
             <div className="flex-grow h-px bg-navy/20" />
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
@@ -104,7 +98,7 @@ export default function StudentsPage() {
                   <Image src={item.icon} alt="" width={56} height={56} className="w-14 h-14" />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-3">{item.title}</h3>
-                <p className="text-navy/60 leading-relaxed text-[15px]">{item.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{item.text}</p>
               </div>
             ))}
           </div>
@@ -136,7 +130,7 @@ export default function StudentsPage() {
                   <Image src={item.icon} alt="" width={56} height={56} className="w-14 h-14" />
                 </div>
                 <h3 className="text-lg font-bold text-navy mb-3">{item.title}</h3>
-                <p className="text-navy/60 leading-relaxed text-[15px]">{item.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{item.text}</p>
               </div>
             ))}
           </div>

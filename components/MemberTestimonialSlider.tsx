@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from '@/components/SafeImage';
 import type { Testimonial } from '@/data/testimonials';
 
@@ -11,12 +11,17 @@ interface Props {
 export default function MemberTestimonialSlider({ testimonials }: Props) {
   const [current, setCurrent] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayed, setDisplayed] = useState(0);
 
   const goTo = (index: number) => {
     if (isTransitioning || index === current) return;
     setIsTransitioning(true);
+    // Fade out first
     setTimeout(() => {
+      // Switch content while invisible
       setCurrent(index);
+      setDisplayed(index);
+      // Then fade back in
       setTimeout(() => setIsTransitioning(false), 50);
     }, 300);
   };
@@ -24,7 +29,17 @@ export default function MemberTestimonialSlider({ testimonials }: Props) {
   const prev = () => goTo(current === 0 ? testimonials.length - 1 : current - 1);
   const next = () => goTo(current === testimonials.length - 1 ? 0 : current + 1);
 
-  const t = testimonials[current];
+  // Preload all testimonial images
+  useEffect(() => {
+    testimonials.forEach((t) => {
+      if (t.image) {
+        const img = new window.Image();
+        img.src = t.image;
+      }
+    });
+  }, [testimonials]);
+
+  const t = testimonials[displayed];
 
   return (
     <div className="relative max-w-4xl mx-auto">
@@ -56,8 +71,15 @@ export default function MemberTestimonialSlider({ testimonials }: Props) {
           </p>
           <div className="flex items-center gap-4">
             {t.image && (
-              <div className="w-14 h-14 relative rounded-full overflow-hidden flex-shrink-0">
-                <Image src={t.image} alt={t.author} fill className="object-cover" />
+              <div className="w-14 h-14 relative rounded-full overflow-hidden flex-shrink-0 bg-white">
+                <Image
+                  key={t.image}
+                  src={t.image}
+                  alt={t.author}
+                  fill
+                  className="object-cover object-top"
+                  sizes="56px"
+                />
               </div>
             )}
             <div>

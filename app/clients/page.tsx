@@ -5,6 +5,7 @@ import TestimonialSlider from '@/components/TestimonialSlider';
 import LogoGrid from '@/components/LogoGrid';
 import ServiceGrid from '@/components/ServiceGrid';
 import ProjectTimeline from '@/components/ProjectTimeline';
+import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 import { clientTestimonials } from '@/data/testimonials';
 import { clientLogos } from '@/data/clients';
@@ -33,31 +34,31 @@ const services = [
   {
     title: 'Marketing',
     icon: '/images/icons/megaphone.svg',
-    image: '/images/marketing/Photo.jpg',
+    image: '/images/marketing/Marketing.jpg',
     text: 'In an increasingly competitive market, success belongs to organisations that distinguish themselves from the rest through exceptional brand awareness. This highlights the need for investing in a sound marketing strategy that positions your brand top of mind.',
   },
   {
     title: 'Operations',
     icon: '/images/icons/gears.svg',
-    image: '/images/marketing/Photo-9.jpg',
+    image: '/images/marketing/Operations.jpg',
     text: "Operations are at the crossroads between organizational strategy and sustainable growth. Effective operations management is the key that unlocks your organization's full competitive potential.",
   },
   {
     title: 'Sustainability',
     icon: '/images/icons/leaf-lightbulb.svg',
-    image: '/images/background.jpg',
+    image: '/images/marketing/Sustainability.jpg',
     text: 'Environmental, social, and corporate governance criteria are becoming increasingly relevant in the global business scene. As a result, companies are subject to a growing range of ethical and regulatory requirements that have an effect on business models and corporate operations.',
   },
   {
     title: 'Strategy and Organization',
     icon: '/images/icons/darts.svg',
-    image: '/images/marketing/Photo-15-skaliert.jpg',
+    image: '/images/marketing/Strategy and Organisation.jpg',
     text: 'Globalisation and digitalisation have brought a profound transformation to global markets. As a result, businesses are exposed to an increasingly competitive and dynamic environment.',
   },
   {
     title: 'Human Resources',
     icon: '/images/icons/people.svg',
-    image: '/images/marketing/Photo-2.jpg',
+    image: '/images/marketing/Human resources.jpg',
     text: 'Human capital is one of the most valuable assets any company could have. However, for optimal results, human resources should be strategically managed.',
   },
 ];
@@ -102,14 +103,7 @@ export default function ClientsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/hero-board-standing.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxHero src="/images/hero-board-standing.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -123,7 +117,7 @@ export default function ClientsPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-12">
             <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={80} className="flex-shrink-0" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
             <div className="flex-grow h-px bg-navy/20" />
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
@@ -146,7 +140,7 @@ export default function ClientsPage() {
               <div key={v.title} className="bg-white rounded-lg p-7 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100">
                 <h3 className="text-lg font-bold text-navy mb-3">{v.title}</h3>
                 <div className="w-8 h-0.5 bg-orange/50 mb-4" />
-                <p className="text-navy/60 leading-relaxed text-[15px]">{v.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{v.text}</p>
               </div>
             ))}
           </div>

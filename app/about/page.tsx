@@ -3,6 +3,7 @@ import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import BoardGrid from '@/components/BoardGrid';
 import ConsultantGrid from '@/components/ConsultantGrid';
+import ParallaxHero from '@/components/ParallaxHero';
 import { boardMembers, consultants, getContactPerson } from '@/data/team';
 
 export const metadata: Metadata = {
@@ -17,14 +18,7 @@ export default function AboutPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <Image
-          src="/images/hero-board-2.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <ParallaxHero src="/images/hero-board-2.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
@@ -38,7 +32,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-6 mb-12">
             <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={80} className="flex-shrink-0" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
             <div className="flex-grow h-px bg-navy/20" />
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
@@ -91,12 +85,12 @@ export default function AboutPage() {
               />
             </div>
             <div className="w-full md:w-1/2">
-              <p className="text-navy/70 leading-[1.75] mb-4 text-[15px]">
+              <p className="text-navy/70 leading-[1.75] mb-4 text-[15px] text-justify">
                 The two driving forces and creative minds behind our organization are Lennart Weifenbach
                 and Torben Fuhrmann. After first experiences in consulting combined with entrepreneurial
                 spirit, together they founded Maastricht Student Consulting in April 2014.
               </p>
-              <p className="text-navy/70 leading-[1.75] mb-6 text-[15px]">
+              <p className="text-navy/70 leading-[1.75] mb-6 text-[15px] text-justify">
                 Torben Fuhrmann is now Managing Director at Lions Trust GmbH and Lennart Weifenbach is
                 Managing Director at Leharo GmbH, both located in Germany.
               </p>

@@ -4,14 +4,16 @@ export interface BoardMember {
   image: string;
   email: string;
   linkedin?: string;
+  phone?: string;
+  imageClassName?: string;
 }
 
 export const boardMembers: BoardMember[] = [
-  { name: 'Niklas Ullrich', title: 'President', image: '/images/board/Niklas Ullrich.jpg', email: 'niklas.ullrich@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/niklas-ullrich-ba7a07321/' },
-  { name: 'Anna-Sophie von der Heydt', title: 'Vice-President', image: '/images/board/Anna-Sophie von der Heydt.jpg', email: 'anna-sophie.vonderheydt@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/anna-sophie-von-der-heydt-980674313/' },
-  { name: 'Federico Donati', title: 'Head of Business Development', image: '/images/board/Federico Donati.jpg', email: 'federico.donati@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/fede249/' },
-  { name: 'Jan Moog', title: 'Head of External Relations', image: '/images/board/Jan Moog.jpg', email: 'jan.moog@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jan-moog-93b117311/' },
-  { name: 'Lukas Lippert', title: 'Head of Human Resources', image: '/images/board/Lukas Lippert.jpg', email: 'lukas.lippert@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lukas-lippert-49524a2a1/' },
+  { name: 'Niklas Ullrich', title: 'President', image: '/images/board/Niklas Ullrich.jpg', email: 'niklas.ullrich@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/niklas-ullrich-ba7a07321/', phone: '+49 1573 0686972' },
+  { name: 'Anna-Sophie von der Heydt', title: 'Vice-President', image: '/images/board/Anna-Sophie von der Heydt.jpg', email: 'anna-sophie.vonderheydt@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/anna-sophie-von-der-heydt-980674313/', phone: '+49 1575 3477795' },
+  { name: 'Federico Donati', title: 'Head of Business Development', image: '/images/board/Federico Donati.jpg', email: 'federico.donati@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/fede249/', phone: '+49 1575 3506950', imageClassName: 'object-[center_25%]' },
+  { name: 'Jan Moog', title: 'Head of External Relations', image: '/images/board/Jan Moog.jpg', email: 'jan.moog@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jan-moog-93b117311/', phone: '+49 176 73552789' },
+  { name: 'Lukas Lippert', title: 'Head of Human Resources', image: '/images/board/Lukas Lippert.jpg', email: 'lukas.lippert@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lukas-lippert-49524a2a1/', phone: '+49 1575 9092572' },
 ];
 
 export interface Consultant {
@@ -22,7 +24,7 @@ export interface Consultant {
 }
 
 export const consultants: Consultant[] = [
-  { name: 'Lars Vandingenen', image: '/images/consultants/Lars.jpg' },
+  { name: 'Lars Vandingenen', image: '/images/consultants/Lars.jpg', imageClassName: 'object-[center_30%]' },
   { name: 'Lilly Vollmer', image: '/images/consultants/Lilly Vollmer.jpg' },
   { name: 'Morgan Joffe', image: '/images/consultants/Morgan.jpg' },
   { name: 'Aylin Cakici', image: '/images/consultants/Aylin.jpg' },
@@ -36,18 +38,18 @@ export const consultants: Consultant[] = [
   { name: 'Bintou Jabbi', image: '/images/consultants/Bintou Siya.jpg' },
   { name: 'Leonhard Cuzmin', image: '/images/consultants/Leonhard Cuzmin.jpg' },
   { name: 'Julian Kuni', image: '/images/consultants/Julian Kuni.jpg' },
-  { name: 'Arthur von Moltke', image: '/images/consultants/Arthur.jpg', imageClassName: 'scale-[1.35]' },
+  { name: 'Arthur von Moltke', image: '/images/consultants/Arthur.jpg', imageClassName: 'scale-[1.1]' },
   { name: 'Ida Gloede', image: '/images/consultants/Ida Gloede.jpg' },
   { name: 'Benjamin Ganovsky', image: '/images/consultants/Ben Ganovsky.jpg' },
   { name: 'Maxim Franko', image: '/images/consultants/Maxim Franko.jpg' },
   { name: 'Simon Kley', image: '/images/consultants/Simon Kley.jpg' },
   { name: 'Mona Stiegemeier', image: '/images/consultants/Mona Stiegemeier.jpg' },
   { name: 'Jona Weber', image: '/images/consultants/Jona.jpg' },
-  { name: 'Anna Gessner', image: '/images/consultants/Anna G.jpg' },
+  { name: 'Anna Gronsfeld', image: '/images/consultants/Anna G.jpg' },
   { name: 'Max Hesse', image: '/images/consultants/Max Hesse.jpg' },
   { name: 'Tom-Luis Marin', image: '/images/consultants/Tom-Luis.jpg' },
   { name: 'Anna Mitchell', image: '/images/consultants/Anna Mitchell.jpg' },
-  { name: 'Shervin', image: '/images/consultants/Shervin.jpg' },
+  { name: 'Shervin Krämer', image: '/images/consultants/Shervin.jpg' },
   { name: 'Martim Machado', image: '/images/consultants/Martim.jpg' },
   { name: 'Helene Werner', image: '/images/consultants/Helene Werner.jpg' },
   { name: 'Henrik Pickrahn', image: '/images/consultants/Henrik Pickrahn.jpeg' },

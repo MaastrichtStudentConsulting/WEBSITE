@@ -17,7 +17,7 @@ export default function BoardGrid({ members }: BoardGridProps) {
               fill
               quality={100}
               sizes="(max-width: 640px) 40vw, (max-width: 1024px) 22vw, 180px"
-              className="object-cover group-hover:scale-[1.03] transition-transform duration-300"
+              className={`object-cover group-hover:scale-[1.03] transition-transform duration-300 ${member.imageClassName ?? ''}`}
             />
           </div>
           <p className="font-semibold text-navy text-xs sm:text-[15px] leading-tight">{member.name}</p>

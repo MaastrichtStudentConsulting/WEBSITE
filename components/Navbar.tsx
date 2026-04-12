@@ -63,9 +63,9 @@ export default function Navbar() {
             <Image
               src="/images/msc-logo-big.png"
               alt="Maastricht Student Consulting"
-              width={148}
-              height={88}
-              className={`h-16 w-auto ${forceSolid ? '' : 'transition-all duration-200'} ${
+              width={120}
+              height={72}
+              className={`h-12 w-auto ${forceSolid ? '' : 'transition-all duration-200'} ${
                 isSolid ? '' : 'navbar-logo-white'
               }`}
               priority

@@ -1,33 +1,34 @@
 export interface Logo {
   name: string;
   image: string | null;
+  url?: string;
 }
 
 export const clientLogos: Logo[] = [
-  { name: 'SAP', image: '/images/clients/SAP.png' },
-  { name: 'Siemens', image: '/images/clients/Siemens-logo.png' },
-  { name: 'Philips', image: '/images/clients/philips-logo.png' },
-  { name: 'MAN', image: '/images/clients/MAN-logo.png' },
-  { name: 'Studydrive', image: '/images/clients/stidydrive-logo.png' },
-  { name: 'Nissin', image: '/images/clients/Nissin-logo.png' },
-  { name: 'Oqema', image: '/images/clients/Oqema.png' },
-  { name: 'Tennis Point', image: '/images/clients/Tennis-Point.png' },
-  { name: 'Rheinmetall', image: '/images/clients/Rheinmetall.png' },
-  { name: 'Qiagen', image: '/images/clients/Qiagen.png' },
-  { name: 'ProSiebenSat.1', image: '/images/clients/ProSiebenSat1.png' },
-  { name: 'Vaude', image: '/images/clients/Vaude.png' },
+  { name: 'SAP', image: '/images/clients/SAP.png', url: 'https://www.sap.com' },
+  { name: 'Siemens', image: '/images/clients/Siemens-logo.png', url: 'https://www.siemens.com' },
+  { name: 'Philips', image: '/images/clients/philips-logo.png', url: 'https://www.philips.com' },
+  { name: 'MAN', image: '/images/clients/MAN-logo.png', url: 'https://www.man.eu' },
+  { name: 'Studydrive', image: '/images/clients/stidydrive-logo.png', url: 'https://www.studydrive.net' },
+  { name: 'Nissin', image: '/images/clients/Nissin-logo.png', url: 'https://www.nissin.com' },
+  { name: 'Oqema', image: '/images/clients/Oqema.png', url: 'https://www.oqema.com' },
+  { name: 'Tennis Point', image: '/images/clients/Tennis-Point.png', url: 'https://www.tennis-point.com' },
+  { name: 'Rheinmetall', image: '/images/clients/Rheinmetall.png', url: 'https://www.rheinmetall.com' },
+  { name: 'Qiagen', image: '/images/clients/Qiagen.png', url: 'https://www.qiagen.com' },
+  { name: 'ProSiebenSat.1', image: '/images/clients/ProSiebenSat1.png', url: 'https://www.prosiebensat1.com' },
+  { name: 'Vaude', image: '/images/clients/Vaude.png', url: 'https://www.vaude.com' },
 ];
 
 export const partnerLogos: Logo[] = [
-  { name: 'Bain & Company', image: '/images/partners/Bain_and_Company_Logo_1.png' },
-  { name: 'EY', image: '/images/partners/EY-min.png' },
-  { name: 'Simon Kucher', image: '/images/partners/Simon-Kucher-Partners-min.png' },
-  { name: 'BCG', image: '/images/partners/BCG.png' },
-  { name: 'Roland Berger', image: '/images/partners/Roland_Berger_Logo_2015.png' },
-  { name: 'SET Management Consulting', image: '/images/partners/SET.webp' },
-  { name: 'Inverto', image: '/images/partners/Inverto-new.png' },
-  { name: 'thyssenkrupp Management Consulting', image: '/images/partners/Thyssenkrupp.png' },
-  { name: 'Esprit St. Gallen', image: '/images/partners/Esprit.png' },
+  { name: 'Bain & Company', image: '/images/partners/Bain_and_Company_Logo_1.png', url: 'https://www.bain.com' },
+  { name: 'EY', image: '/images/partners/EY-min.png', url: 'https://www.ey.com' },
+  { name: 'Simon Kucher', image: '/images/partners/Simon-Kucher-Partners-min.png', url: 'https://www.simon-kucher.com' },
+  { name: 'BCG', image: '/images/partners/BCG.png', url: 'https://www.bcg.com' },
+  { name: 'Roland Berger', image: '/images/partners/Roland_Berger_Logo_2015.png', url: 'https://www.rolandberger.com' },
+  { name: 'SET Management Consulting', image: '/images/partners/SET.webp', url: 'https://www.set-mc.com' },
+  { name: 'Inverto', image: '/images/partners/Inverto-new.png', url: 'https://www.inverto.com' },
+  { name: 'thyssenkrupp Management Consulting', image: '/images/partners/Thyssenkrupp.png', url: 'https://www.thyssenkrupp.com' },
+  { name: 'Esprit St. Gallen', image: '/images/partners/Esprit.png', url: 'https://www.espritsg.ch' },
   { name: 'European Student Consulting Network', image: '/images/partners/ESCN.png' },
 ];
 
