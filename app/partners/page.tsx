@@ -51,7 +51,7 @@ export default function PartnersPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/hero-partners-hands.jpg" className="object-center" />
+        <ParallaxHero src="/images/hero-partners-hands.jpg" className="object-[center_25%]" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -138,7 +138,7 @@ export default function PartnersPage() {
               We have built successful, long-term relationships with a number of different companies.
             </p>
           </div>
-          <LogoGrid logos={partnerLogos} largerLogos={['Simon Kucher', 'SET Management Consulting', 'Rheinmetall']} smallerLogos={['BCG', 'Inverto']} />
+          <LogoGrid logos={partnerLogos} largerLogos={['SET Management Consulting', 'Rheinmetall']} smallerLogos={['BCG', 'Inverto']} />
         </div>
       </section>
 

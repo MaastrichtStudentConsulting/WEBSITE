@@ -122,12 +122,10 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
             {services.map((service) => (
-              <div key={service.title} className="bg-white p-10 sm:p-12 text-center border border-gray-100">
-                <div className="flex justify-center mb-6">
-                  <Image src={service.icon} alt={service.title} width={80} height={80} />
-                </div>
-                <h3 className="text-xl font-bold text-navy mb-5">{service.title}</h3>
-                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{service.text}</p>
+              <div key={service.title} className="bg-white p-10 sm:p-12 text-center border border-gray-100 grid grid-rows-[80px_3rem_1fr] justify-items-center gap-y-5">
+                <Image src={service.icon} alt={service.title} width={80} height={80} className="self-end" />
+                <h3 className="text-xl font-bold text-navy self-center">{service.title}</h3>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify self-start">{service.text}</p>
               </div>
             ))}
           </div>

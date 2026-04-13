@@ -28,14 +28,16 @@ export default function ConsultantGrid({ consultants }: ConsultantGridProps) {
           className="group relative aspect-[3/4] rounded-lg overflow-hidden cursor-pointer"
         >
           {consultant.image ? (
-            <Image
-              src={consultant.image}
-              alt={consultant.name}
-              fill
-              quality={100}
-              className={`object-cover ${consultant.imageClassName ?? ''}`}
-              sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
-            />
+            <div className={`absolute inset-0 ${consultant.wrapperClassName ?? ''}`}>
+              <Image
+                src={consultant.image}
+                alt={consultant.name}
+                fill
+                quality={100}
+                className={`object-cover ${consultant.imageClassName ?? ''}`}
+                sizes="(max-width: 640px) 33vw, (max-width: 768px) 25vw, 20vw"
+              />
+            </div>
           ) : (
             <PlaceholderAvatar name={consultant.name} />
           )}

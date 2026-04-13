@@ -22,7 +22,7 @@ export const clientLogos: Logo[] = [
 export const partnerLogos: Logo[] = [
   { name: 'Bain & Company', image: '/images/partners/Bain_and_Company_Logo_1.png', url: 'https://www.bain.com' },
   { name: 'EY', image: '/images/partners/EY-min.png', url: 'https://www.ey.com' },
-  { name: 'Simon Kucher', image: '/images/partners/Simon-Kucher-Partners-min.png', url: 'https://www.simon-kucher.com' },
+  { name: 'Simon Kucher', image: '/images/partners/Simon Kucher.png', url: 'https://www.simon-kucher.com' },
   { name: 'BCG', image: '/images/partners/BCG.png', url: 'https://www.bcg.com' },
   { name: 'Roland Berger', image: '/images/partners/Roland_Berger_Logo_2015.png', url: 'https://www.rolandberger.com' },
   { name: 'SET Management Consulting', image: '/images/partners/SET.webp', url: 'https://www.set-mc.com' },
@@ -30,6 +30,7 @@ export const partnerLogos: Logo[] = [
   { name: 'thyssenkrupp Management Consulting', image: '/images/partners/Thyssenkrupp.png', url: 'https://www.thyssenkrupp.com' },
   { name: 'Esprit St. Gallen', image: '/images/partners/Esprit.png', url: 'https://www.espritsg.ch' },
   { name: 'European Student Consulting Network', image: '/images/partners/ESCN.png' },
+  { name: 'PrepLounge', image: '/images/partners/Preplounge logo.webp', url: 'https://www.preplounge.com' },
 ];
 
 export interface EventItem {

@@ -137,10 +137,10 @@ export default function ClientsPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {values.map((v) => (
-              <div key={v.title} className="bg-white rounded-lg p-7 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100">
+              <div key={v.title} className="bg-white rounded-lg p-7 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col">
                 <h3 className="text-lg font-bold text-navy mb-3">{v.title}</h3>
                 <div className="w-8 h-0.5 bg-orange/50 mb-4" />
-                <p className="text-navy/60 leading-relaxed text-[15px] text-justify">{v.text}</p>
+                <p className="text-navy/60 leading-relaxed text-[15px] text-justify flex-grow">{v.text}</p>
               </div>
             ))}
           </div>

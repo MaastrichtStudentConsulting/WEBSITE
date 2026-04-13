@@ -15,7 +15,7 @@ export default function LogoGrid({ logos, largerLogos = [], smallerLogos = [], r
         const isLarger = largerLogos.includes(logo.name);
         const isSmaller = smallerLogos.includes(logo.name);
         const removeBg = removeBackground.includes(logo.name);
-        const heightClass = isLarger ? 'max-h-[6.5rem]' : isSmaller ? 'max-h-10' : 'max-h-16';
+        const heightClass = isLarger ? 'max-h-[8rem]' : isSmaller ? 'max-h-10' : 'max-h-16';
         const content = logo.image ? (
           <Image
             src={logo.image}
