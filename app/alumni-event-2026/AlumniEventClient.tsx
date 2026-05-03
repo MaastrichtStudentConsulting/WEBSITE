@@ -118,10 +118,10 @@ export default function AlumniEventClient() {
                   {label}
                 </button>
               ))}
-              <button onClick={() => scrollTo('rsvp')}
-                className="ml-4 px-6 py-2 rounded text-[15px] font-medium transition-all border border-orange bg-orange text-white hover:bg-orange/90 font-sans cursor-pointer">
+              <a href="https://share.hsforms.com/19ouAODh8RR2SRyMAkUbVTQbw4n1" target="_blank" rel="noopener noreferrer"
+                className="ml-4 px-6 py-2 rounded text-[15px] font-medium transition-all border border-orange bg-orange text-white hover:bg-orange/90 font-sans no-underline">
                 RSVP
-              </button>
+              </a>
             </div>
 
             {/* Mobile hamburger */}
@@ -146,11 +146,11 @@ export default function AlumniEventClient() {
                 {label}
               </button>
             ))}
-            <button onClick={() => scrollTo('rsvp')}
-              className={`mt-6 border-2 border-orange bg-orange text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange/90 cursor-pointer font-sans transition-all duration-300 ${mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            <a href="https://share.hsforms.com/19ouAODh8RR2SRyMAkUbVTQbw4n1" target="_blank" rel="noopener noreferrer"
+              className={`mt-6 inline-block border-2 border-orange bg-orange text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange/90 font-sans no-underline transition-all duration-300 ${mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ transitionDelay: mobileOpen ? '200ms' : '0ms' }}>
               RSVP
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -180,9 +180,10 @@ export default function AlumniEventClient() {
               ))}
             </div>
           )}
-          <button onClick={() => scrollTo('rsvp')} className="bg-orange text-white border-0 px-10 py-4 rounded-full text-base font-bold tracking-wide cursor-pointer font-sans hover:opacity-90 transition-opacity">
+          <a href="https://share.hsforms.com/19ouAODh8RR2SRyMAkUbVTQbw4n1" target="_blank" rel="noopener noreferrer" className="inline-block bg-orange text-white px-10 py-4 rounded-full text-base font-bold tracking-wide hover:opacity-90 transition-opacity no-underline">
             RSVP Now
-          </button>
+          </a>
+          <p style={{ marginTop: '1rem', fontSize: '0.85rem', opacity: 0.6 }}>RSVP deadline: July 31, 2026</p>
         </div>
       </section>
 
@@ -238,11 +239,11 @@ export default function AlumniEventClient() {
                 <div key={time} style={{ display: 'grid', gridTemplateColumns: '20px 1fr', gap: '0 1.25rem' }}>
                   {/* Left: dot + line */}
                   <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#EE9643', flexShrink: 0, marginTop: '4px', zIndex: 1 }} />
-                    {!last && <div style={{ width: '2px', flex: 1, background: '#e0e0e0', minHeight: '40px' }} />}
+                    <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#EE9643', flexShrink: 0, zIndex: 1 }} />
+                    {!last && <div style={{ width: '2px', flex: 1, background: '#e0e0e0' }} />}
                   </div>
                   {/* Right: content */}
-                  <div style={{ paddingBottom: last ? 0 : '1.75rem' }}>
+                  <div style={{ paddingBottom: last ? '0.25rem' : '1.75rem' }}>
                     <div style={{ fontSize: '0.8rem', color: '#EE9643', fontWeight: 600, letterSpacing: '0.04em', marginBottom: '0.2rem' }}>{time}</div>
                     <div className="font-bold text-navy text-[1rem]">{title}</div>
                     <div className="text-gray-400 text-sm mt-0.5">{sub}</div>
@@ -257,12 +258,12 @@ export default function AlumniEventClient() {
             <h3 className="text-lg font-bold mb-6" style={{ color: '#EE9643' }}>Sunday, November 8th</h3>
             <div style={{ display: 'grid', gridTemplateColumns: '20px 1fr', gap: '0 1.25rem' }}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#EE9643', flexShrink: 0, marginTop: '4px' }} />
+                <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#EE9643', flexShrink: 0 }} />
               </div>
               <div>
                 <div style={{ fontSize: '0.8rem', color: '#EE9643', fontWeight: 600, letterSpacing: '0.04em', marginBottom: '0.2rem' }}>11:00 – 13:30</div>
                 <div className="font-bold text-navy text-[1rem]">Hangover Brunch</div>
-                <div className="text-gray-400 text-sm mt-0.5">(to be announced)</div>
+                <div className="text-gray-400 text-sm mt-0.5">Lumière, Bassin 88, 6211 AK Maastricht</div>
               </div>
             </div>
           </div>
@@ -318,36 +319,36 @@ export default function AlumniEventClient() {
           </div>
           <div className="ae-animate grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
             {[
-              { name: 'The Social Hub', img: 'the-social-hub', address: 'Sphinxcour 9A, Maastricht', price: 'From €148 / night', url: 'https://www.thesocialhub.co' },
-              { name: 'Kruisherenhotel', img: 'kruisherenhotel', address: 'Kruisherengang 19-23, Maastricht', price: 'From €282 / night', url: 'https://www.oostwegelcollection.nl/kruisherenhotel-maastricht/' },
-              { name: 'Haas Hustinx', img: 'haas-hustinx', address: 'Vrijthof 20, Maastricht', price: 'From €216 / night', url: 'https://haashustinx.nl' },
-              { name: 'Fitz Roy', img: 'fitz-roy', address: 'Boschstraat 70, Maastricht', price: 'From €230 / night', url: 'https://www.fitz-roy.nl' },
-            ].map(({ name, img, address, price, url }) => (
+              { name: 'Hotel Monastere', img: 'hotel-monastere.jpg', address: 'Slavante 1, Maastricht', price: 'From €213 / night', note: '15% discount, 2 night min.', url: 'https://app.mews.com/distributor/a754984a-ae1f-4759-af98-af4200a37ae8?mewsVoucherCode=MConsulting6%2F7%2F8nov2026' },
+              { name: 'Amrath Hotel DuCasque', img: 'hotel-ducasque.jpg', address: 'Helmstraat 14, Maastricht', price: 'From €258 / night', note: 'Alumni discount included in link', url: 'https://app.mews.com/distributor/8f00e842-5707-4ea8-b117-b43a0088ae6d?mewsStart=2026-11-06&mewsEnd=2026-11-08&language=nl-NL&mewsVoucherCode=Alumni26' },
+              { name: 'Fitz Roy', img: 'fitz-roy.jpeg', address: 'Boschstraat 70, Maastricht', price: 'From €279 / night', note: 'Group discount, book 1 month before', url: 'https://www.fitz-roy.nl' },
+              { name: 'Leonardo Hotel', img: 'leonardo.jpg', address: 'Maastricht City Centre', price: 'Single €209 / Double €229', note: 'Pre-reserved rooms', url: 'https://www.leonardo-hotels.com/maastricht' },
+            ].map(({ name, img, address, price, note, url }) => (
               <a key={name} href={url} target="_blank" rel="noopener noreferrer"
                 className="block rounded-xl overflow-hidden border border-gray-200 bg-white no-underline text-inherit hover:shadow-md transition-shadow">
-                <div className="relative h-56">
-                  <Image src={`/images/alumni-event/${img}.jpeg`} alt={name} fill style={{ objectFit: 'cover' }} />
+                <div className="relative h-48">
+                  <Image src={`/images/alumni-event/${img}`} alt={name} fill style={{ objectFit: 'cover' }} />
                 </div>
                 <div className="p-4">
                   <h3 className="text-sm font-bold text-navy mb-1">{name}</h3>
-                  <p className="text-xs text-gray-400 mb-2">{address}</p>
-                  <p className="text-sm font-semibold text-orange">{price}</p>
+                  <p className="text-xs text-gray-400 mb-1">{address}</p>
+                  <p className="text-sm font-semibold text-orange mb-1">{price}</p>
+                  <p className="text-xs text-gray-400 italic">{note}</p>
                 </div>
               </a>
             ))}
           </div>
-          <p className="ae-animate text-center text-gray-400 text-xs mt-6">Prices are indicative. Discount codes may follow.</p>
         </div>
       </section>
 
       {/* ── RSVP ── */}
       <section id="rsvp" className="py-24 bg-navy text-white text-center">
         <div className="ae-animate max-w-2xl mx-auto px-6">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">We can&apos;t wait to celebrate with you!</h2>
-          <p className="text-white/70 text-lg mb-8">Please confirm your participation by <strong className="text-white">July 31, 2026</strong>.</p>
-          <a href="#rsvp" className="inline-block bg-orange text-white px-12 py-4 rounded-full text-base font-bold tracking-wide hover:opacity-90 transition-opacity no-underline">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">We can&apos;t wait to celebrate with you!</h2>
+          <a href="https://share.hsforms.com/19ouAODh8RR2SRyMAkUbVTQbw4n1" className="inline-block bg-orange text-white px-12 py-4 rounded-full text-base font-bold tracking-wide hover:opacity-90 transition-opacity no-underline">
             RSVP Now
           </a>
+          <p className="text-white/60 text-sm mt-6">RSVP deadline: July 31, 2026</p>
         </div>
       </section>
 
