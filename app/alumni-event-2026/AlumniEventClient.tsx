@@ -100,15 +100,15 @@ export default function AlumniEventClient() {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${isSolid ? 'bg-white shadow-[0_1px_3px_rgba(0,0,0,0.08)]' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <button onClick={() => scrollTo('hero')} className="flex-shrink-0 bg-transparent border-0 cursor-pointer p-0">
+            <a href="https://maastrichtconsulting.com" className="flex-shrink-0 p-0 no-underline">
               <Image
-                src={isSolid ? '/images/msc-logo-big.png' : '/images/msc-logo-big.png'}
+                src="/images/msc-logo-big.png"
                 alt="Maastricht Student Consulting"
                 width={120} height={72}
                 className={`h-12 w-auto transition-all duration-200 ${!isSolid ? 'navbar-logo-white' : ''}`}
                 priority
               />
-            </button>
+            </a>
 
             {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-1">
