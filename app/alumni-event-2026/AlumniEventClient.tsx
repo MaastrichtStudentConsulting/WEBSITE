@@ -320,7 +320,7 @@ export default function AlumniEventClient() {
           <div className="ae-animate grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
             {[
               { name: 'Hotel Monastere', img: 'hotel-monastere.jpg', address: 'Slavante 1, Maastricht', price: 'From €213 / night', note: '15% discount, 2 night min.', url: 'https://app.mews.com/distributor/a754984a-ae1f-4759-af98-af4200a37ae8?mewsVoucherCode=MConsulting6%2F7%2F8nov2026' },
-              { name: 'Amrath Hotel DuCasque', img: 'hotel-ducasque.jpg', address: 'Helmstraat 14, Maastricht', price: 'From €258 / night', note: 'Alumni discount included in link', url: 'https://app.mews.com/distributor/8f00e842-5707-4ea8-b117-b43a0088ae6d?mewsStart=2026-11-06&mewsEnd=2026-11-08&language=nl-NL&mewsVoucherCode=Alumni26' },
+              { name: 'Amrath Hotel DuCasque', img: 'hotel-ducasque.jpg', address: 'Helmstraat 14, Maastricht', price: 'From €258 / night', note: '10% alumni discount included in link', url: 'https://app.mews.com/distributor/8f00e842-5707-4ea8-b117-b43a0088ae6d?mewsStart=2026-11-06&mewsEnd=2026-11-08&language=nl-NL&mewsVoucherCode=Alumni26' },
               { name: 'Fitz Roy', img: 'fitz-roy.jpeg', address: 'Boschstraat 70, Maastricht', price: 'From €279 / night', note: 'Group discount, book 1 month before', url: 'https://www.fitz-roy.nl' },
               { name: 'Leonardo Hotel', img: 'leonardo.jpg', address: 'Maastricht City Centre', price: 'Single €209 / Double €229', note: 'Pre-reserved rooms', url: 'https://www.leonardo-hotels.com/maastricht' },
             ].map(({ name, img, address, price, note, url }) => (
