@@ -16,7 +16,7 @@ export default function ApplicationCTA() {
         Become part of our team!
       </h2>
       <p className="text-xl text-white/80 font-medium mb-10 max-w-2xl mx-auto">
-        Applications are now closed. Thank you to everyone who applied!
+        Applications aren't open yet, but they're coming soon. Follow us on social media to be the first to know!
       </p>
 
     </div>
