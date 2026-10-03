@@ -37,7 +37,7 @@ function EventCard({ e }: { e: UpcomingEvent }) {
       <div className="relative z-10">
         <DateBadge date={e.date} />
       </div>
-      <div className="mt-5 rounded-xl bg-white border border-gray-100 shadow-sm p-5 h-[200px] flex flex-col">
+      <div className="mt-5 rounded-xl bg-white border border-gray-100 shadow-sm p-5 h-[225px] flex flex-col">
         <span className={`self-start rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider ${typeStyles[e.type]}`}>
           {e.type}
         </span>
