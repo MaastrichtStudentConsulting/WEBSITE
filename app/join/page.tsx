@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
-import CountdownTimer from '@/components/CountdownTimer';
 import ApplicationCTA from '@/components/ApplicationCTA';
+import StudentQA from '@/components/StudentQA';
+import { INFO_NIGHT, OPENING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const applicationSteps = [
   {
     title: 'Attend our Info Night',
-    description: 'Join our info night to learn more about MSC and to meet our current consultants.',
+    description: `Join our Info Night on ${INFO_NIGHT.dateLabel} to learn more about MSC and to meet our current consultants.`,
     icon: '/images/icons/chat-bubble.svg',
   },
   {
@@ -25,7 +26,7 @@ const applicationSteps = [
   },
   {
     title: 'Upload it to MSC',
-    description: 'When the application window opens, click on the link icon to be redirected to the upload file for your documents. The link is also accessible on our Instagram.',
+    description: `Applications open on ${OPENING_LABEL}. Click "Apply now" on this page to submit your documents. The link is also shared on our Instagram.`,
     icon: '/images/icons/send4.svg',
   },
   {
@@ -37,6 +38,19 @@ const applicationSteps = [
     title: 'Welcome to MSC',
     description: "We will inform you about the results, once all of the period's interviews have been conducted.",
     icon: '/images/icons/contract.svg',
+  },
+];
+
+const roles = [
+  {
+    team: 'Consulting Team',
+    title: 'Consultant',
+    text: 'Apply your academic knowledge to real-life business challenges and work on impactful projects for our clients in teams of 4–8 students.',
+  },
+  {
+    team: 'Marketing Team',
+    title: 'Marketing / PR Strategist',
+    text: "Shape MSC's communication, branding and content creation, from our social media presence to events and campaigns.",
   },
 ];
 
@@ -72,8 +86,42 @@ export default function JoinPage() {
         </div>
       </section>
 
+      {/* Roles + Info Night */}
+      <section className="pb-20 sm:pb-28">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Open Positions</h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {roles.map((role) => (
+              <div key={role.title} className="bg-white rounded-xl border border-gray-100 shadow-sm p-7 sm:p-8 border-t-4 border-t-orange">
+                <p className="text-orange text-xs font-bold uppercase tracking-[0.18em] mb-2">{role.team}</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-navy mb-3">{role.title}</h3>
+                <p className="text-navy/65 leading-relaxed text-[15px]">{role.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div id="info-night" className="mt-6 scroll-mt-28 rounded-xl bg-navy text-white p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+            <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-white text-navy flex flex-col items-center justify-center leading-none">
+              <span className="text-[11px] font-bold uppercase tracking-widest text-orange">Nov</span>
+              <span className="text-3xl font-bold mt-1">2</span>
+            </div>
+            <div className="flex-grow">
+              <p className="text-orange text-xs font-bold uppercase tracking-[0.18em] mb-1">Info Night</p>
+              <h3 className="text-xl sm:text-2xl font-bold">{INFO_NIGHT.dateLabel}</h3>
+              <p className="text-white/70 text-sm mt-1">{INFO_NIGHT.location}</p>
+              <p className="text-white/85 mt-3 leading-relaxed text-[15px]">
+                Get to know MSC, meet current members and ask all your questions before applying.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Application Status + Countdown + Talent Pool */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden" id="apply">
         <Image
           src="/images/become-team-new.jpg"
           alt=""
@@ -81,7 +129,7 @@ export default function JoinPage() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/30 to-black/55" />
 
         <ApplicationCTA />
       </section>
@@ -96,6 +144,8 @@ export default function JoinPage() {
           <ProjectTimeline steps={applicationSteps} />
         </div>
       </section>
+
+      <StudentQA />
 
       <ContactSection contactPerson={contact} />
     </>

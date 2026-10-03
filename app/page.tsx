@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from '@/components/SafeImage';
 import HeroSection from '@/components/HeroSection';
+import RecruitmentBanner from '@/components/RecruitmentBanner';
 import BoardGrid from '@/components/BoardGrid';
 import ReferenceCard from '@/components/ReferenceCard';
 import { boardMembers } from '@/data/team';
@@ -55,6 +56,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection heading="Be inspired by the next generation." video showStats />
+      <RecruitmentBanner />
 
       {/* Intro */}
       <section className="py-20 sm:py-28">
