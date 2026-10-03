@@ -3,6 +3,7 @@ import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import MemberTestimonialSlider from '@/components/MemberTestimonialSlider';
 import EventSlider from '@/components/EventSlider';
+import AlumniCompanies from '@/components/AlumniCompanies';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
@@ -189,6 +190,8 @@ export default function StudentsPage() {
       </section>
 
       {/* What it's like to be at MSC */}
+      <AlumniCompanies />
+
       <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
