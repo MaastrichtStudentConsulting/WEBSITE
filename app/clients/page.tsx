@@ -32,6 +32,18 @@ const values = [
 
 const services = [
   {
+    title: 'AI & Automation',
+    icon: '/images/icons/ai-chip.svg',
+    image: '/images/marketing/Photo-15-skaliert.jpg',
+    text: 'AI is changing how companies operate. We identify where AI creates real value in your business, map and optimise your processes, and support you in implementing AI projects – from the first use case to a working solution in day-to-day operations.',
+  },
+  {
+    title: 'Mergers & Acquisitions',
+    icon: '/images/icons/merge.svg',
+    image: '/images/marketing/Photo.jpg',
+    text: 'We support buy-side and sell-side mandates on a European-wide basis. From market screening and long-list building to target and buyer identification and structured outreach, we give you a solid, data-driven foundation for every transaction.',
+  },
+  {
     title: 'Marketing',
     icon: '/images/icons/megaphone.svg',
     image: '/images/marketing/Marketing.jpg',
@@ -103,7 +115,7 @@ export default function ClientsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/hero-board-standing.jpg" />
+        <ParallaxHero src="/images/team/board-hero.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">

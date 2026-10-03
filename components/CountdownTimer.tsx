@@ -27,7 +27,7 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
       <div className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tabular-nums leading-none">
         {String(value).padStart(2, '0')}
       </div>
-      <span className="mt-2 text-white/60 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em]">
+      <span className="mt-2 text-white/70 text-[11px] sm:text-xs font-medium uppercase tracking-[0.15em]">
         {label}
       </span>
     </div>
@@ -36,7 +36,7 @@ function TimeUnit({ value, label }: { value: number; label: string }) {
 
 function Separator() {
   return (
-    <span className="text-4xl sm:text-5xl lg:text-6xl font-bold text-orange/80 leading-none -mt-6 sm:-mt-7" aria-hidden>
+    <span className="text-4xl sm:text-5xl lg:text-6xl font-light text-white/50 leading-none -mt-6 sm:-mt-7" aria-hidden>
       :
     </span>
   );

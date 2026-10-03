@@ -10,10 +10,10 @@ import { homeReferences } from '@/data/testimonials';
 const cards = [
   {
     title: 'Clients',
-    image: '/images/hero-board-2.jpg',
+    image: '/images/team/board-card.jpg',
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
-    imageClassName: '!-left-[5%] !-right-[31%] !w-[136%] !max-w-none',
+    imageClassName: '',
   },
   {
     title: 'Partners',
@@ -24,7 +24,7 @@ const cards = [
   },
   {
     title: 'Students',
-    image: '/images/card-students.png',
+    image: '/images/team/students-card.jpg',
     href: '/students',
     text: 'As a top-tier student with an inquiring mind, you are always looking for ways to take your knowledge further? Discover the practical side of your academic knowledge and join us as a student consultant. With MSC, your education has real-life value.',
     imageClassName: '',
@@ -41,6 +41,16 @@ const services = [
     title: 'Operations',
     icon: '/images/icons/gears.svg',
     text: 'In order to be efficient and generate value, corporate processes must be frequently evaluated. With our operations services we analyse critical processes in your company and help you transform a high-level strategy into actionable steps.',
+  },
+  {
+    title: 'AI & Automation',
+    icon: '/images/icons/ai-chip.svg',
+    text: 'AI is changing how companies work. We identify where AI creates real value in your business, map and optimise your processes, and support you in implementing AI projects – from the first use case to a working solution.',
+  },
+  {
+    title: 'Mergers & Acquisitions',
+    icon: '/images/icons/merge.svg',
+    text: 'We support buy-side and sell-side mandates on a European-wide basis. From market screening and long-list building to target and buyer identification, we give you a structured, data-driven foundation for every transaction.',
   },
   {
     title: 'Strategy & Organisations',
@@ -119,12 +129,12 @@ export default function HomePage() {
           <p className="text-center text-navy/60 max-w-4xl mx-auto leading-relaxed mb-14">
             Since 2014 we have completed more than 175 projects for clients worldwide. In every
             interaction, we put our clients needs and goals first and keep communication channels open.
-            We can offer you services in the areas of strategy development, marketing, finance, HR and
-            market research, among many others.
+            We offer services in strategy development, marketing, operations, AI and M&amp;A, as well as
+            finance, HR and market research, among many others.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+          <div className="flex flex-wrap justify-center">
             {services.map((service) => (
-              <div key={service.title} className="bg-white p-10 sm:p-12 text-center border border-gray-100 grid grid-rows-[80px_3rem_1fr] justify-items-center gap-y-5">
+              <div key={service.title} className="w-full md:w-1/2 lg:w-1/3 bg-white p-10 sm:p-12 text-center border border-gray-100 grid grid-rows-[80px_3rem_1fr] justify-items-center gap-y-5">
                 <Image src={service.icon} alt={service.title} width={80} height={80} className="self-end" />
                 <h3 className="text-xl font-bold text-navy self-center">{service.title}</h3>
                 <p className="text-navy/60 leading-relaxed text-[15px] text-justify self-start">{service.text}</p>

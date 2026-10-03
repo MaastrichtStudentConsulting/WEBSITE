@@ -43,12 +43,10 @@ const applicationSteps = [
 
 const roles = [
   {
-    team: 'Consulting Team',
     title: 'Consultant',
     text: 'Apply your academic knowledge to real-life business challenges and work on impactful projects for our clients in teams of 4–8 students.',
   },
   {
-    team: 'Marketing Team',
     title: 'Marketing / PR Strategist',
     text: "Shape MSC's communication, branding and content creation, from our social media presence to events and campaigns.",
   },
@@ -61,7 +59,7 @@ export default function JoinPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/hero-board-1.jpg" />
+        <ParallaxHero src="/images/team/team-hero.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -88,22 +86,21 @@ export default function JoinPage() {
 
       {/* Roles + Info Night */}
       <section className="pb-20 sm:pb-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Open Positions</h2>
             <div className="section-divider mx-auto mt-4" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 md:divide-x md:divide-navy/10">
             {roles.map((role) => (
-              <div key={role.title} className="bg-white rounded-xl border border-gray-100 shadow-sm p-7 sm:p-8 border-t-4 border-t-orange">
-                <p className="text-orange text-xs font-bold uppercase tracking-[0.18em] mb-2">{role.team}</p>
+              <div key={role.title} className="text-center md:px-10">
                 <h3 className="text-xl sm:text-2xl font-bold text-navy mb-3">{role.title}</h3>
                 <p className="text-navy/65 leading-relaxed text-[15px]">{role.text}</p>
               </div>
             ))}
           </div>
 
-          <div id="info-night" className="mt-6 scroll-mt-28 rounded-xl bg-navy text-white p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+          <div id="info-night" className="mt-14 scroll-mt-28 rounded-xl bg-navy text-white p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
             <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-white text-navy flex flex-col items-center justify-center leading-none">
               <span className="text-[11px] font-bold uppercase tracking-widest text-orange">Nov</span>
               <span className="text-3xl font-bold mt-1">2</span>
@@ -129,7 +126,7 @@ export default function JoinPage() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/30 to-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/40 to-black/60" />
 
         <ApplicationCTA />
       </section>

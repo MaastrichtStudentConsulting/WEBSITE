@@ -15,9 +15,9 @@ export const boardMembers: BoardMember[] = [
   { name: 'Niklas Ullrich', title: 'President', image: `${B}niklas-ullrich.jpg`, email: 'niklas.ullrich@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/niklas-ullrich-ba7a07321/', phone: '+49 1573 0686972' },
   { name: 'Lukas Lippert', title: 'Vice President', image: `${B}lukas-lippert.jpg`, email: 'lukas.lippert@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lukas-lippert-49524a2a1/', phone: '+49 1575 9092572' },
   { name: 'Jan Moog', title: 'Head of External Relations', image: `${B}jan-moog.jpg`, email: 'jan.moog@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jan-moog-93b117311/', phone: '+49 176 73552789' },
-  { name: 'Henrik Pickrahn', title: 'Head of Human Resources', image: `${B}henrik-pickrahn.jpg`, email: 'henrik.pickrahn@maastrichtconsulting.com' },
-  { name: 'Lars Vandingenen', title: 'Head of Business Development', image: `${B}lars-vandingenen.jpg`, email: 'lars.vandingenen@maastrichtconsulting.com' },
-  { name: 'Jona Weber', title: 'Head of Public Relations', image: `${B}jona-weber.jpg`, email: 'jona.weber@maastrichtconsulting.com' },
+  { name: 'Henrik Pickrahn', title: 'Head of Human Resources', image: `${B}henrik-pickrahn.jpg`, email: 'henrik.pickrahn@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/henrik-pickrahn/', phone: '+49 1578 0996454' },
+  { name: 'Lars Vandingenen', title: 'Head of Business Development', image: `${B}lars-vandingenen.jpg`, email: 'lars.vandingenen@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lars-vandingenen/', phone: '+32 469 46 51 21' },
+  { name: 'Jona Weber', title: 'Head of Public Relations', image: `${B}jona-weber.jpg`, email: 'jona.weber@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jona-weber/' },
 ];
 
 export interface Consultant {
