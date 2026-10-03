@@ -81,7 +81,7 @@ export default function ApplicationCTA() {
           <span
             aria-disabled="true"
             title={open ? 'The application link will be added shortly' : `Applications open ${OPENING_LABEL}`}
-            className="inline-flex items-center justify-center gap-2 bg-white/20 text-white/70 px-10 py-3.5 rounded-full text-sm font-semibold tracking-wide cursor-not-allowed select-none min-w-[220px] backdrop-blur-[2px]"
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/70 bg-black/25 text-white px-10 py-3 rounded-full text-sm font-semibold tracking-wide cursor-not-allowed select-none min-w-[220px]"
           >
             <LockIcon />
             {open ? 'Apply now' : `Apply from ${OPENING_SHORT}`}
