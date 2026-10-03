@@ -106,16 +106,31 @@ export default function ApplicationCTA() {
           href={TALENT_POOL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-[14px] rounded-full text-base font-semibold tracking-wide transition-colors min-w-[240px]"
+          className={`group inline-flex items-center justify-center gap-2 px-8 py-[14px] rounded-full text-base font-bold tracking-wide transition-colors min-w-[240px] ${
+            live
+              ? 'border-2 border-white text-white hover:bg-white hover:text-navy'
+              : 'bg-white text-navy hover:bg-orange hover:text-white shadow-lg ring-4 ring-white/25'
+          }`}
         >
-          Join the Talent Pool
+          Join the Talent Pool <ArrowIcon />
         </a>
       </div>
 
-      <p className="mt-6 text-white/85 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-        Not ready to apply yet? Join our Talent Pool and be the first to hear about application dates,
-        the Info Night and upcoming events.
-      </p>
+      {live ? (
+        <p className="mt-6 text-white/85 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          Not ready to apply yet? Join our Talent Pool to hear about future recruitment rounds and events.
+        </p>
+      ) : (
+        <div className="mt-7 max-w-xl mx-auto rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-4">
+          <p className="text-white font-semibold text-sm sm:text-base">
+            Applications are not open yet, but you can already get a head start.
+          </p>
+          <p className="text-white/85 text-sm mt-1 leading-relaxed">
+            Join our Talent Pool and be the first to hear when applications open, plus get updates on the
+            Info Night and upcoming events.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
