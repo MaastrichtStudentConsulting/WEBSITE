@@ -48,9 +48,6 @@ export default function ConsultantGrid({ consultants, columns }: ConsultantGridP
           <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-full group-focus-within:h-full bg-navy/75 transition-all duration-700 ease-in-out flex items-end justify-center overflow-hidden">
             <div className="text-center px-2 pb-4 sm:pb-6">
               <p className="text-white text-xs sm:text-sm lg:text-base font-semibold leading-tight">{consultant.name}</p>
-              {consultant.role && (
-                <p className="text-white/70 text-[10px] sm:text-xs mt-1 leading-tight">{consultant.role}</p>
-              )}
               {consultant.linkedin && (
                 <a
                   href={consultant.linkedin}

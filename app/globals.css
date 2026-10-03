@@ -87,3 +87,21 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .name-marquee-ltr, .name-marquee-rtl { animation: none; }
 }
+
+/* Project flip cards: flip on hover (desktop) or tap (touch) */
+.flip-card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.flip-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-back { transform: rotateY(180deg); }
+.flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner { transition: none; }
+}

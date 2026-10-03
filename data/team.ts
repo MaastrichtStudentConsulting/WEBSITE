@@ -37,7 +37,7 @@ const BD = 'Consultant & Business Development';
 /** 25 consultants, ordered by joining date (Jan 2025 → Jun 2026). */
 export const consultants: Consultant[] = [
   { name: 'Maxim Franko', image: `${C}maxim-franko.jpg`, linkedin: 'https://www.linkedin.com/in/maxim-franko-560378291/' },
-  { name: 'Caspar Kleinewiese', image: `${C}caspar-kleinewiese.jpg` },
+  { name: 'Caspar Kleinewiese', image: `${C}caspar-kleinewiese.jpg`, linkedin: 'https://www.linkedin.com/in/caspar-kleinewiese-63b587254/' },
   { name: 'Federico Donati', image: `${C}federico-donati.jpg`, linkedin: 'https://www.linkedin.com/in/fede249/' },
   { name: 'Jonathan Altmann', image: `${C}jonathan-altmann.jpg`, linkedin: 'https://www.linkedin.com/in/jonathan-altmann-8a36a7272/' },
   { name: 'Lilly Vollmer', image: `${C}lilly-vollmer.jpg`, linkedin: 'https://www.linkedin.com/in/lilly-vollmer-4b624032b/' },

@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import LogoMarquee from '@/components/LogoMarquee';
 import ServiceGrid from '@/components/ServiceGrid';
+import ProjectCards from '@/components/ProjectCards';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
@@ -170,8 +171,22 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      {/* Project Cycle */}
+      {/* Selected projects */}
       <section className="py-20 sm:py-28 bg-gray-50/80">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Selected Projects</h2>
+            <div className="section-divider mx-auto mt-4" />
+            <p className="mt-6 text-navy/60 max-w-2xl mx-auto">
+              A few of the 175+ projects we have delivered. Hover over or tap a card to see what we did.
+            </p>
+          </div>
+          <ProjectCards />
+        </div>
+      </section>
+
+      {/* Project Cycle */}
+      <section className="py-20 sm:py-28">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-6">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Project Cycle</h2>
@@ -185,7 +200,7 @@ export default function ClientsPage() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-20 sm:py-28">
+      <section className="py-20 sm:py-28 bg-gray-50/80">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Clients</h2>
