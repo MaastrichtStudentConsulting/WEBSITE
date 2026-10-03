@@ -25,6 +25,7 @@ export interface Consultant {
   image: string | null;
   /** Shown under the name on hover, e.g. "Business Development" */
   role?: string;
+  linkedin?: string;
   /** Extra Tailwind classes on the <Image>, e.g. to zoom out a tight crop */
   imageClassName?: string;
   /** Extra Tailwind classes on the wrapper div, e.g. scale transforms */
@@ -35,38 +36,38 @@ const BD = 'Consultant & Business Development';
 
 /** 25 consultants, ordered by joining date (Jan 2025 → Jun 2026). */
 export const consultants: Consultant[] = [
-  { name: 'Maxim Franko', image: `${C}maxim-franko.jpg` },
+  { name: 'Maxim Franko', image: `${C}maxim-franko.jpg`, linkedin: 'https://www.linkedin.com/in/maxim-franko-560378291/' },
   { name: 'Caspar Kleinewiese', image: `${C}caspar-kleinewiese.jpg` },
-  { name: 'Federico Donati', image: `${C}federico-donati.jpg` },
-  { name: 'Jonathan Altmann', image: `${C}jonathan-altmann.jpg` },
-  { name: 'Lilly Vollmer', image: `${C}lilly-vollmer.jpg` },
-  { name: 'Julian Kuni', image: `${C}julian-kuni.jpg` },
-  { name: 'Mona Stiegemeier', image: `${C}mona-stiegemeier.jpg` },
-  { name: 'Arthur von Moltke', image: `${C}arthur-von-moltke.jpg` },
-  { name: 'Morgan Joffe', image: `${C}morgan-joffe.jpg` },
-  { name: 'Madeleine Liljenqvist', image: `${C}madeleine-liljenqvist.jpg`, role: BD },
-  { name: 'Bintou Jabbi', image: `${C}bintou-jabbi.jpg` },
-  { name: 'Aylin Cakici', image: `${C}aylin-cakici.jpg` },
-  { name: 'Tom-Luis Marin', image: `${C}tom-luis-marin.jpg` },
-  { name: "Brian O'Sullivan", image: `${C}brian-osullivan.jpg` },
-  { name: 'Konstantin Klinkenberg', image: '/images/consultants/Konstantin.jpg', role: BD },
-  { name: 'Mia Czwalinna', image: `${C}mia-czwalinna.jpg` },
-  { name: 'Sara Zaadi', image: `${C}sara-zaadi.jpg`, role: BD },
-  { name: 'Paula Teschendorf', image: `${C}paula-teschendorf.jpg` },
-  { name: 'Giacomo Ferioli', image: `${C}giacomo-ferioli.jpg` },
-  { name: 'Batuhan Özden', image: `${C}batuhan-oezden.jpg` },
-  { name: 'Pauline Siepmann', image: `${C}pauline-siepmann.jpg`, role: BD },
-  { name: 'Anton Niebuer', image: `${C}anton-niebuer.jpg` },
-  { name: 'Carl Liljenqvist', image: `${C}carl-liljenqvist.jpg` },
-  { name: 'Emil Mahr', image: `${C}emil-mahr.jpg`, role: BD },
-  { name: 'Julius Koeberich', image: `${C}julius-koeberich.jpg`, role: BD },
+  { name: 'Federico Donati', image: `${C}federico-donati.jpg`, linkedin: 'https://www.linkedin.com/in/fede249/' },
+  { name: 'Jonathan Altmann', image: `${C}jonathan-altmann.jpg`, linkedin: 'https://www.linkedin.com/in/jonathan-altmann-8a36a7272/' },
+  { name: 'Lilly Vollmer', image: `${C}lilly-vollmer.jpg`, linkedin: 'https://www.linkedin.com/in/lilly-vollmer-4b624032b/' },
+  { name: 'Julian Kuni', image: `${C}julian-kuni.jpg`, linkedin: 'https://www.linkedin.com/in/julian-kuni-963542348/' },
+  { name: 'Mona Stiegemeier', image: `${C}mona-stiegemeier.jpg`, linkedin: 'https://www.linkedin.com/in/mona-sophie-stiegemeier-633347331/' },
+  { name: 'Arthur von Moltke', image: `${C}arthur-von-moltke.jpg`, linkedin: 'https://www.linkedin.com/in/arthur-von-moltke-b90861359/' },
+  { name: 'Morgan Joffe', image: `${C}morgan-joffe.jpg`, linkedin: 'https://www.linkedin.com/in/morganjoffe/' },
+  { name: 'Madeleine Liljenqvist', image: `${C}madeleine-liljenqvist.jpg`, role: BD, linkedin: 'https://www.linkedin.com/in/madeleine-liljenqvist-02b5053a4/' },
+  { name: 'Bintou Jabbi', image: `${C}bintou-jabbi.jpg`, linkedin: 'https://www.linkedin.com/in/bintou-jabbi-3a25aa300/' },
+  { name: 'Aylin Cakici', image: `${C}aylin-cakici.jpg`, linkedin: 'https://www.linkedin.com/in/aylin-cakici-439725338/' },
+  { name: 'Tom-Luis Marin', image: `${C}tom-luis-marin.jpg`, linkedin: 'https://www.linkedin.com/in/tom-luis-marin-670044251/' },
+  { name: "Brian O'Sullivan", image: `${C}brian-osullivan.jpg`, linkedin: 'https://www.linkedin.com/in/brian-o-sullivan07/' },
+  { name: 'Konstantin Klinkenberg', image: '/images/consultants/Konstantin.jpg', role: BD, linkedin: 'https://www.linkedin.com/in/konstantin-klinkenberg/' },
+  { name: 'Mia Czwalinna', image: `${C}mia-czwalinna.jpg`, linkedin: 'https://www.linkedin.com/in/miaczwalinna/' },
+  { name: 'Sara Zaadi', image: `${C}sara-zaadi.jpg`, role: BD, linkedin: 'https://www.linkedin.com/in/sara-zaadi-6952283b5/' },
+  { name: 'Paula Teschendorf', image: `${C}paula-teschendorf.jpg`, linkedin: 'https://www.linkedin.com/in/paula-katharina-teschendorf-934577410/' },
+  { name: 'Giacomo Ferioli', image: `${C}giacomo-ferioli.jpg`, linkedin: 'https://www.linkedin.com/in/giacomo-ferioli-b08046262/' },
+  { name: 'Batuhan Özden', image: `${C}batuhan-oezden.jpg`, linkedin: 'https://www.linkedin.com/in/batuhan-%C3%B6zden-3b58981a0/' },
+  { name: 'Pauline Siepmann', image: `${C}pauline-siepmann.jpg`, role: BD, linkedin: 'https://www.linkedin.com/in/pauline-doroth%C3%A9e-jule-siepmann-abb7b62b2/' },
+  { name: 'Anton Niebuer', image: `${C}anton-niebuer.jpg`, linkedin: 'https://www.linkedin.com/in/anton-niebuer-9b42b1395/' },
+  { name: 'Carl Liljenqvist', image: `${C}carl-liljenqvist.jpg`, linkedin: 'https://www.linkedin.com/in/carl-fredrik-liljenqvist-422229254/' },
+  { name: 'Emil Mahr', image: `${C}emil-mahr.jpg`, role: BD, linkedin: 'https://www.linkedin.com/in/emil-mahr-9ab60a34a/' },
+  { name: 'Julius Koeberich', image: `${C}julius-koeberich.jpg`, role: BD, linkedin: 'https://www.linkedin.com/in/julius-c-koeberich-b03b26378/' },
 ];
 
 /** Marketing / PR team (Head of PR is on the board). */
 export const marketingTeam: Consultant[] = [
-  { name: 'Anna Gronsfeld', image: `${C}anna-gronsfeld.jpg`, role: 'PR Strategist' },
-  { name: 'Carla Kersken', image: `${C}carla-kersken.jpg`, role: 'PR Strategist' },
-  { name: 'Charlotte Kürschner', image: `${C}charlotte-kuerschner.jpg`, role: 'PR Strategist' },
+  { name: 'Anna Gronsfeld', image: `${C}anna-gronsfeld.jpg`, role: 'PR Strategist', linkedin: 'https://www.linkedin.com/in/anna-gronsfeld-1a75aa341/' },
+  { name: 'Carla Kersken', image: `${C}carla-kersken.jpg`, role: 'PR Strategist', linkedin: 'https://www.linkedin.com/in/carla-kersken-834059332/' },
+  { name: 'Charlotte Kürschner', image: `${C}charlotte-kuerschner.jpg`, role: 'PR Strategist', linkedin: 'https://www.linkedin.com/in/charlotte-k%C3%BCrschner-532810387/' },
 ];
 
 /** Board + consultants + marketing. */

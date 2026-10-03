@@ -92,14 +92,14 @@ export default function Navbar() {
               );
             })}
             <a
-              href="mailto:info@maastrichtconsulting.com"
+              href="mailto:info@maastrichtconsulting.com?subject=Enquiry%20via%20the%20MSC%20website"
               className={`ml-4 px-6 py-2 rounded text-[15px] font-medium transition-all border ${
                 isSolid
                   ? 'border-navy/20 text-navy hover:bg-navy hover:text-white'
                   : 'border-white/40 text-white hover:border-white hover:bg-white/10'
               }`}
             >
-              Contact
+              Get in touch
             </a>
           </div>
 
@@ -156,14 +156,14 @@ export default function Navbar() {
             );
           })}
           <a
-            href="mailto:info@maastrichtconsulting.com"
+            href="mailto:info@maastrichtconsulting.com?subject=Enquiry%20via%20the%20MSC%20website"
             className={`inline-block mt-6 border-2 border-navy text-navy px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-navy hover:text-white ${
               mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
             style={{ transitionDelay: mobileOpen ? `${navLinks.length * 50}ms` : '0ms' }}
             onClick={handleMobileLink}
           >
-            Contact
+            Get in touch
           </a>
         </div>
       </div>

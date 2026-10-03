@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from '@/components/SafeImage';
-import ContactForm from '@/components/ContactForm';
-import { CLIENT_ENQUIRIES_TO } from '@/data/recruitment';
+import ContactSection from '@/components/ContactSection';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import LogoMarquee from '@/components/LogoMarquee';
 import ServiceGrid from '@/components/ServiceGrid';
@@ -116,7 +115,7 @@ export default function ClientsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/team/board-standing.jpg" />
+        <ParallaxHero src="/images/team/board-standing.jpg" className="object-[center_88%] origin-bottom" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -202,62 +201,7 @@ export default function ClientsPage() {
       {/* Testimonials */}
       <TestimonialSlider testimonials={clientTestimonials} />
 
-      {/* Work with us – Business Development */}
-      <section id="contact" className="py-20 sm:py-28 bg-gray-50/80 scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Work with us</h2>
-            <div className="section-divider mx-auto mt-4" />
-            <p className="mt-6 text-navy/60 max-w-2xl mx-auto">
-              Our Business Development team is your first point of contact for new projects. Tell us about your
-              challenge and we will get back to you within a few days.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-            <div>
-              <div className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm">
-                <Image
-                  src="/images/team/team-business-development.jpg"
-                  alt="MSC Business Development team"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="mt-6 flex items-center gap-5 bg-white rounded-xl border border-gray-100 p-5">
-                <div className="relative w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                  <Image src={contact.image} alt={contact.name} fill sizes="64px" className="object-cover" />
-                </div>
-                <div className="min-w-0">
-                  <p className="font-bold text-navy">{contact.name}</p>
-                  <p className="text-navy/55 text-sm">{contact.title}</p>
-                  <div className="flex flex-wrap gap-x-5 gap-y-1 mt-2 text-sm">
-                    <a href={`mailto:${contact.email}`} className="text-navy/70 hover:text-orange break-all">{contact.email}</a>
-                    {contact.phone && (
-                      <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="text-navy/70 hover:text-orange whitespace-nowrap">{contact.phone}</a>
-                    )}
-                    {contact.linkedin && (
-                      <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-navy/70 hover:text-orange">LinkedIn</a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl border border-gray-100 p-6 sm:p-10">
-              <h3 className="text-2xl font-bold text-navy mb-2">Start a project</h3>
-              <p className="text-navy/60 text-[15px] mb-8">Your message goes directly to {contact.name}.</p>
-              <ContactForm
-                variant="client"
-                recipient={CLIENT_ENQUIRIES_TO}
-                subject="New project enquiry via the MSC website"
-                submitLabel="Send enquiry"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactSection contactPerson={contact} />
     </>
   );
 }
