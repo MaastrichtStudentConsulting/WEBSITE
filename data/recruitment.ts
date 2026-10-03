@@ -20,6 +20,16 @@ export const INFO_NIGHT = {
   dateLabel: '2 November 2026',
   shortDate: '2 Nov',
   location: 'Location to be announced',
+  /** Calendar date (YYYY-MM-DD). */
+  date: '2026-11-02',
+  /**
+   * Fill in once known, e.g. startTime: '19:00', endTime: '21:00' (Amsterdam time).
+   * While empty, "Add to calendar" creates an all-day event.
+   */
+  startTime: '',
+  endTime: '',
+  /** Address for the calendar entry, once known. */
+  address: '',
 };
 
 export const OPENING_LABEL = '3 November 2026';

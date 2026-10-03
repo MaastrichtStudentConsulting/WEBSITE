@@ -3,6 +3,7 @@ import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import ApplicationCTA from '@/components/ApplicationCTA';
 import StudentQA from '@/components/StudentQA';
+import AddToCalendar from '@/components/AddToCalendar';
 import { INFO_NIGHT, OPENING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
@@ -112,6 +113,9 @@ export default function JoinPage() {
               <p className="text-navy/70 mt-3 leading-relaxed text-[15px]">
                 Get to know MSC, meet current members and ask all your questions before applying.
               </p>
+              <div className="mt-5">
+                <AddToCalendar />
+              </div>
             </div>
           </div>
         </div>
