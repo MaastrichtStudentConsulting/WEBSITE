@@ -45,7 +45,7 @@ const whatWeExpect = [
   {
     title: 'A strong team spirit',
     icon: '/images/icons/people.svg',
-    text: 'At Maastricht Student Consulting we are a team of 35 consultants from diverse backgrounds but united by a spirit of collaboration. Inclusiveness and integration are some of our core values, so we strive to create a cooperative environment where all our members feel valued and respected. We expect the same approach from our members \u2013 Your spirit of collaboration with other like-minded students creates value for everyone involved.',
+    text: 'At Maastricht Student Consulting we are a team of 34 consultants from diverse backgrounds but united by a spirit of collaboration. Inclusiveness and integration are some of our core values, so we strive to create a cooperative environment where all our members feel valued and respected. We expect the same approach from our members \u2013 Your spirit of collaboration with other like-minded students creates value for everyone involved.',
   },
 ];
 

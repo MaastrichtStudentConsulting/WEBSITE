@@ -3,6 +3,8 @@ import { Consultant } from '@/data/team';
 
 interface ConsultantGridProps {
   consultants: Consultant[];
+  /** Fixed column count (used for the small Marketing grid) */
+  columns?: 3;
 }
 
 function PlaceholderAvatar({ name }: { name: string }) {
@@ -19,9 +21,9 @@ function PlaceholderAvatar({ name }: { name: string }) {
   );
 }
 
-export default function ConsultantGrid({ consultants }: ConsultantGridProps) {
+export default function ConsultantGrid({ consultants, columns }: ConsultantGridProps) {
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4 sm:gap-5">
+    <div className={`grid gap-4 sm:gap-5 ${columns === 3 ? 'grid-cols-3' : 'grid-cols-3 sm:grid-cols-4 md:grid-cols-5'}`}>
       {consultants.map((consultant) => (
         <div
           key={consultant.name}
@@ -44,9 +46,12 @@ export default function ConsultantGrid({ consultants }: ConsultantGridProps) {
 
           {/* Blue slide-up overlay */}
           <div className="absolute inset-x-0 bottom-0 h-0 group-hover:h-full bg-navy/75 transition-all duration-700 ease-in-out flex items-end justify-center overflow-hidden">
-            <p className="text-white text-xs sm:text-sm lg:text-base font-semibold text-center px-2 pb-4 sm:pb-6 leading-tight">
-              {consultant.name}
-            </p>
+            <div className="text-center px-2 pb-4 sm:pb-6">
+              <p className="text-white text-xs sm:text-sm lg:text-base font-semibold leading-tight">{consultant.name}</p>
+              {consultant.role && (
+                <p className="text-white/70 text-[10px] sm:text-xs mt-1 leading-tight">{consultant.role}</p>
+              )}
+            </div>
           </div>
         </div>
       ))}

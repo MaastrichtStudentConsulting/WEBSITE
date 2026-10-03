@@ -4,11 +4,11 @@ import ContactSection from '@/components/ContactSection';
 import BoardGrid from '@/components/BoardGrid';
 import ConsultantGrid from '@/components/ConsultantGrid';
 import ParallaxHero from '@/components/ParallaxHero';
-import { boardMembers, consultants, getContactPerson } from '@/data/team';
+import { boardMembers, consultants, marketingTeam, MEMBER_COUNT, getContactPerson } from '@/data/team';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Maastricht Student Consulting — 35 consultants, 1 goal.',
+  description: `Learn about Maastricht Student Consulting — ${MEMBER_COUNT} consultants, 1 goal.`,
 };
 
 export default function AboutPage() {
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
-            35 Consultants<br />1 Goal.
+            {MEMBER_COUNT} Consultants<br />1 Goal.
           </h1>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function AboutPage() {
           </div>
           <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
             MSC is a student consultancy, consisting of talented and ambitious Bachelor and Master students.
-            The active team currently consists of more than 35 consultants, all of whom are among the top 10%
+            The active team currently consists of {MEMBER_COUNT} consultants, all of whom are among the top 10%
             within their respective studies. With their interdisciplinary background our consultants are
             looking to apply their academic knowledge to real-life cases and solve our clients&apos; business
             challenges.
@@ -64,6 +64,14 @@ export default function AboutPage() {
             <div className="section-divider mx-auto mt-4" />
           </div>
           <ConsultantGrid consultants={consultants} />
+
+          <div className="text-center mt-20 mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-navy">Marketing Team</h3>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <div className="md:max-w-[calc(60%+0.75rem)] mx-auto">
+            <ConsultantGrid consultants={marketingTeam} columns={3} />
+          </div>
         </div>
       </section>
 

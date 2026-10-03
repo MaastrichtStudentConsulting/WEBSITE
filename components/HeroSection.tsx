@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { MEMBER_COUNT } from '@/data/team';
 import Image from '@/components/SafeImage';
 import { asset } from '@/lib/assetPath';
 
@@ -47,9 +48,9 @@ function AnimatedNumber({ target, suffix }: { target: number; suffix: string }) 
 }
 
 const stats = [
-  { value: 150, suffix: '+', label: 'Projects' },
+  { value: 175, suffix: '+', label: 'Projects' },
   { value: 12, suffix: '', label: 'Years of experience' },
-  { value: 35, suffix: '+', label: 'Consultants' },
+  { value: MEMBER_COUNT, suffix: '', label: 'Consultants' },
 ];
 
 export default function HeroSection({

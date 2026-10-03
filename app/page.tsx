@@ -117,7 +117,7 @@ export default function HomePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Services</h2>
           </div>
           <p className="text-center text-navy/60 max-w-4xl mx-auto leading-relaxed mb-14">
-            Since 2014 we have been advising and inspiring more than 150 clients worldwide. In every
+            Since 2014 we have completed more than 175 projects for clients worldwide. In every
             interaction, we put our clients needs and goals first and keep communication channels open.
             We can offer you services in the areas of strategy development, marketing, finance, HR and
             market research, among many others.

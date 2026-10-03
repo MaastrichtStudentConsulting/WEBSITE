@@ -8,73 +8,82 @@ export interface BoardMember {
   imageClassName?: string;
 }
 
+const B = '/images/team/board/';
+const C = '/images/team/consultants/';
+
 export const boardMembers: BoardMember[] = [
-  { name: 'Niklas Ullrich', title: 'President', image: '/images/board/Niklas Ullrich.jpg', email: 'niklas.ullrich@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/niklas-ullrich-ba7a07321/', phone: '+49 1573 0686972' },
-  { name: 'Anna-Sophie von der Heydt', title: 'Vice-President', image: '/images/board/Anna-Sophie von der Heydt.jpg', email: 'anna-sophie.vonderheydt@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/anna-sophie-von-der-heydt-980674313/', phone: '+49 1575 3477795' },
-  { name: 'Federico Donati', title: 'Head of Business Development', image: '/images/board/Federico Donati.jpg', email: 'federico.donati@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/fede249/', phone: '+49 1575 3506950', imageClassName: 'object-[center_25%]' },
-  { name: 'Jan Moog', title: 'Head of External Relations', image: '/images/board/Jan Moog.jpg', email: 'jan.moog@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jan-moog-93b117311/', phone: '+49 176 73552789' },
-  { name: 'Lukas Lippert', title: 'Head of Human Resources', image: '/images/board/Lukas Lippert.jpg', email: 'lukas.lippert@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lukas-lippert-49524a2a1/', phone: '+49 1575 9092572' },
+  { name: 'Niklas Ullrich', title: 'President', image: `${B}niklas-ullrich.jpg`, email: 'niklas.ullrich@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/niklas-ullrich-ba7a07321/', phone: '+49 1573 0686972' },
+  { name: 'Lukas Lippert', title: 'Vice President', image: `${B}lukas-lippert.jpg`, email: 'lukas.lippert@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/lukas-lippert-49524a2a1/', phone: '+49 1575 9092572' },
+  { name: 'Jan Moog', title: 'Head of External Relations', image: `${B}jan-moog.jpg`, email: 'jan.moog@maastrichtconsulting.com', linkedin: 'https://www.linkedin.com/in/jan-moog-93b117311/', phone: '+49 176 73552789' },
+  { name: 'Henrik Pickrahn', title: 'Head of Human Resources', image: `${B}henrik-pickrahn.jpg`, email: 'hr@maastrichtconsulting.com' },
+  { name: 'Lars Vandingenen', title: 'Head of Business Development', image: `${B}lars-vandingenen.jpg`, email: 'lars.vandingenen@maastrichtconsulting.com' },
+  { name: 'Jona Weber', title: 'Head of Public Relations', image: `${B}jona-weber.jpg`, email: 'jona.weber@maastrichtconsulting.com' },
 ];
 
 export interface Consultant {
   name: string;
   image: string | null;
+  /** Shown under the name on hover, e.g. "Business Development" */
+  role?: string;
   /** Extra Tailwind classes on the <Image>, e.g. to zoom out a tight crop */
   imageClassName?: string;
   /** Extra Tailwind classes on the wrapper div, e.g. scale transforms */
   wrapperClassName?: string;
 }
 
+const BD = 'Consultant & Business Development';
+
+/** 25 consultants, ordered by joining date (Jan 2025 → Jun 2026). */
 export const consultants: Consultant[] = [
-  { name: 'Lars Vandingenen', image: '/images/consultants/Lars.jpg', imageClassName: 'object-[center_30%]' },
-  { name: 'Lilly Vollmer', image: '/images/consultants/Lilly Vollmer.jpg' },
-  { name: 'Morgan Joffe', image: '/images/consultants/Morgan.jpg' },
-  { name: 'Aylin Cakici', image: '/images/consultants/Aylin.jpg' },
-  { name: 'Fabrice Jansen', image: '/images/consultants/Fabrice.jpg' },
-  { name: 'Leonie Binder', image: '/images/consultants/Leonie Binder.jpg' },
-  { name: 'Brian O\'Sullivan', image: '/images/consultants/Brian.jpg' },
-  { name: 'Madeleine Liljenqvist', image: '/images/consultants/Madeleine.jpg' },
-  { name: 'Paul Boger', image: '/images/consultants/Paul.jpg' },
-  { name: 'Mia Czwallinna', image: '/images/consultants/Mia.jpg' },
-  { name: 'Konstantin Klinkenberg', image: '/images/consultants/Konstantin.jpg' },
-  { name: 'Bintou Jabbi', image: '/images/consultants/Bintou Siya.jpg' },
-  { name: 'Leonhard Cuzmin', image: '/images/consultants/Leonhard Cuzmin.jpg' },
-  { name: 'Julian Kuni', image: '/images/consultants/Julian Kuni.jpg' },
-  { name: 'Arthur von Moltke', image: '/images/consultants/Arthur-von-Moltke.jpg', wrapperClassName: 'scale-[0.85] origin-center' },
-  { name: 'Ida Gloede', image: '/images/consultants/Ida Gloede.jpg' },
-  { name: 'Benjamin Ganvoszky', image: '/images/consultants/Ben Ganovsky.jpg' },
-  { name: 'Maxim Franko', image: '/images/consultants/Maxim Franko.jpg' },
-  { name: 'Simon Kley', image: '/images/consultants/Simon Kley.jpg' },
-  { name: 'Mona Stiegemeier', image: '/images/consultants/Mona Stiegemeier.jpg' },
-  { name: 'Jona Weber', image: '/images/consultants/Jona.jpg' },
-  { name: 'Anna Gronsfeld', image: '/images/consultants/Anna G.jpg' },
-  { name: 'Max Hesse', image: '/images/consultants/Max Hesse.jpg' },
-  { name: 'Tom-Luis Marin', image: '/images/consultants/Tom-Luis.jpg' },
-  { name: 'Anna Mitchell', image: '/images/consultants/Anna Mitchell.jpg' },
-  { name: 'Shervin Krämer', image: '/images/consultants/Shervin.jpg' },
-  { name: 'Martim Machado', image: '/images/consultants/Martim.jpg' },
-  { name: 'Helene Werner', image: '/images/consultants/Helene Werner.jpg' },
-  { name: 'Henrik Pickrahn', image: '/images/consultants/Henrik Pickrahn.jpeg' },
-  { name: 'Jonathan Altmann', image: '/images/consultants/Jonathan Altmann.jpeg' },
-  { name: 'Ada Volkmann', image: '/images/consultants/Ada.jpeg' },
-  { name: 'Casper van Marrewijk', image: '/images/consultants/Casper v. m.jpeg' },
-  { name: 'Ari Mühlthaler', image: '/images/consultants/Ari Mühlthaler.jpeg' },
-  { name: 'Caspar Kleinewiese', image: '/images/consultants/Caspar Kleinewiese.jpeg' },
-  { name: 'Tiphaine Reynaud', image: '/images/consultants/Tiphaine.jpeg' },
+  { name: 'Maxim Franko', image: `${C}maxim-franko.jpg` },
+  { name: 'Caspar Kleinewiese', image: `${C}caspar-kleinewiese.jpg` },
+  { name: 'Federico Donati', image: `${C}federico-donati.jpg` },
+  { name: 'Jonathan Altmann', image: `${C}jonathan-altmann.jpg` },
+  { name: 'Lilly Vollmer', image: `${C}lilly-vollmer.jpg` },
+  { name: 'Julian Kuni', image: `${C}julian-kuni.jpg` },
+  { name: 'Mona Stiegemeier', image: `${C}mona-stiegemeier.jpg` },
+  { name: 'Arthur von Moltke', image: `${C}arthur-von-moltke.jpg` },
+  { name: 'Morgan Joffe', image: `${C}morgan-joffe.jpg` },
+  { name: 'Madeleine Liljenqvist', image: `${C}madeleine-liljenqvist.jpg`, role: BD },
+  { name: 'Bintou Jabbi', image: `${C}bintou-jabbi.jpg` },
+  { name: 'Aylin Cakici', image: `${C}aylin-cakici.jpg` },
+  { name: 'Tom-Luis Marin', image: `${C}tom-luis-marin.jpg` },
+  { name: "Brian O'Sullivan", image: `${C}brian-osullivan.jpg` },
+  { name: 'Konstantin Klinkenberg', image: '/images/consultants/Konstantin.jpg', role: BD },
+  { name: 'Mia Czwalinna', image: `${C}mia-czwalinna.jpg` },
+  { name: 'Sara Zaadi', image: `${C}sara-zaadi.jpg`, role: BD },
+  { name: 'Paula Teschendorf', image: `${C}paula-teschendorf.jpg` },
+  { name: 'Giacomo Ferioli', image: `${C}giacomo-ferioli.jpg` },
+  { name: 'Batuhan Özden', image: `${C}batuhan-oezden.jpg` },
+  { name: 'Pauline Siepmann', image: `${C}pauline-siepmann.jpg`, role: BD },
+  { name: 'Anton Niebuer', image: `${C}anton-niebuer.jpg` },
+  { name: 'Carl Liljenqvist', image: `${C}carl-liljenqvist.jpg` },
+  { name: 'Emil Mahr', image: null, role: BD },
+  { name: 'Julius Koeberich', image: `${C}julius-koeberich.jpg`, role: BD },
 ];
+
+/** Marketing / PR team (Head of PR is on the board). */
+export const marketingTeam: Consultant[] = [
+  { name: 'Anna Gronsfeld', image: `${C}anna-gronsfeld.jpg`, role: 'PR Strategist' },
+  { name: 'Carla Kersken', image: `${C}carla-kersken.jpg`, role: 'PR Strategist' },
+  { name: 'Charlotte Kürschner', image: `${C}charlotte-kuerschner.jpg`, role: 'PR Strategist' },
+];
+
+/** Board + consultants + marketing. */
+export const MEMBER_COUNT = boardMembers.length + consultants.length + marketingTeam.length;
 
 export function getContactPerson(page: 'home' | 'about' | 'clients' | 'partners' | 'students' | 'join'): BoardMember {
   switch (page) {
     case 'home':
     case 'about':
-      return boardMembers[0]; // Niklas Ullrich
+      return boardMembers[0]; // Niklas Ullrich — President
     case 'clients':
-      return boardMembers[2]; // Federico Donati
+      return boardMembers[4]; // Lars Vandingenen — Business Development
     case 'partners':
-      return boardMembers[3]; // Jan Moog
+      return boardMembers[2]; // Jan Moog — External Relations
     case 'students':
-      return boardMembers[1]; // Anna-Sophie von der Heydt
+      return boardMembers[1]; // Lukas Lippert — Vice President
     case 'join':
-      return boardMembers[4]; // Lukas Lippert
+      return boardMembers[3]; // Henrik Pickrahn — Human Resources
   }
 }
