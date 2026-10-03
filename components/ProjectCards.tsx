@@ -18,9 +18,9 @@ function FlipCard({ p }: { p: Project }) {
       <div className="flip-card-inner relative w-full h-full">
         {/* Front */}
         <div className="flip-face absolute inset-0 rounded-2xl bg-white border border-gray-100 shadow-sm flex flex-col p-7">
-          <span className="text-orange text-[11px] font-bold uppercase tracking-[0.18em]">{p.service}</span>
+          <span className="text-navy/45 text-[11px] font-bold uppercase tracking-[0.18em]">{p.service}</span>
           <div className="flex-grow flex items-center justify-center px-6">
-            <Image src={p.logo} alt={p.client} width={220} height={100} className="w-auto max-h-20 max-w-[200px] object-contain" />
+            <Image src={p.logo} alt={p.client} width={p.logoW ?? 220} height={p.logoH ?? 80} style={{ width: p.logoW ?? 220, height: p.logoH ?? 80 }} className="object-contain max-w-full" />
           </div>
           <div className="flex items-end justify-between gap-4">
             <div>

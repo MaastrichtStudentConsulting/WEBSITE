@@ -12,6 +12,9 @@ export interface Project {
   year?: string;
   title: string;
   text: string;
+  /** Display size of the logo (px) so all logos look equally large */
+  logoW?: number;
+  logoH?: number;
   /** Short facts shown as highlights on the back of the card */
   highlights?: string[];
   quote?: string;
@@ -20,7 +23,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     client: 'Rheinmetall',
-    logo: '/images/clients/Rheinmetall.png',
+    logo: '/images/projects/Rheinmetall.png',
+    logoW: 253,
+    logoH: 69,
     industry: 'Defence & Automotive · DAX 40',
     service: 'Market Research & Analysis',
     year: '2025',
@@ -30,7 +35,9 @@ export const projects: Project[] = [
   },
   {
     client: 'OQEMA',
-    logo: '/images/clients/Oqema.png',
+    logo: '/images/projects/Oqema.png',
+    logoW: 260,
+    logoH: 52,
     industry: 'Chemical Distribution',
     service: 'Strategy & Organisation',
     year: '2022',
@@ -40,7 +47,9 @@ export const projects: Project[] = [
   },
   {
     client: 'Siemens',
-    logo: '/images/clients/Siemens-logo.png',
+    logo: '/images/projects/Siemens-logo.png',
+    logoW: 260,
+    logoH: 42,
     industry: 'Industrial Manufacturing',
     service: 'Sales & Incentives',
     year: '2019',
@@ -50,7 +59,9 @@ export const projects: Project[] = [
   },
   {
     client: 'Qiagen',
-    logo: '/images/clients/Qiagen.png',
+    logo: '/images/projects/Qiagen.png',
+    logoW: 144,
+    logoH: 121,
     industry: 'Molecular Diagnostics · Life Sciences',
     service: 'Marketing & Employer Branding',
     year: '2024',
@@ -60,7 +71,9 @@ export const projects: Project[] = [
   },
   {
     client: 'ProSiebenSat.1 PULS 4',
-    logo: '/images/clients/ProSiebenSat1.png',
+    logo: '/images/projects/ProSiebenSat1.png',
+    logoW: 260,
+    logoH: 52,
     industry: 'Media · 4GAMECHANGERS',
     service: 'Marketing Strategy',
     year: '2023',
@@ -69,7 +82,9 @@ export const projects: Project[] = [
   },
   {
     client: 'SAP',
-    logo: '/images/clients/SAP.png',
+    logo: '/images/projects/SAP.png',
+    logoW: 188,
+    logoH: 93,
     industry: 'Enterprise Software',
     service: 'Business Development',
     year: '2021',

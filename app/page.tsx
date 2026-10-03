@@ -11,7 +11,7 @@ import { homeReferences } from '@/data/testimonials';
 const cards = [
   {
     title: 'Clients',
-    image: '/images/team/board-card.jpg',
+    image: '/images/team/clients-card.jpg',
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
     imageClassName: '',
@@ -123,6 +123,45 @@ export default function HomePage() {
 
       <EventsTimeline />
 
+      {/* Management Team */}
+      <section className="py-20 sm:py-28 bg-gray-50/80">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
+              Meet our Management Team
+            </h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <BoardGrid members={boardMembers} />
+          <p className="text-center text-navy/50 mt-12 max-w-2xl mx-auto italic">
+            As the board of Maastricht Student Consulting we are looking forward to getting in touch with you.
+          </p>
+        </div>
+      </section>
+
+      {/* References */}
+      <section className="py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our References</h2>
+            <p className="mt-6 text-navy/60 max-w-4xl mx-auto leading-relaxed">
+              Our stakeholders are an integral part of our success. Therefore, we are always keen on
+              meeting new partners that share our values of intellectual curiosity, openness, and dedication.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {homeReferences.map((ref, i) => (
+              <ReferenceCard
+                key={ref.author}
+                testimonial={ref}
+                label={`${refLabels[i]} References`}
+                href={refLinks[i]}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services */}
       <section className="py-20 sm:py-28 bg-gray-50/80">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -152,45 +191,6 @@ export default function HomePage() {
               Learn more
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* References */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our References</h2>
-            <p className="mt-6 text-navy/60 max-w-4xl mx-auto leading-relaxed">
-              Our stakeholders are an integral part of our success. Therefore, we are always keen on
-              meeting new partners that share our values of intellectual curiosity, openness, and dedication.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {homeReferences.map((ref, i) => (
-              <ReferenceCard
-                key={ref.author}
-                testimonial={ref}
-                label={`${refLabels[i]} References`}
-                href={refLinks[i]}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Management Team */}
-      <section className="py-20 sm:py-28 bg-gray-50/80">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">
-              Meet our Management Team
-            </h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <BoardGrid members={boardMembers} />
-          <p className="text-center text-navy/50 mt-12 max-w-2xl mx-auto italic">
-            As the board of Maastricht Student Consulting we are looking forward to getting in touch with you.
-          </p>
         </div>
       </section>
 
