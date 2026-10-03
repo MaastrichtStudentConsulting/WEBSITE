@@ -13,7 +13,7 @@ function FlipCard({ p }: { p: Project }) {
       onClick={() => setFlipped((f) => !f)}
       aria-pressed={flipped}
       aria-label={`${p.client}: ${p.title}`}
-      className={`flip-card group block w-full h-[380px] sm:h-[400px] text-left [perspective:1400px] ${flipped ? 'is-flipped' : ''}`}
+      className={`flip-card group block w-full h-[420px] sm:h-[440px] text-left [perspective:1400px] ${flipped ? 'is-flipped' : ''}`}
     >
       <div className="flip-card-inner relative w-full h-full">
         {/* Front */}
@@ -38,24 +38,25 @@ function FlipCard({ p }: { p: Project }) {
         </div>
 
         {/* Back */}
-        <div className="flip-face flip-back absolute inset-0 rounded-2xl bg-navy text-white flex flex-col p-7 overflow-hidden">
-          <div className="flex items-center justify-between text-[11px] font-bold uppercase tracking-[0.18em]">
-            <span className="text-orange">{p.client}</span>
-            {p.year && <span className="text-white/50 tabular-nums">{p.year}</span>}
+        <div className="flip-face flip-back absolute inset-0 rounded-2xl bg-white border-2 border-orange/30 shadow-lg flex flex-col p-7 overflow-hidden">
+          <div className="flex items-center justify-between gap-4">
+            <Image src={p.logo} alt="" width={p.logoW ?? 220} height={p.logoH ?? 80} style={{ width: (p.logoW ?? 220) * 0.45, height: (p.logoH ?? 80) * 0.45 }} className="object-contain object-left" />
+            {p.year && <span className="text-navy/40 text-sm font-bold tabular-nums">{p.year}</span>}
           </div>
-          <h3 className="mt-4 text-xl font-bold leading-snug">{p.title}</h3>
-          <p className="mt-3 text-white/75 text-[14px] leading-relaxed">{p.text}</p>
+          <p className="mt-5 text-orange text-[11px] font-bold uppercase tracking-[0.18em]">{p.service}</p>
+          <h3 className="mt-2 text-2xl font-bold text-navy leading-tight">{p.title}</h3>
+          <p className="mt-3 text-navy/75 text-base leading-relaxed">{p.text}</p>
           <div className="mt-auto pt-4">
             {p.highlights && (
               <div className="flex flex-wrap gap-2">
                 {p.highlights.map((h) => (
-                  <span key={h} className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">
+                  <span key={h} className="rounded-full bg-navy/5 text-navy px-3 py-1.5 text-xs font-bold">
                     {h}
                   </span>
                 ))}
               </div>
             )}
-            {p.quote && <p className="text-white/90 italic text-[15px]">&ldquo;{p.quote}&rdquo;</p>}
+            {p.quote && <p className="text-navy font-semibold italic text-base border-l-2 border-orange pl-3">&ldquo;{p.quote}&rdquo;</p>}
           </div>
         </div>
       </div>

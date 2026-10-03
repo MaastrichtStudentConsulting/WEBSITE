@@ -12,6 +12,7 @@ const cards = [
   {
     title: 'Clients',
     image: '/images/team/clients-card.jpg',
+    light: true,
     href: '/clients',
     text: 'MSC provides advisory for start-ups, small to medium sized enterprises and corporate business units. Our mission is to deliver thoughtful, creative and out of the box solutions that help your business achieve long-term improvement.',
     imageClassName: '',
@@ -99,8 +100,10 @@ export default function HomePage() {
                   className={`object-cover ${card.imageClassName ?? ''}`}
                 />
                 {/* Default state: gradient + title */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent transition-opacity duration-300 group-hover:opacity-0" />
-                <h3 className="absolute bottom-8 left-8 text-3xl sm:text-4xl font-bold text-white transition-opacity duration-300 group-hover:opacity-0">
+                {!card.light && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-transparent to-transparent transition-opacity duration-300 group-hover:opacity-0" />
+                )}
+                <h3 className={`absolute bottom-8 left-8 text-3xl sm:text-4xl font-bold transition-opacity duration-300 group-hover:opacity-0 ${card.light ? 'text-navy' : 'text-white'}`}>
                   {card.title}
                 </h3>
 

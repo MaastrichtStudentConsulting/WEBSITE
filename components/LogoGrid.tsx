@@ -6,9 +6,11 @@ interface LogoGridProps {
   largerLogos?: string[];
   smallerLogos?: string[];
   removeBackground?: string[];
+  /** Show logos in full colour instead of grey */
+  color?: boolean;
 }
 
-export default function LogoGrid({ logos, largerLogos = [], smallerLogos = [], removeBackground = [] }: LogoGridProps) {
+export default function LogoGrid({ logos, largerLogos = [], smallerLogos = [], removeBackground = [], color = false }: LogoGridProps) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center">
       {logos.map((logo) => {
@@ -30,7 +32,7 @@ export default function LogoGrid({ logos, largerLogos = [], smallerLogos = [], r
           </span>
         );
 
-        const wrapperClass = "w-full flex items-center justify-center h-28 px-6 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300";
+        const wrapperClass = `w-full flex items-center justify-center h-28 px-6 transition-all duration-300 ${color ? 'hover:scale-105' : 'grayscale opacity-60 hover:grayscale-0 hover:opacity-100'}`;
 
         return logo.url ? (
           <a

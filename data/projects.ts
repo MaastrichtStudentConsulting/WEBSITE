@@ -79,6 +79,7 @@ export const projects: Project[] = [
     year: '2023',
     title: 'Growing a community beyond the broadcast',
     text: 'Developed a year-round social media and community strategy for the 4GAMECHANGERS festival to reach the next generation, based on target-group workshops and competitor analyses.',
+    highlights: ['Target-group workshops', 'Competitor analysis', 'Year-round strategy'],
   },
   {
     client: 'SAP',
@@ -90,5 +91,6 @@ export const projects: Project[] = [
     year: '2021',
     title: 'The circular economy opportunity',
     text: 'Analysed the investment potential of the circular economy and its impact on procurement processes and on SAP’s software offering.',
+    highlights: ['Circular economy', 'Investment potential', 'Procurement'],
   },
 ];
