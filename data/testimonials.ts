@@ -57,13 +57,13 @@ export const memberTestimonials: Testimonial[] = [
     quote: 'I really admire the MSC family and the amazing people in it. I love spending time together, having fun and just enjoying the journey while learning from one another. Some of my best memories and biggest learnings come from this community, where we constantly push and support each other to grow.',
     author: 'Lilly Vollmer',
     role: 'International Business Student at Maastricht University',
-    image: '/images/consultants/Lilly Vollmer.jpg',
+    image: '/images/team/consultants/lilly-vollmer.jpg',
   },
   {
     quote: 'What I value most about MSC is getting to collaborate with a diverse group of ambitious students with a passion for making an impact. In particular, working with people from different backgrounds and fields constantly challenges my perspective and helps me grow.',
     author: 'Lars Vandingenen',
     role: 'Computer Science Student at Maastricht University',
-    image: '/images/consultants/Lars.jpg',
+    image: '/images/team/board/lars-vandingenen.jpg',
   },
 ];
 
