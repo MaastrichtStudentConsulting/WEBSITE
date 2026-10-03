@@ -100,16 +100,16 @@ export default function JoinPage() {
             ))}
           </div>
 
-          <div id="info-night" className="mt-14 scroll-mt-28 rounded-xl bg-navy text-white p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
-            <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-white text-navy flex flex-col items-center justify-center leading-none">
+          <div id="info-night" className="mt-14 scroll-mt-28 rounded-xl bg-gray-50 border border-gray-100 p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+            <div className="flex-shrink-0 w-20 h-20 rounded-xl bg-white border border-gray-200 text-navy flex flex-col items-center justify-center leading-none">
               <span className="text-[11px] font-bold uppercase tracking-widest text-orange">Nov</span>
               <span className="text-3xl font-bold mt-1">2</span>
             </div>
             <div className="flex-grow">
               <p className="text-orange text-xs font-bold uppercase tracking-[0.18em] mb-1">Info Night</p>
-              <h3 className="text-xl sm:text-2xl font-bold">{INFO_NIGHT.dateLabel}</h3>
-              <p className="text-white/70 text-sm mt-1">{INFO_NIGHT.location}</p>
-              <p className="text-white/85 mt-3 leading-relaxed text-[15px]">
+              <h3 className="text-xl sm:text-2xl font-bold text-navy">{INFO_NIGHT.dateLabel}</h3>
+              <p className="text-navy/55 text-sm mt-1">{INFO_NIGHT.location}</p>
+              <p className="text-navy/70 mt-3 leading-relaxed text-[15px]">
                 Get to know MSC, meet current members and ask all your questions before applying.
               </p>
             </div>

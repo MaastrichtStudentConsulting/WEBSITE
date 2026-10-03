@@ -20,7 +20,7 @@ const teams = [
   {
     title: 'Public Relations',
     image: '/images/team/team-public-relations.jpg',
-    text: 'Led by Jona Weber, our PR team shapes how MSC is seen: our brand, our social media presence and our publication Maastricht Market Insights.',
+    text: 'Led by Jona Weber, our PR team shapes how MSC is seen: our brand, our social media presence and our content.',
   },
 ];
 
@@ -31,7 +31,7 @@ export default function AboutPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/team/board-standing.jpg" />
+        <ParallaxHero src="/images/team/board-walking-1.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">

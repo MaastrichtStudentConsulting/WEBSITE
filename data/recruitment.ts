@@ -25,7 +25,13 @@ export const INFO_NIGHT = {
 export const OPENING_LABEL = '3 November 2026';
 export const OPENING_SHORT = '3 Nov';
 
-export const HR_EMAIL = 'hr@maastrichtconsulting.com';
+export const HR_EMAIL = 'info@maastrichtconsulting.com';
+
+/** Questions sent through the form on the Join page go straight to the Head of HR. */
+export const APPLICATION_QUESTIONS_TO = 'henrik.pickrahn@maastrichtconsulting.com';
+
+/** Project enquiries from the form on the Clients page go straight to the Head of Business Development. */
+export const CLIENT_ENQUIRIES_TO = 'lars.vandingenen@maastrichtconsulting.com';
 
 export function applicationsAreOpen(now: number = Date.now()): boolean {
   return now >= APPLICATIONS_OPEN.getTime();

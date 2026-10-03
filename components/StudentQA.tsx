@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, type ReactNode } from 'react';
-import { HR_EMAIL } from '@/data/recruitment';
+import { HR_EMAIL, APPLICATION_QUESTIONS_TO } from '@/data/recruitment';
+import ContactForm from '@/components/ContactForm';
 
 /* Heroicons (outline) paths */
 const icons: Record<string, string> = {
@@ -218,26 +219,25 @@ export default function StudentQA() {
           })}
         </div>
 
-        <div className="mt-10 flex items-center gap-5 bg-white rounded-xl border border-gray-100 p-5 sm:p-6">
-          <span className="flex-shrink-0 w-12 h-12 rounded-full border-2 border-navy/20 text-navy flex items-center justify-center">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5} aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-            </svg>
-          </span>
-          <div>
-            <p className="font-bold text-navy">Still have questions?</p>
-            <p className="text-navy/60 text-sm sm:text-[15px] mt-0.5">
-              Contact our HR team at{' '}
-              <a href={`mailto:${HR_EMAIL}`} className="underline underline-offset-2 hover:text-orange break-all">
-                {HR_EMAIL}
-              </a>{' '}
-              or visit our{' '}
-              <a href="#info-night" className="underline underline-offset-2 hover:text-orange">
-                Info Night
-              </a>
-              .
-            </p>
-          </div>
+        <div id="ask" className="mt-12 scroll-mt-28 bg-white rounded-2xl border border-gray-100 p-6 sm:p-10">
+          <h3 className="text-2xl font-bold text-navy">Still have questions?</h3>
+          <p className="text-navy/60 mt-2 mb-8 text-[15px] leading-relaxed">
+            Send your question directly to our Head of Human Resources, visit our{' '}
+            <a href="#info-night" className="underline underline-offset-2 hover:text-orange">
+              Info Night
+            </a>{' '}
+            or write to{' '}
+            <a href={`mailto:${HR_EMAIL}`} className="underline underline-offset-2 hover:text-orange break-all">
+              {HR_EMAIL}
+            </a>
+            .
+          </p>
+          <ContactForm
+            variant="application"
+            recipient={APPLICATION_QUESTIONS_TO}
+            subject="Question about the MSC application (website)"
+            submitLabel="Send question"
+          />
         </div>
       </div>
     </section>
