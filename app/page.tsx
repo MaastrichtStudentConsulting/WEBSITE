@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from '@/components/SafeImage';
 import HeroSection from '@/components/HeroSection';
 import RecruitmentBanner from '@/components/RecruitmentBanner';
+import EventsTimeline from '@/components/EventsTimeline';
 import BoardGrid from '@/components/BoardGrid';
 import ReferenceCard from '@/components/ReferenceCard';
 import { boardMembers } from '@/data/team';
@@ -119,6 +120,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <EventsTimeline />
 
       {/* Services */}
       <section className="py-20 sm:py-28 bg-gray-50/80">

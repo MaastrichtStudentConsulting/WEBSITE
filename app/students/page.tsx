@@ -4,6 +4,7 @@ import ContactSection from '@/components/ContactSection';
 import MemberTestimonialSlider from '@/components/MemberTestimonialSlider';
 import EventSlider from '@/components/EventSlider';
 import AlumniCompanies from '@/components/AlumniCompanies';
+import TeamWall from '@/components/TeamWall';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
@@ -150,6 +151,8 @@ export default function StudentsPage() {
           <MemberTestimonialSlider testimonials={memberTestimonials} />
         </div>
       </section>
+
+      <TeamWall />
 
       {/* Alumni */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
