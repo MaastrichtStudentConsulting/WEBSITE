@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   description: `Learn about Maastricht Student Consulting — ${MEMBER_COUNT} consultants, 1 goal.`,
 };
 
+const teams = [
+  {
+    title: 'Business Development',
+    image: '/images/team/team-business-development.jpg',
+    text: 'Led by Lars Vandingenen, our Business Development team acquires new consulting projects and builds lasting relationships with clients across Europe.',
+  },
+  {
+    title: 'Public Relations',
+    image: '/images/team/team-public-relations.jpg',
+    text: 'Led by Jona Weber, our PR team shapes how MSC is seen: our brand, our social media presence and our publication Maastricht Market Insights.',
+  },
+];
+
 export default function AboutPage() {
   const contact = getContactPerson('about');
 
@@ -18,7 +31,7 @@ export default function AboutPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/team/board-hero.jpg" />
+        <ParallaxHero src="/images/team/board-standing.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
@@ -53,6 +66,27 @@ export default function AboutPage() {
             <div className="section-divider mx-auto mt-4" />
           </div>
           <BoardGrid members={boardMembers} />
+        </div>
+      </section>
+
+      {/* Teams */}
+      <section className="py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Teams</h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+            {teams.map((team) => (
+              <div key={team.title}>
+                <div className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-sm">
+                  <Image src={team.image} alt={team.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-bold text-navy mt-6">{team.title}</h3>
+                <p className="text-navy/65 leading-relaxed mt-2 text-[15px]">{team.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

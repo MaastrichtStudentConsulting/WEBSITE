@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import LogoGrid from '@/components/LogoGrid';
+import LogoMarquee from '@/components/LogoMarquee';
 import ServiceGrid from '@/components/ServiceGrid';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
@@ -115,7 +115,7 @@ export default function ClientsPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/team/board-hero.jpg" />
+        <ParallaxHero src="/images/team/board-walking-1.jpg" />
         <div className="absolute inset-0 bg-navy/55" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
@@ -194,7 +194,7 @@ export default function ClientsPage() {
               We work together with companies in many different industries ranging from start-ups to multinational corporations.
             </p>
           </div>
-          <LogoGrid logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips']} />
+          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips']} />
         </div>
       </section>
 
