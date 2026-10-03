@@ -24,6 +24,7 @@ export default function LogoMarquee({ logos, largerLogos = [] }: LogoMarqueeProp
               alt={i < logos.length ? logo.name : ''}
               width={200}
               height={80}
+              loading="eager"
               className={`w-auto object-contain ${larger ? 'max-h-24' : 'max-h-14'}`}
             />
           ) : (
