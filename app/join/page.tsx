@@ -6,6 +6,8 @@ import ApplicationCTA from '@/components/ApplicationCTA';
 import StudentQA from '@/components/StudentQA';
 import AddToCalendar from '@/components/AddToCalendar';
 import OfferExpect from '@/components/OfferExpect';
+import EventSlider from '@/components/EventSlider';
+import { studentInsights } from '@/data/clients';
 import { INFO_NIGHT, OPENING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
@@ -179,6 +181,17 @@ export default function JoinPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/40 to-black/60" />
 
         <ApplicationCTA />
+      </section>
+
+      {/* What it's like to be at MSC */}
+      <section className="py-20 sm:py-28 bg-gray-50/80">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What it&apos;s like to be at MSC</h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <EventSlider events={studentInsights} />
+        </div>
       </section>
 
       {/* What We Offer + What We Expect */}
