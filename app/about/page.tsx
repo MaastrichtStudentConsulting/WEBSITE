@@ -36,7 +36,7 @@ const whatWeOffer = [
     text: 'Solve real business cases for companies like Siemens, SAP and Rheinmetall.',
   },
   {
-    title: 'Top-tier workshops',
+    title: 'Workshops',
     icon: '/images/icons/presentation.svg',
     text: 'Workshops and case trainings with partners like BCG, Simon-Kucher and Inverto.',
   },
@@ -155,7 +155,7 @@ export default function AboutPage() {
           alt="The MSC team at sunset in Maastricht"
           fill
           sizes="100vw"
-          className="object-cover object-[center_62%]"
+          className="object-cover object-[center_55%]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 z-10">

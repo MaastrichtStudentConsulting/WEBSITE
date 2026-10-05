@@ -118,7 +118,7 @@ export default function PartnersPage() {
               We have built successful, long-term relationships with a number of different companies.
             </p>
           </div>
-          <LogoGrid logos={partnerLogos} largerLogos={['SET Management Consulting', 'Rheinmetall']} smallerLogos={['BCG', 'Inverto']} color />
+          <LogoGrid logos={partnerLogos} largerLogos={['SET Management Consulting', 'Rheinmetall']} smallerLogos={['BCG', 'Inverto', 'ritzenhoefer & company']} color />
         </div>
       </section>
 

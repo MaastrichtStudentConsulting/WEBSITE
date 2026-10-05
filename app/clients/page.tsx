@@ -148,7 +148,7 @@ export default function ClientsPage() {
               From start-ups to multinational corporations, across many different industries.
             </p>
           </div>
-          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips', 'BYD', 'Uniper']} />
+          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips', 'Vaude']} />
         </div>
       </section>
 
