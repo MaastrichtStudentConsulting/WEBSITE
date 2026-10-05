@@ -45,10 +45,7 @@ function EventCard({ e }: { e: UpcomingEvent }) {
           {e.type}
         </span>
         <h3 className="mt-3 text-lg font-bold text-navy leading-snug">{e.title}</h3>
-        {(e.time || e.location) && (
-          <p className="text-navy/50 text-sm mt-0.5">{[e.time, e.location].filter(Boolean).join(' · ')}</p>
-        )}
-        {e.text && <p className="text-navy/65 text-sm leading-relaxed mt-2 line-clamp-2">{e.text}</p>}
+        {e.text && <p className="text-navy/65 text-sm leading-relaxed mt-2 line-clamp-3">{e.text}</p>}
         {e.href && (
           <Link href={e.href} className="mt-auto pt-3 text-sm font-semibold text-navy hover:text-orange transition-colors">
             {e.linkLabel ?? 'More info'} →
