@@ -2,7 +2,7 @@
  * Upcoming events shown on the homepage timeline.
  * - Events whose date has passed disappear automatically.
  * - `date`: 'YYYY-MM-DD', or leave empty for "Date to be announced".
- * - Replace the placeholder workshops below once the board has confirmed them.
+ * - Dates may still change; the timeline shows a note saying so.
  */
 
 export type EventType = 'Recruitment' | 'Workshop' | 'Social' | 'Event';
@@ -11,6 +11,8 @@ export interface UpcomingEvent {
   title: string;
   type: EventType;
   date?: string;
+  /** Last day for events over several days ('YYYY-MM-DD') */
+  endDate?: string;
   time?: string;
   location?: string;
   text?: string;
@@ -20,6 +22,19 @@ export interface UpcomingEvent {
 }
 
 export const upcomingEvents: UpcomingEvent[] = [
+  {
+    title: 'Inverto Workshop',
+    type: 'Workshop',
+    date: '2026-10-08',
+    text: 'Case competition with Inverto, followed by dinner together.',
+  },
+  {
+    title: 'M&A Workshop',
+    type: 'Workshop',
+    date: '2026-10-30',
+    location: 'With the Maastricht Finance Society',
+    text: 'Explore the world of mergers & acquisitions – with dinner afterwards.',
+  },
   {
     title: 'Info Night',
     type: 'Recruitment',
@@ -38,21 +53,23 @@ export const upcomingEvents: UpcomingEvent[] = [
     linkLabel: 'How to apply',
   },
   {
-    title: 'Workshop 1',
+    title: 'Bain Workshop',
     type: 'Workshop',
-    location: 'Partner to be announced',
-    text: 'Hands-on case workshop with one of our partner firms.',
+    date: '2026-11-05',
+    location: 'On site in Cologne',
+    text: 'Workshop at the Bain & Company office, followed by dinner and networking.',
   },
   {
-    title: 'Workshop 2',
+    title: 'ritzenhoefer Workshop',
     type: 'Workshop',
-    location: 'Partner to be announced',
-    text: 'Hands-on case workshop with one of our partner firms.',
+    date: '2026-11-12',
+    text: 'Hands-on workshop with ritzenhoefer & company.',
   },
   {
-    title: 'Workshop 3',
-    type: 'Workshop',
-    location: 'Partner to be announced',
-    text: 'Hands-on case workshop with one of our partner firms.',
+    title: 'Application interviews',
+    type: 'Recruitment',
+    date: '2026-11-23',
+    endDate: '2026-11-24',
+    text: 'Interviews with shortlisted applicants for the next project period.',
   },
 ];
