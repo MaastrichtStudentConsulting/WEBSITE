@@ -1,50 +1,33 @@
+import Image from '@/components/SafeImage';
 import { alumniEmployersConsulting, alumniEmployersFinanceIndustry, type Employer } from '@/data/alumni';
 
-function initials(name: string) {
-  const skip = ['&', 'and', 'of', 'Company', 'Group'];
-  return name
-    .replace(/[.\-]/g, ' ')
-    .split(' ')
-    .filter((w) => w && !skip.includes(w))
-    .map((w) => w[0])
-    .join('')
-    .slice(0, 2)
-    .toUpperCase();
-}
-
-function Chip({ e, hidden }: { e: Employer; hidden?: boolean }) {
+function Tile({ e, hidden }: { e: Employer; hidden?: boolean }) {
   return (
-    <span
+    <div
       aria-hidden={hidden || undefined}
-      className="flex-shrink-0 mx-2.5 sm:mx-3 inline-flex items-center gap-3 pl-2 pr-5 sm:pr-6 py-2 rounded-full bg-white border-2 whitespace-nowrap shadow-sm"
-      style={{ borderColor: `${e.color}40` }}
+      className="flex-shrink-0 mx-2 sm:mx-2.5 w-[176px] h-[88px] sm:w-[208px] sm:h-[104px] rounded-xl bg-white border border-gray-100 shadow-sm flex items-center justify-center"
+      title={hidden ? undefined : e.name}
     >
-      <span
-        className="w-8 h-8 sm:w-9 sm:h-9 rounded-full flex items-center justify-center text-white text-[11px] sm:text-xs font-bold flex-shrink-0"
-        style={{ backgroundColor: e.color }}
-      >
-        {e.icon ? (
-          <svg viewBox="0 0 24 24" className="w-4 h-4 sm:w-[18px] sm:h-[18px]" fill="currentColor" aria-hidden>
-            <path d={e.icon} />
-          </svg>
-        ) : (
-          initials(e.name)
-        )}
-      </span>
-      <span className="text-sm sm:text-base font-bold" style={{ color: e.color }}>
-        {e.name}
-      </span>
-    </span>
+      <Image
+        src={e.logo}
+        alt={hidden ? '' : e.name}
+        width={e.w * 2}
+        height={e.h * 2}
+        loading="eager"
+        className="object-contain scale-[0.85] sm:scale-100"
+        style={{ width: e.w, height: e.h }}
+      />
+    </div>
   );
 }
 
 function Row({ items, reverse }: { items: Employer[]; reverse?: boolean }) {
   const track = [...items, ...items];
   return (
-    <div className="logo-marquee relative overflow-hidden py-2">
+    <div className="logo-marquee relative overflow-hidden py-1.5">
       <div className={`flex w-max items-center ${reverse ? 'name-marquee-rtl' : 'name-marquee-ltr'}`}>
         {track.map((e, i) => (
-          <Chip key={`${e.name}-${i}`} e={e} hidden={i >= items.length} />
+          <Tile key={`${e.name}-${i}`} e={e} hidden={i >= items.length} />
         ))}
       </div>
     </div>
@@ -53,17 +36,16 @@ function Row({ items, reverse }: { items: Employer[]; reverse?: boolean }) {
 
 export default function AlumniCompanies() {
   return (
-    <section className="py-20 sm:py-28 overflow-hidden">
+    <section className="py-20 sm:py-28 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-navy">Where our alumni work</h2>
           <div className="section-divider mx-auto mt-4" />
           <p className="mt-6 text-navy/60 max-w-2xl mx-auto">
-            MSC alumni have started their careers at leading consultancies, banks, investors and corporates across Europe
-            and beyond.
+            MSC alumni have started their careers at leading consultancies, banks, investors and corporates.
           </p>
         </div>
-        <div className="space-y-3">
+        <div className="space-y-2">
           <Row items={alumniEmployersConsulting} />
           <Row items={alumniEmployersFinanceIndustry} reverse />
         </div>

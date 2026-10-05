@@ -31,7 +31,7 @@ export default function LogoMarquee({ logos, largerLogos = [] }: LogoMarqueeProp
             <span className="text-navy/50 text-sm font-semibold">{logo.name}</span>
           );
           const cls =
-            'flex-shrink-0 w-40 sm:w-52 h-24 mx-4 sm:mx-6 flex items-center justify-center grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300';
+            'flex-shrink-0 w-40 sm:w-52 h-24 mx-4 sm:mx-6 flex items-center justify-center transition-transform duration-300 hover:scale-105';
           return logo.url ? (
             <a
               key={`${logo.name}-${i}`}

@@ -6,15 +6,15 @@ import { upcomingEvents, type UpcomingEvent } from '@/data/events';
 
 const typeStyles: Record<string, string> = {
   Recruitment: 'bg-orange/10 text-orange',
-  Workshop: 'bg-navy/5 text-navy',
+  Workshop: 'bg-gray-100 text-gray-600',
   Social: 'bg-emerald-50 text-emerald-700',
-  Event: 'bg-navy/5 text-navy',
+  Event: 'bg-gray-100 text-gray-600',
 };
 
 function DateBadge({ date }: { date?: string }) {
   if (!date) {
     return (
-      <div className="w-16 h-16 rounded-xl border-2 border-dashed border-navy/20 bg-white flex flex-col items-center justify-center leading-none text-navy/40">
+      <div className="w-16 h-16 rounded-xl border-2 border-dashed border-gray-300 bg-white flex flex-col items-center justify-center leading-none text-gray-400">
         <span className="text-[10px] font-bold uppercase tracking-wider">Date</span>
         <span className="text-sm font-bold mt-1">TBA</span>
       </div>
@@ -22,11 +22,11 @@ function DateBadge({ date }: { date?: string }) {
   }
   const d = new Date(`${date}T12:00:00`);
   return (
-    <div className="w-16 h-16 rounded-xl bg-navy text-white flex flex-col items-center justify-center leading-none shadow-sm">
-      <span className="text-[10px] font-bold uppercase tracking-wider text-orange">
+    <div className="w-16 h-16 rounded-xl bg-white border-2 border-orange/40 flex flex-col items-center justify-center leading-none shadow-sm">
+      <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
         {d.toLocaleDateString('en-GB', { month: 'short' })}
       </span>
-      <span className="text-2xl font-bold mt-1">{d.getDate()}</span>
+      <span className="text-2xl font-bold mt-1 text-orange tabular-nums">{d.getDate()}</span>
     </div>
   );
 }
@@ -79,7 +79,7 @@ export default function EventsTimeline() {
 
         <div className="relative">
           {/* timeline line through the date badges */}
-          <div className="absolute left-0 right-0 top-8 h-px bg-navy/15" aria-hidden />
+          <div className="absolute left-0 right-0 top-8 h-px bg-gray-200" aria-hidden />
           <div className="relative flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 lg:mx-0 lg:px-0 [scrollbar-width:thin]">
             {events.map((e, i) => (
               <EventCard key={`${e.title}-${i}`} e={e} />

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import LogoMarquee from '@/components/LogoMarquee';
@@ -7,6 +6,7 @@ import ServiceGrid from '@/components/ServiceGrid';
 import ProjectCards from '@/components/ProjectCards';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
+import ProjectEnquiry from '@/components/ProjectEnquiry';
 import { getContactPerson } from '@/data/team';
 import { clientTestimonials } from '@/data/testimonials';
 import { clientLogos } from '@/data/clients';
@@ -15,21 +15,6 @@ export const metadata: Metadata = {
   title: 'Clients',
   description: 'Helping you succeed since 2014. MSC delivers innovative, tailor-made consulting solutions.',
 };
-
-const values = [
-  {
-    title: 'Customer Centricity',
-    text: 'We value productive and long-lasting relationships with our clients, as we believe that those ties form the basis of success. In every interaction, we put your needs and goals first and keep communication channels open. Your satisfaction is our benchmark for quality.',
-  },
-  {
-    title: 'Innovation',
-    text: 'We are committed to using our theoretical and practical know-how in innovative ways that give your company a competitive edge. Our diligent team understands the real-world value of strategic innovation and we are keen on incorporating that vision into the solutions we offer.',
-  },
-  {
-    title: 'Cost-effectiveness',
-    text: 'We believe that our clients should never have to choose between competitive fees and outstanding value. All our consulting services are designed to offer the best possible price-performance ratio. We deliver high-quality results while keeping costs transparent and fair.',
-  },
-];
 
 const services = [
   {
@@ -122,52 +107,9 @@ export default function ClientsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
             Helping you succeed since 2014.
           </h1>
-        </div>
-      </section>
-
-      {/* Logo divider + Intro */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex items-center gap-6 mb-12">
-            <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
-            <div className="flex-grow h-px bg-navy/20" />
-          </div>
-          <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
-            Since 2014 our mission is to provide a solid link between academic expertise and industry needs.
-            We deliver innovative and tailor-made solutions that help our clients overcome crucial challenges.
+          <p className="mt-6 text-lg sm:text-xl text-white/85 max-w-2xl leading-relaxed">
+            Tailor-made solutions that link academic expertise with the needs of your business.
           </p>
-        </div>
-      </section>
-
-      {/* Project Values */}
-      <section className="py-20 sm:py-28 bg-gray-50/80">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Project Values</h2>
-            <div className="section-divider mx-auto mt-4" />
-            <p className="mt-6 text-navy/60">Our ethos and services revolve around three cornerstone values:</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {values.map((v) => (
-              <div key={v.title} className="bg-white rounded-lg p-7 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col">
-                <h3 className="text-lg font-bold text-navy mb-3">{v.title}</h3>
-                <div className="w-8 h-0.5 bg-orange/50 mb-4" />
-                <p className="text-navy/60 leading-relaxed text-[15px] text-justify flex-grow">{v.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Services</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <ServiceGrid services={services} />
         </div>
       </section>
 
@@ -185,17 +127,14 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      {/* Project Cycle */}
+      {/* Services */}
       <section className="py-20 sm:py-28">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-6">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Project Cycle</h2>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What we do</h2>
             <div className="section-divider mx-auto mt-4" />
           </div>
-          <ProjectTimeline
-            intro="To start off, the management team will meet with you and discuss your specific requirements. We will then formulate the objectives of our cooperation and draw up a project offer, taking into account your specifications. A contract and specific non-disclosure agreements will be signed. Kicking off the project work, the project leader will contact you and schedule a first meeting with your team. Throughout the project you will communicate with the project leader, who will update you regularly about the progress of the project. The project concludes with a final meeting, in which the team presents its findings and the deliverable."
-            steps={projectCycleSteps}
-          />
+          <ServiceGrid services={services} />
         </div>
       </section>
 
@@ -206,10 +145,24 @@ export default function ClientsPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Clients</h2>
             <div className="section-divider mx-auto mt-4" />
             <p className="mt-6 text-navy/60">
-              We work together with companies in many different industries ranging from start-ups to multinational corporations.
+              From start-ups to multinational corporations, across many different industries.
             </p>
           </div>
-          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips']} />
+          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips', 'BYD', 'Uniper']} />
+        </div>
+      </section>
+
+      {/* Project Cycle */}
+      <section className="py-20 sm:py-28">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Project Cycle</h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <ProjectTimeline
+            intro="From the first call to the final presentation: this is how a project with MSC works."
+            steps={projectCycleSteps}
+          />
         </div>
       </section>
 
@@ -217,6 +170,8 @@ export default function ClientsPage() {
       <TestimonialSlider testimonials={clientTestimonials} />
 
       <ContactSection contactPerson={contact} />
+
+      <ProjectEnquiry />
     </>
   );
 }

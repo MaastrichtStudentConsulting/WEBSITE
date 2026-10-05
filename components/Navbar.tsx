@@ -9,7 +9,6 @@ const navLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/clients', label: 'Clients' },
   { href: '/partners', label: 'Partners' },
-  { href: '/students', label: 'Students' },
   { href: '/join', label: 'Join us' },
 ];
 

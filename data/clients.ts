@@ -17,6 +17,10 @@ export const clientLogos: Logo[] = [
   { name: 'Qiagen', image: '/images/clients/Qiagen.png', url: 'https://www.qiagen.com' },
   { name: 'ProSiebenSat.1', image: '/images/clients/ProSiebenSat1.png', url: 'https://www.prosiebensat1.com' },
   { name: 'Vaude', image: '/images/clients/Vaude.png', url: 'https://www.vaude.com' },
+  { name: 'BYD', image: '/images/clients/BYD.png', url: 'https://www.byd.com' },
+  { name: 'Uniper', image: '/images/clients/Uniper.png', url: 'https://www.uniper.energy' },
+  { name: 'Haworth', image: '/images/clients/Haworth.png', url: 'https://www.haworth.com' },
+  { name: 'Abiomed', image: '/images/clients/Abiomed.png', url: 'https://www.abiomed.com' },
 ];
 
 export const partnerLogos: Logo[] = [
@@ -31,6 +35,7 @@ export const partnerLogos: Logo[] = [
   { name: 'Esprit St. Gallen', image: '/images/partners/Esprit.png', url: 'https://www.espritsg.ch' },
   { name: 'European Student Consulting Network', image: '/images/partners/ESCN.png' },
   { name: 'PrepLounge', image: '/images/partners/Preplounge logo.webp', url: 'https://www.preplounge.com' },
+  { name: 'ritzenhoefer & company', image: '/images/partners/ritzenhoefer.png', url: 'https://ritzenhoefer.com' },
 ];
 
 export interface EventItem {
@@ -91,6 +96,6 @@ export const studentInsights: EventItem[] = [
   {
     title: 'Team Socials',
     description: 'From outdoor activities to group outings, our social events bring the whole team together outside of work.',
-    image: '/images/events/socials.jpeg',
+    image: '/images/events/team-socials.jpg',
   },
 ];
