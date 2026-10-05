@@ -20,7 +20,7 @@ const services = [
   {
     title: 'AI & Automation',
     icon: '/images/icons/ai-chip.svg',
-    image: '/images/marketing/header_bg.jpg',
+    image: '/images/marketing/ai-chip.jpg',
     text: 'AI is changing how companies operate. We identify where AI creates real value in your business, map and optimise your processes, and support you in implementing AI projects – from the first use case to a working solution in day-to-day operations.',
   },
   {
