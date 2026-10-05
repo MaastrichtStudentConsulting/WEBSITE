@@ -11,7 +11,7 @@ import { studentInsights } from '@/data/clients';
 import { INFO_NIGHT, OPENING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
-import { getContactPerson } from '@/data/team';
+import { getContactPerson, MEMBER_COUNT } from '@/data/team';
 
 export const metadata: Metadata = {
   title: 'Join Us',
