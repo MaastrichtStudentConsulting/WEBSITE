@@ -80,7 +80,8 @@ export const alumniTestimonials: Testimonial[] = [
   },
   {
     quote: 'MSC has been a major part of my time in Maastricht. On the one hand, it is all about gaining practical skills and insights into what consulting is all about. On the other hand, the close community and family-like atmosphere is the start of many great friendships and memorable events we share.',
-    author: 'Adham Tahlouli',
+    author: 'Felicitas Hüffer',
+    image: '/images/alumni/felicitas-hueffer.jpg',
   },
 ];
 

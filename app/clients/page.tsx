@@ -6,7 +6,7 @@ import ServiceGrid from '@/components/ServiceGrid';
 import ProjectCards from '@/components/ProjectCards';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
-import ProjectEnquiry from '@/components/ProjectEnquiry';
+import FloatingContact from '@/components/FloatingContact';
 import { getContactPerson } from '@/data/team';
 import { clientTestimonials } from '@/data/testimonials';
 import { clientLogos } from '@/data/clients';
@@ -169,9 +169,18 @@ export default function ClientsPage() {
       {/* Testimonials */}
       <TestimonialSlider testimonials={clientTestimonials} />
 
-      <ContactSection contactPerson={contact} />
+      <ContactSection
+        contactPerson={contact}
+        form={{
+          subject: 'Project enquiry via the MSC website',
+          heading: 'Interested in a project with us?',
+          intro: 'Tell us briefly what you have in mind – our team will get back to you.',
+          messagePlaceholder: 'Your project or question',
+          company: true,
+        }}
+      />
 
-      <ProjectEnquiry />
+      <FloatingContact title="Interested in a project?" subtitle="Send us a message" />
     </>
   );
 }

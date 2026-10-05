@@ -14,7 +14,7 @@ const typeStyles: Record<string, string> = {
 function DateBadge({ date }: { date?: string }) {
   if (!date) {
     return (
-      <div className="w-16 h-16 rounded-xl border-2 border-dashed border-gray-300 bg-white flex flex-col items-center justify-center leading-none text-gray-400">
+      <div className="w-16 h-16 rounded-xl border-2 border-dashed border-navy/40 bg-white flex flex-col items-center justify-center leading-none text-navy/50">
         <span className="text-[10px] font-bold uppercase tracking-wider">Date</span>
         <span className="text-sm font-bold mt-1">TBA</span>
       </div>
@@ -22,7 +22,7 @@ function DateBadge({ date }: { date?: string }) {
   }
   const d = new Date(`${date}T12:00:00`);
   return (
-    <div className="w-16 h-16 rounded-xl bg-white border-2 border-orange/40 flex flex-col items-center justify-center leading-none shadow-sm">
+    <div className="w-16 h-16 rounded-xl bg-white border-2 border-navy flex flex-col items-center justify-center leading-none shadow-sm">
       <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
         {d.toLocaleDateString('en-GB', { month: 'short' })}
       </span>

@@ -18,25 +18,59 @@ const whatWeOffer = [
   {
     title: 'Recruiting',
     icon: '/images/icons/telescope.svg',
-    text: 'Meet a hand-picked group of motivated students at your own workshop.',
+    text: 'Meet a hand-picked group of motivated students at your own workshop or case training – and get to know future colleagues before they apply.',
   },
   {
     title: 'Visibility',
     icon: '/images/icons/megaphone.svg',
-    text: 'Put your firm in front of the most ambitious students in Maastricht.',
+    text: 'Put your firm in front of the most ambitious students in Maastricht, on campus and through our channels.',
   },
   {
     title: 'Impact',
     icon: '/images/icons/leaf-lightbulb.svg',
-    text: 'Invest in the consultants and leaders of tomorrow.',
+    text: 'Invest in the consultants and leaders of tomorrow and help them grow through real business challenges.',
   },
 ];
 
 const whatWeExpect = [
-  { title: 'Professional input', text: 'Share your expertise in workshops and case trainings.' },
-  { title: 'Long-term commitment', text: 'Regular events that build real relationships.' },
-  { title: 'Career guidance', text: 'Advice for our consultants as they start their careers.' },
+  {
+    title: 'Professional input',
+    icon: '/images/icons/presentation.svg',
+    text: 'Share your expertise in workshops and case trainings – ideally based on real cases from your daily work.',
+  },
+  {
+    title: 'Long-term commitment',
+    icon: '/images/icons/people.svg',
+    text: 'Regular events, ideally every semester, so that real relationships between your team and our members can grow.',
+  },
+  {
+    title: 'Career guidance',
+    icon: '/images/icons/darts.svg',
+    text: 'Give our consultants honest advice on careers in your industry and help them start with confidence.',
+  },
 ];
+
+function OfferList({ title, items }: { title: string; items: { title: string; icon: string; text: string }[] }) {
+  return (
+    <div className="rounded-2xl bg-gray-50/80 border border-gray-100 p-7 sm:p-10">
+      <h2 className="text-3xl sm:text-4xl font-bold text-navy">{title}</h2>
+      <div className="section-divider mt-4" />
+      <ul className="mt-8 space-y-7">
+        {items.map((item) => (
+          <li key={item.title} className="flex gap-5">
+            <span className="flex-shrink-0 w-14 h-14 rounded-full bg-white shadow-sm flex items-center justify-center">
+              <Image src={item.icon} alt="" width={30} height={30} />
+            </span>
+            <div>
+              <h3 className="text-xl font-bold text-navy">{item.title}</h3>
+              <p className="mt-1 text-[16px] text-navy/70 leading-relaxed">{item.text}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function PartnersPage() {
   const contact = getContactPerson('partners');
@@ -57,43 +91,11 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* What We Offer */}
+      {/* What We Offer + What We Expect, side by side */}
       <section className="py-20 sm:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What We Offer</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {whatWeOffer.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-gray-50/80 border border-gray-100 p-8 sm:p-10 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-white shadow-sm flex items-center justify-center">
-                  <Image src={item.icon} alt="" width={40} height={40} />
-                </div>
-                <h3 className="mt-6 text-2xl sm:text-3xl font-bold text-navy">{item.title}</h3>
-                <p className="mt-3 text-lg text-navy/70 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We Expect */}
-      <section className="py-16 sm:py-20 bg-gray-50/80">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What We Expect</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {whatWeExpect.map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-7 border border-gray-100 text-center">
-                <h3 className="text-xl font-bold text-navy">{item.title}</h3>
-                <div className="w-8 h-0.5 bg-orange/60 mx-auto my-3" />
-                <p className="text-navy/65 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <OfferList title="What we offer" items={whatWeOffer} />
+          <OfferList title="What we expect" items={whatWeExpect} />
         </div>
       </section>
 

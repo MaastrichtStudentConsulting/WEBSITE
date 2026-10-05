@@ -227,12 +227,16 @@ export default function StudentQA() {
           <div>
             <p className="font-bold text-navy">Still have questions?</p>
             <p className="text-navy/60 text-sm sm:text-[15px] mt-0.5">
-              Write to us at{' '}
-              <a href={`mailto:${HR_EMAIL}?subject=Question%20about%20the%20application`} className="underline underline-offset-2 hover:text-orange break-all">
+              Ask us with the{' '}
+              <a href="#contact-form" className="underline underline-offset-2 hover:text-navy">
+                form below
+              </a>
+              , write to{' '}
+              <a href={`mailto:${HR_EMAIL}?subject=Question%20about%20the%20application`} className="underline underline-offset-2 hover:text-navy break-all">
                 {HR_EMAIL}
               </a>{' '}
               or visit our{' '}
-              <a href="#info-night" className="underline underline-offset-2 hover:text-orange">
+              <a href="#info-night" className="underline underline-offset-2 hover:text-navy">
                 Info Night
               </a>
               .

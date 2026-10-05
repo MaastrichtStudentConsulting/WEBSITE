@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
+import FloatingContact from '@/components/FloatingContact';
 import ApplicationCTA from '@/components/ApplicationCTA';
 import StudentQA from '@/components/StudentQA';
 import AddToCalendar from '@/components/AddToCalendar';
@@ -107,24 +108,8 @@ export default function JoinPage() {
         </div>
       </section>
 
-      {/* Logo divider + Intro */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex items-center gap-6 mb-12">
-            <div className="flex-grow h-px bg-navy/20" />
-            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
-            <div className="flex-grow h-px bg-navy/20" />
-          </div>
-          <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 text-center">
-            At MSC, we believe in the power of diversity and inclusivity, embracing talents from all faculties
-            and study years at Maastricht University. We are on the lookout for exceptional individuals who are
-            eager to push boundaries and go the extra mile.
-          </p>
-        </div>
-      </section>
-
       {/* Roles + Info Night */}
-      <section className="pb-20 sm:pb-28">
+      <section className="py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Open Positions</h2>
@@ -164,7 +149,7 @@ export default function JoinPage() {
             rel="noopener noreferrer"
             className="group mt-5 rounded-xl border border-gray-100 bg-white p-6 sm:px-8 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 hover:shadow-md transition-shadow"
           >
-            <span className="flex-shrink-0 w-20 h-20 rounded-2xl text-white flex items-center justify-center" style={{ background: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)' }}>
+            <span className="flex-shrink-0 w-20 h-20 rounded-xl bg-white border border-gray-200 text-navy flex items-center justify-center">
               <svg className="w-9 h-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
               </svg>
@@ -283,7 +268,18 @@ export default function JoinPage() {
 
       <StudentQA />
 
-      <ContactSection contactPerson={contact} />
+      <ContactSection
+        contactPerson={contact}
+        form={{
+          subject: 'Question about joining MSC (via the website)',
+          heading: 'Any questions?',
+          intro: 'Ask us anything about MSC, the Info Night or the application – we are happy to help.',
+          messagePlaceholder: 'Your question',
+          studyField: true,
+        }}
+      />
+
+      <FloatingContact title="Any questions?" subtitle="Ask us directly" />
     </>
   );
 }
