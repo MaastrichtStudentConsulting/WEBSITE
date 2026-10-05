@@ -33,7 +33,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     title: 'Applications open',
     type: 'Recruitment',
     date: '2026-11-03',
-    text: 'Apply to join our Consulting or Marketing team for the next project period.',
+    text: 'Apply to join our Consulting or PR team for the next project period.',
     href: '/join#apply',
     linkLabel: 'How to apply',
   },

@@ -33,12 +33,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Half-screen hero */}
-      <section className="relative h-[85vh] min-h-[520px] max-h-[1000px] flex items-end overflow-hidden">
-        <ParallaxHero src="/images/team/team-sunset.jpg" alt="The MSC team" className="object-[center_55%] origin-bottom" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/25 to-navy/30" />
-        <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pb-14 sm:pb-20">
+      <section className="relative h-[85vh] min-h-[520px] max-h-[1000px] flex items-center overflow-hidden">
+        <ParallaxHero src="/images/team/board-walking-1.jpg" alt="The MSC board" className="object-[center_60%] origin-bottom" />
+        <div className="absolute inset-0 bg-navy/55" />
+        <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
-            {MEMBER_COUNT} Consultants.<br />One Team.
+            The people<br />behind MSC.
           </h1>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function AboutPage() {
           <ConsultantGrid consultants={consultants} />
 
           <div className="text-center mt-20 mb-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-navy">Marketing Team</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-navy">PR Team</h3>
             <div className="section-divider mx-auto mt-4" />
           </div>
           <div className="md:max-w-[calc(60%+0.75rem)] mx-auto">
@@ -93,7 +93,7 @@ export default function AboutPage() {
       <section className="py-20 sm:py-28 bg-gray-50/80">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Teams</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Specialised Teams</h2>
             <div className="section-divider mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">

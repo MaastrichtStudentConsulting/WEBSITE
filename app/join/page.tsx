@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const applicationSteps = [
   {
     title: 'Attend our Info Night',
-    description: `Join our Info Night on ${INFO_NIGHT.dateLabel} to learn more about MSC and to meet our current consultants.`,
+    description: `Join our Info Night on the ${INFO_NIGHT.dateLabel} to learn more about MSC and to meet our current consultants.`,
     icon: '/images/icons/chat-bubble.svg',
   },
   {
@@ -31,7 +31,7 @@ const applicationSteps = [
   },
   {
     title: 'Upload it to MSC',
-    description: `Applications open on ${OPENING_LABEL}. Click "Apply now" on this page to submit your documents. The link is also shared on our Instagram.`,
+    description: `Applications open on the ${OPENING_LABEL}. Click "Apply now" on this page to submit your documents. The link is also shared on our Instagram.`,
     icon: '/images/icons/send4.svg',
   },
   {
@@ -52,7 +52,7 @@ const roles = [
     text: 'Apply your academic knowledge to real-life business challenges and work on impactful projects for our clients in teams of 4–8 students.',
   },
   {
-    title: 'Marketing / PR Strategist',
+    title: 'PR Strategist',
     text: "Shape MSC's communication, branding and content creation, from our social media presence to events and campaigns.",
   },
 ];
@@ -99,12 +99,12 @@ export default function JoinPage() {
   return (
     <>
       {/* Half-screen hero */}
-      <section className="relative h-[85vh] min-h-[520px] max-h-[1000px] flex items-center overflow-hidden">
-        <ParallaxHero src="/images/team/board-walking-2.jpg" className="object-[center_60%] origin-bottom" />
-        <div className="absolute inset-0 bg-navy/55" />
-        <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15] max-w-3xl">
-            Become part of our team.
+      <section className="relative h-[85vh] min-h-[520px] max-h-[1000px] flex items-end overflow-hidden">
+        <ParallaxHero src="/images/team/team-sunset.jpg" alt="The MSC team" className="object-[center_55%] origin-bottom" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/25 to-navy/30" />
+        <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pb-14 sm:pb-20">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
+            {MEMBER_COUNT} Consultants.<br />One Team.
           </h1>
         </div>
       </section>

@@ -141,9 +141,6 @@ export default function HomePage() {
             <div className="section-divider mx-auto mt-4" />
           </div>
           <BoardGrid members={boardMembers} />
-          <p className="text-center text-navy/50 mt-12 max-w-2xl mx-auto italic">
-            As the board of Maastricht Student Consulting we are looking forward to getting in touch with you.
-          </p>
         </div>
       </section>
 
@@ -152,10 +149,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our References</h2>
-            <p className="mt-6 text-navy/60 max-w-4xl mx-auto leading-relaxed">
-              Our stakeholders are an integral part of our success. Therefore, we are always keen on
-              meeting new partners that share our values of intellectual curiosity, openness, and dedication.
-            </p>
+            <div className="section-divider mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {homeReferences.map((ref, i) => (

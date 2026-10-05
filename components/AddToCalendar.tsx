@@ -5,7 +5,7 @@ import { INFO_NIGHT } from '@/data/recruitment';
 
 const TITLE = 'MSC Info Night';
 const details = () =>
-  `Get to know Maastricht Student Consulting, meet current members and ask all your questions before applying. Applications open on 3 November. More info: ${window.location.origin}/join`;
+  `Get to know Maastricht Student Consulting, meet current members and ask all your questions before applying. Applications open on the 3rd of November. More info: ${window.location.origin}/join`;
 
 const ymd = (d: string) => d.replace(/-/g, '');
 

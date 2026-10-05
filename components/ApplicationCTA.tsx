@@ -54,7 +54,7 @@ export default function ApplicationCTA() {
       ) : (
         <>
           <p className="text-lg sm:text-xl text-white/90 font-medium mb-12 max-w-2xl mx-auto">
-            Applications open on {OPENING_LABEL}. Meet us first at our Info Night on{' '}
+            Applications open on the {OPENING_LABEL}. Meet us first at our Info Night on the{' '}
             {INFO_NIGHT.dateLabel.replace(' 2026', '')}.
           </p>
 
@@ -80,7 +80,7 @@ export default function ApplicationCTA() {
         ) : (
           <span
             aria-disabled="true"
-            title={open ? 'The application link will be added shortly' : `Applications open ${OPENING_LABEL}`}
+            title={open ? 'The application link will be added shortly' : `Applications open on the ${OPENING_LABEL}`}
             className="inline-flex items-center justify-center gap-2 border-2 border-white/70 bg-black/25 text-white px-10 py-3 rounded-full text-sm font-semibold tracking-wide cursor-not-allowed select-none min-w-[220px]"
           >
             <LockIcon />

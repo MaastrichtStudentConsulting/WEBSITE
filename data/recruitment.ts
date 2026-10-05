@@ -17,8 +17,8 @@ export const APPLY_URL = '';
 export const TALENT_POOL_URL = 'https://share.hsforms.com/1RS7hgpvjQgeIeKx3NIjBsQbw4n1';
 
 export const INFO_NIGHT = {
-  dateLabel: '2 November 2026',
-  shortDate: '2 Nov',
+  dateLabel: '2nd of November 2026',
+  shortDate: '2nd Nov',
   location: 'Location to be announced',
   /** Calendar date (YYYY-MM-DD). */
   date: '2026-11-02',
@@ -32,8 +32,8 @@ export const INFO_NIGHT = {
   address: '',
 };
 
-export const OPENING_LABEL = '3 November 2026';
-export const OPENING_SHORT = '3 Nov';
+export const OPENING_LABEL = '3rd of November 2026';
+export const OPENING_SHORT = '3rd Nov';
 
 export const HR_EMAIL = 'info@maastrichtconsulting.com';
 

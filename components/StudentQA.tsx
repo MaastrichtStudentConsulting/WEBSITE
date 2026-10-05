@@ -68,10 +68,10 @@ const faqs: { q: string; icon: string; a: ReactNode }[] = [
     icon: 'team',
     a: (
       <>
-        <P>Students can apply to join our Consulting Team or our Marketing Team.</P>
+        <P>Students can apply to join our Consulting Team or our PR Team.</P>
         <P>
           As a Consultant, you apply your academic knowledge to real-life business challenges and work on
-          impactful projects for our clients. As a Marketing Strategist, you contribute to MSC&apos;s
+          impactful projects for our clients. As a PR Strategist, you contribute to MSC&apos;s
           communication, branding and content creation.
         </P>
       </>
