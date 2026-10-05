@@ -5,6 +5,8 @@ import BoardGrid from '@/components/BoardGrid';
 import ConsultantGrid from '@/components/ConsultantGrid';
 import MemberTestimonialSlider from '@/components/MemberTestimonialSlider';
 import AlumniCompanies from '@/components/AlumniCompanies';
+import EventSlider from '@/components/EventSlider';
+import { studentInsights } from '@/data/clients';
 import ParallaxHero from '@/components/ParallaxHero';
 import { boardMembers, consultants, marketingTeam, MEMBER_COUNT, getContactPerson } from '@/data/team';
 import { memberTestimonials, alumniTestimonials } from '@/data/testimonials';
@@ -110,8 +112,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Member Testimonials — slider */}
+      {/* Life at MSC — team photo */}
+      <section className="relative h-[70vh] min-h-[420px] max-h-[820px] overflow-hidden scroll-mt-20">
+        <Image
+          src="/images/team/team-sunset.jpg"
+          alt="The MSC team at sunset in Maastricht"
+          fill
+          sizes="100vw"
+          className="object-cover object-[center_55%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 z-10">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-10 sm:pb-14">
+            <p className="text-orange text-xs sm:text-sm font-bold uppercase tracking-[0.2em]">The MSC team</p>
+            <h2 className="mt-2 text-3xl sm:text-5xl font-bold text-white">{MEMBER_COUNT} consultants. One team.</h2>
+          </div>
+        </div>
+      </section>
+
+      {/* What it's like to be at MSC */}
       <section className="py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What it&apos;s like to be at MSC</h2>
+            <div className="section-divider mx-auto mt-4" />
+          </div>
+          <EventSlider events={studentInsights} />
+        </div>
+      </section>
+
+      {/* Member Testimonials — slider */}
+      <section className="py-20 sm:py-28 bg-gray-50/80">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">What our members value most about MSC</h2>

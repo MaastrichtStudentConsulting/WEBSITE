@@ -5,8 +5,7 @@ import FloatingContact from '@/components/FloatingContact';
 import ApplicationCTA from '@/components/ApplicationCTA';
 import StudentQA from '@/components/StudentQA';
 import AddToCalendar from '@/components/AddToCalendar';
-import EventSlider from '@/components/EventSlider';
-import { studentInsights } from '@/data/clients';
+import OfferExpect from '@/components/OfferExpect';
 import { INFO_NIGHT, OPENING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
@@ -60,17 +59,17 @@ const whatWeOffer = [
   {
     title: 'Real projects',
     icon: '/images/icons/book.svg',
-    text: 'Solve real business cases for companies like Siemens, SAP and Rheinmetall.',
+    text: 'Work in small teams on real business cases for companies like Siemens, SAP and Rheinmetall – from the first client meeting to the final presentation.',
   },
   {
     title: 'Workshops',
     icon: '/images/icons/presentation.svg',
-    text: 'Workshops and case trainings with partners like BCG, Simon-Kucher and Inverto.',
+    text: 'Case trainings and workshops with partners like BCG, Simon-Kucher and Inverto – and first contacts for your future career.',
   },
   {
     title: 'A team for life',
     icon: '/images/icons/people.svg',
-    text: 'Trips, dinners and socials – and an alumni network across Europe.',
+    text: 'Trips, dinners and socials with a close-knit team – and an alumni network at leading firms across Europe.',
   },
 ];
 
@@ -168,79 +167,6 @@ export default function JoinPage() {
         </div>
       </section>
 
-      {/* Life at MSC — team photo */}
-      <section id="students" className="relative h-[70vh] min-h-[420px] max-h-[820px] overflow-hidden scroll-mt-20">
-        <Image
-          src="/images/team/team-sunset.jpg"
-          alt="The MSC team at sunset in Maastricht"
-          fill
-          sizes="100vw"
-          className="object-cover object-[center_55%]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 z-10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-10 sm:pb-14">
-            <p className="text-orange text-xs sm:text-sm font-bold uppercase tracking-[0.2em]">For students</p>
-            <h2 className="mt-2 text-3xl sm:text-5xl font-bold text-white">Our success starts with you.</h2>
-          </div>
-        </div>
-      </section>
-
-      {/* What We Offer */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What we offer</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {whatWeOffer.map((item) => (
-              <div key={item.title} className="rounded-2xl bg-gray-50/80 border border-gray-100 p-8 sm:p-10 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-white shadow-sm flex items-center justify-center">
-                  <Image src={item.icon} alt="" width={40} height={40} />
-                </div>
-                <h3 className="mt-6 text-2xl sm:text-3xl font-bold text-navy">{item.title}</h3>
-                <p className="mt-3 text-lg text-navy/70 leading-relaxed">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What We Expect */}
-      <section className="relative py-20 sm:py-28 overflow-hidden">
-        <Image src="/images/europe-map.jpg" alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-navy/85" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">What we expect</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {whatWeExpect.map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-7 sm:p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-5 flex items-center justify-center">
-                  <Image src={item.icon} alt="" width={56} height={56} className="w-14 h-14" />
-                </div>
-                <h3 className="text-lg font-bold text-navy mb-3">{item.title}</h3>
-                <p className="text-navy/65 leading-relaxed text-[15px]">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What it's like to be at MSC */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">What it&apos;s like to be at MSC</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <EventSlider events={studentInsights} />
-        </div>
-      </section>
-
       {/* Application Status + Countdown + Talent Pool */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden" id="apply">
         <Image
@@ -254,6 +180,9 @@ export default function JoinPage() {
 
         <ApplicationCTA />
       </section>
+
+      {/* What We Offer + What We Expect */}
+      <OfferExpect offer={whatWeOffer} expect={whatWeExpect} />
 
       {/* Application Procedure */}
       <section className="py-20 sm:py-28">

@@ -27,7 +27,7 @@ const cards = [
   {
     title: 'Students',
     image: '/images/team/students-card.jpg',
-    href: '/join#students',
+    href: '/join',
     text: 'As a top-tier student with an inquiring mind, you are always looking for ways to take your knowledge further? Discover the practical side of your academic knowledge and join us as a student consultant. With MSC, your education has real-life value.',
     imageClassName: '',
   },
@@ -62,7 +62,7 @@ const services = [
 ];
 
 const refLabels = ['Client', 'Partner', 'Student'];
-const refLinks = ['/clients', '/partners', '/join#students'];
+const refLinks = ['/clients', '/partners', '/join'];
 
 export default function HomePage() {
   return (
