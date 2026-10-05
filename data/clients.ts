@@ -13,7 +13,6 @@ export const clientLogos: Logo[] = [
   { name: 'Nissin', image: '/images/clients/Nissin-logo.png', url: 'https://www.nissin.com' },
   { name: 'Oqema', image: '/images/clients/Oqema.png', url: 'https://www.oqema.com' },
   { name: 'Tennis Point', image: '/images/clients/Tennis-Point.png', url: 'https://www.tennis-point.com' },
-  { name: 'Rheinmetall', image: '/images/clients/Rheinmetall.png', url: 'https://www.rheinmetall.com' },
   { name: 'Qiagen', image: '/images/clients/Qiagen.png', url: 'https://www.qiagen.com' },
   { name: 'ProSiebenSat.1', image: '/images/clients/ProSiebenSat1.png', url: 'https://www.prosiebensat1.com' },
   { name: 'Vaude', image: '/images/clients/Vaude.png', url: 'https://www.vaude.com' },
@@ -75,7 +74,7 @@ export const partnerEvents: EventItem[] = [
 export const studentInsights: EventItem[] = [
   {
     title: 'MSC Trip',
-    description: 'Last semester, all MSC members traveled to Tenerife for a memorable trip combining team bonding, and unforgettable experiences.',
+    description: 'Last year, all MSC members traveled to Tenerife for a memorable trip combining team bonding, and unforgettable experiences.',
     image: '/images/events/tenerife.jpeg',
   },
   {

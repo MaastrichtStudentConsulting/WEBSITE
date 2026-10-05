@@ -20,7 +20,7 @@ const services = [
   {
     title: 'AI & Automation',
     icon: '/images/icons/ai-chip.svg',
-    image: '/images/marketing/Photo-15-skaliert.jpg',
+    image: '/images/marketing/header_bg.jpg',
     text: 'AI is changing how companies operate. We identify where AI creates real value in your business, map and optimise your processes, and support you in implementing AI projects – from the first use case to a working solution in day-to-day operations.',
   },
   {
@@ -145,7 +145,7 @@ export default function ClientsPage() {
               From start-ups to multinational corporations, across many different industries.
             </p>
           </div>
-          <LogoMarquee logos={clientLogos} largerLogos={['Rheinmetall', 'Oqema', 'Philips', 'Vaude']} />
+          <LogoMarquee logos={clientLogos} largerLogos={['Oqema', 'Philips', 'Vaude']} />
         </div>
       </section>
 

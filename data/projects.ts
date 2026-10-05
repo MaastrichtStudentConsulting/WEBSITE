@@ -22,11 +22,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    client: 'Rheinmetall',
-    logo: '/images/projects/Rheinmetall.png',
-    logoW: 253,
-    logoH: 69,
-    industry: 'Defence & Automotive · DAX 40',
+    client: 'DAX 40 Company',
+    logo: '/images/projects/nda.png',
+    logoW: 130,
+    logoH: 130,
+    industry: 'Client name under NDA',
     service: 'Market Research & Analysis',
     year: '2025',
     title: 'DEI benchmarking against the DAX 40',

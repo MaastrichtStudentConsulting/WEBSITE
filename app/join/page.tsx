@@ -61,7 +61,7 @@ const whatWeOffer = [
   {
     title: 'Real projects',
     icon: '/images/icons/book.svg',
-    text: 'Work in small teams on real business cases for companies like Siemens, SAP and Rheinmetall – from the first client meeting to the final presentation.',
+    text: 'Work in small teams on real business cases for companies like Siemens, SAP and Qiagen – from the first client meeting to the final presentation.',
   },
   {
     title: 'Workshops',
