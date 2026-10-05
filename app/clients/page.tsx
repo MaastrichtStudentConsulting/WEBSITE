@@ -119,9 +119,6 @@ export default function ClientsPage() {
           <div className="text-center mb-14">
             <h2 className="text-3xl sm:text-4xl font-bold text-navy">Selected Projects</h2>
             <div className="section-divider mx-auto mt-4" />
-            <p className="mt-6 text-navy/60 max-w-2xl mx-auto">
-              A few of the 175+ projects we have delivered. Hover over or tap a card to see what we did.
-            </p>
           </div>
           <ProjectCards />
         </div>
@@ -173,9 +170,9 @@ export default function ClientsPage() {
         contactPerson={contact}
         form={{
           subject: 'Project enquiry via the MSC website',
-          heading: 'Interested in a project with us?',
-          intro: 'Tell us briefly what you have in mind – our team will get back to you.',
-          messagePlaceholder: 'Your project or question',
+          heading: "Let's talk about your project",
+          intro: 'Interested in a project or want to hear what we can offer in a short call? Send us a message and we will get back to you.',
+          messagePlaceholder: 'Your project, your question or a good time for a call',
           company: true,
         }}
       />

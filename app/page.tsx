@@ -72,8 +72,13 @@ export default function HomePage() {
 
       {/* Intro */}
       <section className="py-20 sm:py-28">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-lg sm:text-xl leading-[1.8] text-navy/70">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="flex items-center gap-6 mb-12">
+            <div className="flex-grow h-px bg-navy/20" />
+            <Image src="/images/msc-logo-big.png" alt="MSC" width={80} height={48} className="flex-shrink-0 h-14 w-auto -mt-5" />
+            <div className="flex-grow h-px bg-navy/20" />
+          </div>
+          <p className="text-lg sm:text-xl leading-[1.8] text-navy/70 max-w-3xl mx-auto">
             Maastricht Student Consulting is a young student consultancy comprised of ambitious students
             from Maastricht University. Our team is driven by a sense of community, purpose, ambition,
             and the willingness to turn our vision into real change within the consulting world and beyond.

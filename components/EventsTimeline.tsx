@@ -26,7 +26,7 @@ function DateBadge({ date }: { date?: string }) {
       <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
         {d.toLocaleDateString('en-GB', { month: 'short' })}
       </span>
-      <span className="text-2xl font-bold mt-1 text-orange tabular-nums">{d.getDate()}</span>
+      <span className="text-2xl font-bold mt-1 text-navy tabular-nums">{d.getDate()}</span>
     </div>
   );
 }
