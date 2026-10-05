@@ -48,10 +48,10 @@ export const partnerTestimonials: Testimonial[] = [
 
 export const memberTestimonials: Testimonial[] = [
   {
-    quote: 'What I appreciate most about MSC is the combination of academic excellence and a close-knit, social community. Everyone is highly motivated and ambitious, yet at the same time open, social, and fun to be around, which makes working together on projects both productive and memorable.',
-    author: 'Martim Machado',
-    role: 'Biomedical Sciences Student at Maastricht University',
-    image: '/images/consultants/Martim.jpg',
+    quote: 'My biggest learning has been that you can contribute even when you are not the most knowledgeable person in the room. I have become more comfortable sharing my ideas, asking questions and trusting my own perspective instead of feeling like I need to know everything first.',
+    author: 'Bintou Jabbi',
+    role: 'International Business Student at Maastricht University',
+    image: '/images/team/consultants/bintou-jabbi.jpg',
   },
   {
     quote: 'I really admire the MSC family and the amazing people in it. I love spending time together, having fun and just enjoying the journey while learning from one another. Some of my best memories and biggest learnings come from this community, where we constantly push and support each other to grow.',
@@ -80,8 +80,7 @@ export const alumniTestimonials: Testimonial[] = [
   },
   {
     quote: 'MSC has been a major part of my time in Maastricht. On the one hand, it is all about gaining practical skills and insights into what consulting is all about. On the other hand, the close community and family-like atmosphere is the start of many great friendships and memorable events we share.',
-    author: 'Felicitas Hüffer',
-    image: '/images/alumni/felicitas-hueffer.jpg',
+    author: 'Adham Tahlouli',
   },
 ];
 

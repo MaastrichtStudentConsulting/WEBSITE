@@ -2,7 +2,7 @@
 const nextConfig = {
   // The Students page is now part of About Us
   async redirects() {
-    return [{ source: '/students', destination: '/about', permanent: false }];
+    return [{ source: '/students', destination: '/join', permanent: false }];
   },
   images: {
     // Larger device sizes so Retina screens get crisp images

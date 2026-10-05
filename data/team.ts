@@ -76,14 +76,14 @@ export const MEMBER_COUNT = boardMembers.length + consultants.length + marketing
 export function getContactPerson(page: 'home' | 'about' | 'clients' | 'partners' | 'students' | 'join'): BoardMember {
   switch (page) {
     case 'home':
+    case 'about':
       return boardMembers[0]; // Niklas Ullrich — President
     case 'clients':
       return boardMembers[4]; // Lars Vandingenen — Business Development
     case 'partners':
       return boardMembers[2]; // Jan Moog — External Relations
-    case 'about':
     case 'students':
-      return boardMembers[1]; // Lukas Lippert — Vice President (About Us incl. students)
+      return boardMembers[1]; // Lukas Lippert — Vice President
     case 'join':
       return boardMembers[3]; // Henrik Pickrahn — Human Resources
   }
