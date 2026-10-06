@@ -54,7 +54,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     title: 'Bain Workshop',
     type: 'Workshop',
     date: '2026-11-05',
-    text: 'On site in Cologne – with dinner and networking afterwards.',
+    text: 'On site in Düsseldorf – with dinner and networking afterwards.',
   },
   {
     title: 'ritzenhoefer Workshop',
