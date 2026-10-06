@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+  // Hover styles only on devices with a real mouse (no 'stuck' hover colours after tapping on phones)
+  future: { hoverOnlyWhenSupported: true },
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

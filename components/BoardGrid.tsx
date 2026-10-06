@@ -45,24 +45,24 @@ export default function BoardGrid({ members }: BoardGridProps) {
             />
 
             {/* Contact overlay on hover / tap */}
-            <div className="absolute inset-0 bg-navy/85 flex flex-col items-center justify-center gap-2 px-3 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
+            <div className="absolute inset-0 bg-navy/85 flex flex-col items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-300">
               {member.phone && (
                 <a
                   href={`tel:${member.phone.replace(/\s/g, '')}`}
-                  className="inline-flex items-center gap-1.5 text-white text-[11px] sm:text-xs font-semibold hover:text-orange transition-colors whitespace-nowrap"
+                  className="inline-flex flex-col sm:flex-row items-center gap-0.5 sm:gap-1.5 text-white text-[10px] sm:text-xs font-semibold tracking-tight sm:tracking-normal hover:text-orange transition-colors whitespace-nowrap"
                 >
                   <PhoneIcon className="w-3.5 h-3.5 flex-shrink-0" />
                   {member.phone}
                 </a>
               )}
-              <div className="flex items-center gap-2 mt-1">
+              <div className="flex items-center gap-2 sm:mt-1">
                 {member.linkedin && (
                   <a
                     href={member.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${member.name} on LinkedIn`}
-                    className="w-9 h-9 rounded-full bg-white text-navy flex items-center justify-center hover:bg-orange hover:text-white transition-colors"
+                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white text-navy flex items-center justify-center hover:bg-orange hover:text-white transition-colors"
                   >
                     <LinkedInIcon />
                   </a>
@@ -70,7 +70,7 @@ export default function BoardGrid({ members }: BoardGridProps) {
                 <a
                   href={`mailto:${member.email}`}
                   aria-label={`Email ${member.name}`}
-                  className="w-9 h-9 rounded-full bg-white text-navy flex items-center justify-center hover:bg-orange hover:text-white transition-colors"
+                  className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white text-navy flex items-center justify-center hover:bg-orange hover:text-white transition-colors"
                 >
                   <MailIcon />
                 </a>

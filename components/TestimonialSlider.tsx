@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useSwipe } from '@/lib/useSwipe';
 import type { Testimonial } from '@/data/testimonials';
 
 interface Props {
@@ -23,6 +24,7 @@ export default function TestimonialSlider({ testimonials }: Props) {
   const prev = () => goTo(current === 0 ? testimonials.length - 1 : current - 1);
   const next = () => goTo(current === testimonials.length - 1 ? 0 : current + 1);
 
+  const swipe = useSwipe(next, prev);
   const t = testimonials[current];
 
   return (
@@ -49,7 +51,7 @@ export default function TestimonialSlider({ testimonials }: Props) {
         </button>
 
         {/* Quote — auto height on mobile, fixed on desktop */}
-        <div className="px-10 sm:px-14 min-h-[200px] sm:h-[240px] flex flex-col justify-center text-center">
+        <div {...swipe} className="touch-pan-y px-10 sm:px-14 min-h-[200px] sm:h-[240px] flex flex-col justify-center text-center">
           <div
             className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
           >

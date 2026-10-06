@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from '@/components/SafeImage';
 import { EventItem } from '@/data/clients';
+import { useSwipe } from '@/lib/useSwipe';
 
 interface Props {
   events: EventItem[];
@@ -49,6 +50,7 @@ export default function EventSlider({ events }: Props) {
   const prev = () => setCurrent((c) => Math.max(0, c - 1));
   const next = () => setCurrent((c) => Math.min(maxIndex, c + 1));
 
+  const swipe = useSwipe(next, prev);
   const translateX = current * (cardWidth + gap);
 
   return (
@@ -80,7 +82,7 @@ export default function EventSlider({ events }: Props) {
       </button>
 
       {/* Carousel track */}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden touch-pan-y" {...swipe}>
         <div
           ref={trackRef}
           className="flex transition-transform duration-500 ease-out"

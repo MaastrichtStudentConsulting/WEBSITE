@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSwipe } from '@/lib/useSwipe';
 import Image from '@/components/SafeImage';
 import type { Testimonial } from '@/data/testimonials';
 
@@ -39,6 +40,7 @@ export default function MemberTestimonialSlider({ testimonials }: Props) {
     });
   }, [testimonials]);
 
+  const swipe = useSwipe(next, prev);
   const t = testimonials[displayed];
 
   return (
@@ -64,7 +66,7 @@ export default function MemberTestimonialSlider({ testimonials }: Props) {
       </button>
 
       {/* Quote */}
-      <div className="px-8 sm:px-16 min-h-[280px] sm:min-h-[240px] flex flex-col justify-center">
+      <div {...swipe} className="touch-pan-y px-8 sm:px-16 min-h-[280px] sm:min-h-[240px] flex flex-col justify-center">
         <div className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
           <p className="text-navy/70 text-lg sm:text-xl leading-relaxed mb-8">
             &ldquo;{t.quote}&rdquo;
