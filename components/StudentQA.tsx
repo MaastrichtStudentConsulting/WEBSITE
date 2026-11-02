@@ -99,8 +99,9 @@ const faqs: { q: string; icon: string; a: ReactNode }[] = [
     a: (
       <>
         <P>
-          Take the opportunity to get to know MSC before submitting your application. Attend our Info Night to
-          learn more about the organisation and meet current members. Our workshops and case events can also give
+          Take the opportunity to get to know MSC before submitting your application. Try our{' '}
+          <a href="#case-simulation" className="underline underline-offset-2 hover:text-navy">case simulation</a> to see
+          what 8 weeks on an MSC project look like. Our workshops and case events can also give
           you a first impression of consulting, collaborative problem-solving and the type of challenges our teams
           work on.
         </P>
@@ -234,10 +235,6 @@ export default function StudentQA() {
               , write to{' '}
               <a href={`mailto:${HR_EMAIL}?subject=Question%20about%20the%20application`} className="underline underline-offset-2 hover:text-navy break-all">
                 {HR_EMAIL}
-              </a>{' '}
-              or visit our{' '}
-              <a href="#info-night" className="underline underline-offset-2 hover:text-navy">
-                Info Night
               </a>
               .
             </p>

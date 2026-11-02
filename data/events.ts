@@ -23,38 +23,25 @@ export interface UpcomingEvent {
 
 export const upcomingEvents: UpcomingEvent[] = [
   {
-    title: 'Inverto Workshop',
-    type: 'Workshop',
-    date: '2026-10-08',
-    text: 'Case competition with Inverto, followed by dinner together.',
-  },
-  {
-    title: 'MFS M&A Workshop',
-    type: 'Workshop',
-    date: '2026-10-30',
-    text: 'Explore M&A with the Maastricht Finance Society – with dinner afterwards.',
-  },
-  {
-    title: 'Info Night',
-    type: 'Recruitment',
-    date: '2026-11-02',
-    text: 'Meet our members and ask all your questions before applying.',
-    href: '/join#info-night',
-    linkLabel: 'Learn more',
-  },
-  {
     title: 'Applications open',
     type: 'Recruitment',
     date: '2026-11-03',
-    text: 'Apply to join our Consulting or PR team for the next project period.',
+    endDate: '2026-11-27',
+    text: 'Apply to join our Consulting or PR team – applications are open until the 27th of November.',
     href: '/join#apply',
-    linkLabel: 'How to apply',
+    linkLabel: 'Apply now',
   },
   {
     title: 'Bain Workshop',
     type: 'Workshop',
     date: '2026-11-05',
     text: 'On site in Düsseldorf – with dinner and networking afterwards.',
+  },
+  {
+    title: 'MSC Girls Padel Night',
+    type: 'Social',
+    date: '2026-11-10',
+    text: 'An evening on the padel court with the girls of MSC.',
   },
   {
     title: 'ritzenhoefer Workshop',

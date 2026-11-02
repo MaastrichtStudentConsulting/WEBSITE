@@ -2,11 +2,13 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { INFO_NIGHT, OPENING_SHORT, applicationsAreOpen } from '@/data/recruitment';
+import { CLOSING_SHORT, OPENING_SHORT, recruitmentPhase, type RecruitmentPhase } from '@/data/recruitment';
 
 export default function RecruitmentBanner() {
-  const [open, setOpen] = useState(false);
-  useEffect(() => setOpen(applicationsAreOpen()), []);
+  const [phase, setPhase] = useState<RecruitmentPhase>('open');
+  useEffect(() => setPhase(recruitmentPhase()), []);
+  if (phase === 'closed') return null;
+  const open = phase === 'open';
 
   return (
     <Link
@@ -23,11 +25,9 @@ export default function RecruitmentBanner() {
         </span>
         <span className="text-sm sm:text-base font-semibold">
           {open ? (
-            <>Applications are now open</>
+            <>Applications are open until the {CLOSING_SHORT}</>
           ) : (
-            <>
-              Info Night {INFO_NIGHT.shortDate} <span className="text-navy/30 mx-1.5">·</span> Applications open {OPENING_SHORT}
-            </>
+            <>Applications open on the {OPENING_SHORT}</>
           )}
         </span>
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange group-hover:text-navy transition-colors">

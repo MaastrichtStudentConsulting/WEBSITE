@@ -4,12 +4,14 @@ import { useCallback, useEffect, useState } from 'react';
 import CountdownTimer from '@/components/CountdownTimer';
 import {
   APPLY_URL,
+  APPLICATIONS_CLOSE,
+  APPLICATIONS_OPEN,
   TALENT_POOL_URL,
-  INFO_NIGHT,
+  CLOSING_LABEL,
   OPENING_LABEL,
   OPENING_SHORT,
-  applicationsAreOpen,
-  applyLinkIsLive,
+  recruitmentPhase,
+  type RecruitmentPhase,
 } from '@/data/recruitment';
 
 function LockIcon() {
@@ -20,22 +22,33 @@ function LockIcon() {
   );
 }
 
+function CaseSimButton() {
+  return (
+    <a
+      href="#case-simulation"
+      className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors min-w-[240px]"
+    >
+      Try the case simulation
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+      </svg>
+    </a>
+  );
+}
+
 export default function ApplicationCTA() {
   const [isVisible, setIsVisible] = useState(false);
-  const [open, setOpen] = useState(false);
-  const [live, setLive] = useState(false);
+  // 'open' as the first render (matches most visitors); corrected in the browser right away
+  const [phase, setPhase] = useState<RecruitmentPhase>('open');
 
   useEffect(() => {
-    setOpen(applicationsAreOpen());
-    setLive(applyLinkIsLive());
+    setPhase(recruitmentPhase());
     const timer = setTimeout(() => setIsVisible(true), 200);
     return () => clearTimeout(timer);
   }, []);
 
-  const handleOpen = useCallback(() => {
-    setOpen(true);
-    setLive(applyLinkIsLive());
-  }, []);
+  const refresh = useCallback(() => setPhase(recruitmentPhase()), []);
+  const linkReady = APPLY_URL.startsWith('http');
 
   return (
     <div
@@ -47,66 +60,62 @@ export default function ApplicationCTA() {
         Become part of our team!
       </h2>
 
-      {open ? (
+      {phase === 'closed' ? (
         <p className="text-lg sm:text-xl text-white/90 font-medium mb-10 max-w-2xl mx-auto">
-          Applications are now open. Apply now and become part of MSC.
+          Applications for this round are closed. Join our Talent Pool and be the first to hear when the next round opens.
         </p>
       ) : (
         <>
           <p className="text-lg sm:text-xl text-white/90 font-medium mb-12 max-w-2xl mx-auto">
-            Applications open on the {OPENING_LABEL}. Meet us first at our Info Night on the{' '}
-            {INFO_NIGHT.dateLabel.replace(' 2026', '')}.
+            {phase === 'open'
+              ? `Applications are open until the ${CLOSING_LABEL}.`
+              : `Applications open on the ${OPENING_LABEL}.`}
           </p>
-
           <p className="text-white/80 text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-4">
-            Applications open in
+            {phase === 'open' ? 'Applications close in' : 'Applications open in'}
           </p>
           <div className="mb-12">
-            <CountdownTimer onOpen={handleOpen} />
+            <CountdownTimer
+              key={phase}
+              target={phase === 'open' ? APPLICATIONS_CLOSE : APPLICATIONS_OPEN}
+              onOpen={refresh}
+            />
           </div>
         </>
       )}
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        {live ? (
+        {phase === 'closed' ? (
+          <a
+            href={TALENT_POOL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center bg-orange hover:bg-[#e2832c] text-white px-10 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors min-w-[240px]"
+          >
+            Join the Talent Pool
+          </a>
+        ) : phase === 'open' && linkReady ? (
           <a
             href={APPLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-orange hover:bg-[#e2832c] text-white px-10 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors min-w-[220px]"
+            className="inline-flex items-center justify-center bg-orange hover:bg-[#e2832c] text-white px-14 py-4 rounded-full text-base font-bold tracking-wide transition-colors min-w-[240px] shadow-lg shadow-black/20"
           >
             Apply now
           </a>
         ) : (
           <span
             aria-disabled="true"
-            title={open ? 'The application link will be added shortly' : `Applications open on the ${OPENING_LABEL}`}
-            className="inline-flex items-center justify-center gap-2 border-2 border-white/70 bg-black/25 text-white px-10 py-3 rounded-full text-sm font-semibold tracking-wide cursor-not-allowed select-none min-w-[220px]"
+            title={`Applications open on the ${OPENING_LABEL}`}
+            className="inline-flex items-center justify-center gap-2 border-2 border-white/70 bg-black/25 text-white px-10 py-3 rounded-full text-sm font-semibold tracking-wide cursor-not-allowed select-none min-w-[240px]"
           >
             <LockIcon />
-            {open ? 'Apply now' : `Apply from ${OPENING_SHORT}`}
+            {phase === 'open' ? 'Apply now' : `Apply from ${OPENING_SHORT}`}
           </span>
         )}
 
-        <a
-          href={TALENT_POOL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`inline-flex items-center justify-center px-10 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors min-w-[220px] ${
-            live
-              ? 'border-2 border-white text-white hover:bg-white hover:text-navy'
-              : 'bg-orange text-white hover:bg-[#e2832c]'
-          }`}
-        >
-          Join the Talent Pool
-        </a>
+        <CaseSimButton />
       </div>
-
-      <p className="mt-6 text-white/85 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-        {live
-          ? 'Not ready to apply yet? Join our Talent Pool to hear about future recruitment rounds and events.'
-          : 'Applications are not open yet. Join our Talent Pool to get a head start and be the first to hear when applications open.'}
-      </p>
     </div>
   );
 }

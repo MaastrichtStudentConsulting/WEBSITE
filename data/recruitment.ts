@@ -1,44 +1,43 @@
 /**
  * Recruitment settings — change dates and links here only.
  * Every recruitment element on the site (countdown, Apply button,
- * Talent Pool, Info Night, homepage banner) reads from this file.
+ * Talent Pool, homepage banner) reads from this file.
  */
 
 /** Applications open at this moment (Amsterdam time, CET = +01:00 in November). */
 export const APPLICATIONS_OPEN = new Date('2026-11-03T00:00:00+01:00');
 
+/** Applications close at the end of this day (Amsterdam time). */
+export const APPLICATIONS_CLOSE = new Date('2026-11-27T23:59:59+01:00');
+
 /**
- * HubSpot application form. Leave empty until the link is ready —
- * the Apply button stays locked while this is empty, even after opening.
+ * HubSpot application form. Leave empty to lock the Apply button.
  */
-export const APPLY_URL = '';
+export const APPLY_URL = 'https://share.hsforms.com/1mZ3J4gE2RFmldI_GWB-1Hwbw4n1';
 
 /** HubSpot Talent Pool form. */
 export const TALENT_POOL_URL = 'https://share.hsforms.com/1RS7hgpvjQgeIeKx3NIjBsQbw4n1';
 
-export const INFO_NIGHT = {
-  dateLabel: '2nd of November 2026',
-  shortDate: '2nd Nov',
-  location: 'Location to be announced',
-  /** Calendar date (YYYY-MM-DD). */
-  date: '2026-11-02',
-  /**
-   * Fill in once known, e.g. startTime: '19:00', endTime: '21:00' (Amsterdam time).
-   * While empty, "Add to calendar" creates an all-day event.
-   */
-  startTime: '',
-  endTime: '',
-  /** Address for the calendar entry, once known. */
-  address: '',
-};
+/** The case simulation ("8 weeks at MSC"), served from public/case-simulation.html */
+export const CASE_SIMULATION_URL = '/case-simulation';
 
 export const OPENING_LABEL = '3rd of November 2026';
 export const OPENING_SHORT = '3rd Nov';
+export const CLOSING_LABEL = '27th of November';
+export const CLOSING_SHORT = '27th Nov';
 
 export const HR_EMAIL = 'info@maastrichtconsulting.com';
 
+export type RecruitmentPhase = 'before' | 'open' | 'closed';
+
+export function recruitmentPhase(now: number = Date.now()): RecruitmentPhase {
+  if (now < APPLICATIONS_OPEN.getTime()) return 'before';
+  if (now <= APPLICATIONS_CLOSE.getTime()) return 'open';
+  return 'closed';
+}
+
 export function applicationsAreOpen(now: number = Date.now()): boolean {
-  return now >= APPLICATIONS_OPEN.getTime();
+  return recruitmentPhase(now) === 'open';
 }
 
 /** True only when applications are open AND a real link is set. */

@@ -10,8 +10,8 @@ interface TimeLeft {
   seconds: number;
 }
 
-function calculateTimeLeft(): TimeLeft | null {
-  const diff = APPLICATIONS_OPEN.getTime() - Date.now();
+function calculateTimeLeft(target: Date): TimeLeft | null {
+  const diff = target.getTime() - Date.now();
   if (diff <= 0) return null;
   return {
     days: Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -42,22 +42,28 @@ function Separator() {
   );
 }
 
-/** Calls onOpen once when the countdown reaches zero. */
-export default function CountdownTimer({ onOpen }: { onOpen?: () => void }) {
+/** Counts down to `target` (default: applications open). Calls onOpen once it reaches zero. */
+export default function CountdownTimer({
+  onOpen,
+  target = APPLICATIONS_OPEN,
+}: {
+  onOpen?: () => void;
+  target?: Date;
+}) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
     const tick = () => {
-      const t = calculateTimeLeft();
+      const t = calculateTimeLeft(target);
       setTimeLeft(t);
       if (!t && onOpen) onOpen();
     };
     tick();
     const timer = setInterval(tick, 1000);
     return () => clearInterval(timer);
-  }, [onOpen]);
+  }, [onOpen, target]);
 
   const t = mounted && timeLeft ? timeLeft : { days: 0, hours: 0, minutes: 0, seconds: 0 };
   if (mounted && !timeLeft) return null;
