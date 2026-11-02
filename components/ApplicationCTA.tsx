@@ -28,7 +28,7 @@ function CaseSimButton() {
       href="#case-simulation"
       className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-navy px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors min-w-[240px]"
     >
-      Try the case simulation
+      Try the case
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden>
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
       </svg>

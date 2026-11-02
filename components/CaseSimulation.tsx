@@ -17,19 +17,19 @@ export default function CaseSimulation() {
     <section id="case-simulation" className="scroll-mt-20 py-20 sm:py-28">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-20 items-center">
         <div>
-          <p className="text-orange text-xs font-bold uppercase tracking-[0.18em] mb-3">Case simulation</p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy leading-tight">Try out being a consultant</h2>
+          <p className="text-orange text-sm font-bold uppercase tracking-[0.18em] mb-3">Case simulation</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-navy leading-tight">Try out being a consultant</h2>
           <div className="section-divider mt-4" />
-          <p className="text-navy/70 mt-6 leading-relaxed text-[15px] sm:text-base max-w-xl">
+          <p className="text-navy/70 mt-6 leading-relaxed text-lg sm:text-xl max-w-xl">
             What do 8 weeks at MSC look like? Pick a client case and work through a full project yourself – from the
             first client call to the final presentation.
           </p>
 
-          <ol className="mt-8 space-y-3">
+          <ol className="mt-10 space-y-4">
             {weeks.map((w) => (
               <li key={w.when} className="flex items-baseline gap-4">
-                <span className="w-24 flex-shrink-0 text-sm font-bold text-navy tabular-nums">{w.when}</span>
-                <span className="text-navy/70 text-[15px]">{w.what}</span>
+                <span className="w-28 flex-shrink-0 text-base sm:text-lg font-bold text-navy tabular-nums">{w.when}</span>
+                <span className="text-navy/70 text-base sm:text-lg">{w.what}</span>
               </li>
             ))}
           </ol>
@@ -39,7 +39,7 @@ export default function CaseSimulation() {
               href={CASE_SIMULATION_URL}
               target="_blank"
               rel="noopener"
-              className="inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-white px-10 py-3.5 rounded-full text-sm font-semibold tracking-wide transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-white px-12 py-4 rounded-full text-base font-semibold tracking-wide transition-colors"
             >
               <span className="lg:hidden">Start the case simulation</span>
               <span className="hidden lg:inline">Open full screen</span>

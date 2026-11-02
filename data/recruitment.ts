@@ -8,7 +8,7 @@
 export const APPLICATIONS_OPEN = new Date('2026-11-03T00:00:00+01:00');
 
 /** Applications close at the end of this day (Amsterdam time). */
-export const APPLICATIONS_CLOSE = new Date('2026-11-27T23:59:59+01:00');
+export const APPLICATIONS_CLOSE = new Date('2026-11-17T23:59:59+01:00');
 
 /**
  * HubSpot application form. Leave empty to lock the Apply button.
@@ -23,8 +23,8 @@ export const CASE_SIMULATION_URL = '/case-simulation';
 
 export const OPENING_LABEL = '3rd of November 2026';
 export const OPENING_SHORT = '3rd Nov';
-export const CLOSING_LABEL = '27th of November';
-export const CLOSING_SHORT = '27th Nov';
+export const CLOSING_LABEL = '17th of November';
+export const CLOSING_SHORT = '17th Nov';
 
 export const HR_EMAIL = 'info@maastrichtconsulting.com';
 
