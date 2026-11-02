@@ -8,7 +8,7 @@ import CaseSimulation from '@/components/CaseSimulation';
 import OfferExpect from '@/components/OfferExpect';
 import EventSlider from '@/components/EventSlider';
 import { studentInsights } from '@/data/clients';
-import { CLOSING_LABEL, OPENING_LABEL } from '@/data/recruitment';
+import { CLOSING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson, MEMBER_COUNT } from '@/data/team';
@@ -31,7 +31,7 @@ const applicationSteps = [
   },
   {
     title: 'Upload it to MSC',
-    description: `Applications are open from the ${OPENING_LABEL} until the ${CLOSING_LABEL}. Click "Apply now" on this page to submit your documents.`,
+    description: `Applications are open until the ${CLOSING_LABEL}. Click "Apply now" on this page to submit your documents.`,
     icon: '/images/icons/send4.svg',
   },
   {

@@ -2,13 +2,12 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { CLOSING_SHORT, OPENING_SHORT, recruitmentPhase, type RecruitmentPhase } from '@/data/recruitment';
+import { CLOSING_SHORT, recruitmentPhase, type RecruitmentPhase } from '@/data/recruitment';
 
 export default function RecruitmentBanner() {
   const [phase, setPhase] = useState<RecruitmentPhase>('open');
   useEffect(() => setPhase(recruitmentPhase()), []);
   if (phase === 'closed') return null;
-  const open = phase === 'open';
 
   return (
     <Link
@@ -24,14 +23,10 @@ export default function RecruitmentBanner() {
           Recruitment
         </span>
         <span className="text-sm sm:text-base font-semibold">
-          {open ? (
-            <>Applications are open until the {CLOSING_SHORT}</>
-          ) : (
-            <>Applications open on the {OPENING_SHORT}</>
-          )}
+          <>Applications are open until the {CLOSING_SHORT}</>
         </span>
         <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange group-hover:text-navy transition-colors">
-          {open ? 'Apply now' : 'Learn more'}
+          Apply now
           <svg className="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2} aria-hidden>
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12l-7.5 7.5M21 12H3" />
           </svg>

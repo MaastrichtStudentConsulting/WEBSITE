@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { APPLICATIONS_OPEN } from '@/data/recruitment';
+import { APPLICATIONS_CLOSE } from '@/data/recruitment';
 
 interface TimeLeft {
   days: number;
@@ -42,10 +42,10 @@ function Separator() {
   );
 }
 
-/** Counts down to `target` (default: applications open). Calls onOpen once it reaches zero. */
+/** Counts down to `target` (default: applications close). Calls onOpen once it reaches zero. */
 export default function CountdownTimer({
   onOpen,
-  target = APPLICATIONS_OPEN,
+  target = APPLICATIONS_CLOSE,
 }: {
   onOpen?: () => void;
   target?: Date;

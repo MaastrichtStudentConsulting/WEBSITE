@@ -4,9 +4,6 @@
  * Talent Pool, homepage banner) reads from this file.
  */
 
-/** Applications open at this moment (Amsterdam time, CET = +01:00 in November). */
-export const APPLICATIONS_OPEN = new Date('2026-11-03T00:00:00+01:00');
-
 /** Applications close at the end of this day (Amsterdam time). */
 export const APPLICATIONS_CLOSE = new Date('2026-11-17T23:59:59+01:00');
 
@@ -21,17 +18,15 @@ export const TALENT_POOL_URL = 'https://share.hsforms.com/1RS7hgpvjQgeIeKx3NIjBs
 /** The case simulation ("8 weeks at MSC"), served from public/case-simulation.html */
 export const CASE_SIMULATION_URL = '/case-simulation';
 
-export const OPENING_LABEL = '3rd of November 2026';
-export const OPENING_SHORT = '3rd Nov';
 export const CLOSING_LABEL = '17th of November';
 export const CLOSING_SHORT = '17th Nov';
 
 export const HR_EMAIL = 'info@maastrichtconsulting.com';
 
-export type RecruitmentPhase = 'before' | 'open' | 'closed';
+/** The site shows applications as open until the closing moment, then as closed. */
+export type RecruitmentPhase = 'open' | 'closed';
 
 export function recruitmentPhase(now: number = Date.now()): RecruitmentPhase {
-  if (now < APPLICATIONS_OPEN.getTime()) return 'before';
   if (now <= APPLICATIONS_CLOSE.getTime()) return 'open';
   return 'closed';
 }
