@@ -31,9 +31,45 @@ export const metadata: Metadata = {
   },
 };
 
+// Tells Google which image to show next to the site in search results (a square logo with margin,
+// so it is not cut off). Link previews in WhatsApp etc. keep using og-image.jpg above.
+const DOMAIN = 'https://www.maastrichtconsulting.com';
+const SEARCH_LOGO = `${DOMAIN}/images/msc-logo-search.jpg`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${DOMAIN}/#organization`,
+      name: 'Maastricht Student Consulting',
+      url: DOMAIN,
+      logo: { '@type': 'ImageObject', url: SEARCH_LOGO, width: 1200, height: 1200 },
+      image: SEARCH_LOGO,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${DOMAIN}/#website`,
+      name: 'Maastricht Student Consulting',
+      url: DOMAIN,
+      publisher: { '@id': `${DOMAIN}/#organization` },
+    },
+    {
+      '@type': 'WebPage',
+      url: DOMAIN,
+      name: 'Maastricht Student Consulting',
+      primaryImageOfPage: { '@type': 'ImageObject', url: SEARCH_LOGO, width: 1200, height: 1200 },
+      isPartOf: { '@id': `${DOMAIN}/#website` },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="thumbnail" content={SEARCH_LOGO} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+      </head>
       <body className="font-sans antialiased overflow-x-hidden">
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
