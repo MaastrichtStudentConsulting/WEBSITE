@@ -100,7 +100,7 @@ export default function JoinPage() {
     <>
       {/* Half-screen hero */}
       <section className="relative h-[85vh] min-h-[520px] max-h-[1000px] flex items-end overflow-hidden">
-        <ParallaxHero src="/images/team/team-sunset.jpg" alt="The MSC team" className="object-[center_55%] origin-bottom" />
+        <ParallaxHero src="/images/team/team-field-2026.jpg" alt="The MSC team" className="object-[center_70%] origin-bottom" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/25 to-navy/30" />
         <div className="relative z-10 max-w-7xl w-full mx-auto px-6 lg:px-8 pb-14 sm:pb-20">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
