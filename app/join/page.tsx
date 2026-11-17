@@ -45,17 +45,6 @@ const applicationSteps = [
   },
 ];
 
-const roles = [
-  {
-    title: 'Consultant',
-    text: 'Apply your academic knowledge to real-life business challenges and work on impactful projects for our clients in teams of 4–8 students.',
-  },
-  {
-    title: 'PR Strategist',
-    text: "Shape MSC's communication, branding and content creation, from our social media presence to events and campaigns.",
-  },
-];
-
 const whatWeOffer = [
   {
     title: 'Real projects',
@@ -105,24 +94,6 @@ export default function JoinPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.15]">
             {MEMBER_COUNT} Consultants.<br />One Team.
           </h1>
-        </div>
-      </section>
-
-      {/* Positions */}
-      <section className="py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Positions</h2>
-            <div className="section-divider mx-auto mt-4" />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 md:divide-x md:divide-navy/10">
-            {roles.map((role) => (
-              <div key={role.title} className="text-center md:px-10">
-                <h3 className="text-xl sm:text-2xl font-bold text-navy mb-3">{role.title}</h3>
-                <p className="text-navy/65 leading-relaxed text-[15px]">{role.text}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
