@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
+import Image from '@/components/SafeImage';
 import ContactSection from '@/components/ContactSection';
 import FloatingContact from '@/components/FloatingContact';
-import ApplicationsClosed from '@/components/ApplicationsClosed';
+import ApplicationCTA from '@/components/ApplicationCTA';
 import StudentQA from '@/components/StudentQA';
 import CaseSimulation from '@/components/CaseSimulation';
 import OfferExpect from '@/components/OfferExpect';
@@ -96,8 +97,19 @@ export default function JoinPage() {
         </div>
       </section>
 
-      {/* Between rounds. For the next round, use the photo section with <ApplicationCTA /> again (see git history). */}
-      <ApplicationsClosed />
+      {/* Application Status + Countdown + Talent Pool */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden mt-16 sm:mt-24 scroll-mt-20" id="apply">
+        <Image
+          src="/images/become-team-new.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/40 to-black/60" />
+
+        <ApplicationCTA />
+      </section>
 
       {/* Case simulation: 8 weeks at MSC */}
       <CaseSimulation />
