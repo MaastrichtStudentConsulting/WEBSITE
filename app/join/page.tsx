@@ -8,7 +8,6 @@ import CaseSimulation from '@/components/CaseSimulation';
 import OfferExpect from '@/components/OfferExpect';
 import EventSlider from '@/components/EventSlider';
 import { studentInsights } from '@/data/clients';
-import { CLOSING_LABEL } from '@/data/recruitment';
 import ProjectTimeline from '@/components/ProjectTimeline';
 import ParallaxHero from '@/components/ParallaxHero';
 import { getContactPerson, MEMBER_COUNT } from '@/data/team';
@@ -31,7 +30,7 @@ const applicationSteps = [
   },
   {
     title: 'Upload it to MSC',
-    description: `Applications are open until the ${CLOSING_LABEL}. Click "Apply now" on this page to submit your documents.`,
+    description: 'Submit your documents through the application form on this page while applications are open. Join our Talent Pool to hear when the next round starts.',
     icon: '/images/icons/send4.svg',
   },
   {
@@ -109,11 +108,11 @@ export default function JoinPage() {
         </div>
       </section>
 
-      {/* Open positions */}
+      {/* Positions */}
       <section className="py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Open Positions</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-navy">Our Positions</h2>
             <div className="section-divider mx-auto mt-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 md:divide-x md:divide-navy/10">

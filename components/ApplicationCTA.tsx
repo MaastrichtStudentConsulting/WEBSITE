@@ -45,7 +45,7 @@ export default function ApplicationCTA() {
       }`}
     >
       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-5 leading-tight">
-        Become part of our team!
+        {phase === 'open' ? 'Become part of our team!' : 'Thank you for applying!'}
       </h2>
 
       {phase === 'open' ? (
@@ -61,9 +61,15 @@ export default function ApplicationCTA() {
           </div>
         </>
       ) : (
-        <p className="text-lg sm:text-xl text-white/90 font-medium mb-10 max-w-2xl mx-auto">
-          Applications for this round are closed. Join our Talent Pool and be the first to hear when the next round opens.
-        </p>
+        <>
+          <p className="text-lg sm:text-xl text-white/90 font-medium mb-4 max-w-2xl mx-auto">
+            Applications for this round are now closed. We are going through every application and will get back to
+            you soon.
+          </p>
+          <p className="text-base text-white/75 mb-10 max-w-2xl mx-auto">
+            Missed this round? Join our Talent Pool and we&apos;ll let you know when applications open again.
+          </p>
+        </>
       )}
 
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
